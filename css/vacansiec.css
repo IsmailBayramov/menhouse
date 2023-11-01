@@ -628,6 +628,7 @@ input[type=checkbox] {
     .prise_1, .prise_2 {
         display: flex;
         justify-content: space-around;
+        margin-bottom: 40px;
     }
 
     .block_1, .block_2, .block_3, .block_4, .block_5 {
@@ -678,6 +679,7 @@ input[type=checkbox] {
     }
     .low_header_wrap_logo {
         padding-top: 5px;                                               
+        width: 60%;
     }
 
     .burger {
@@ -687,9 +689,6 @@ input[type=checkbox] {
         width: 200px;
     }
 
-    .low_header_wrap_logo {
-        width: 60%;
-    }
 
     .wrap {
         max-width: 800px;

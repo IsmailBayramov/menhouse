@@ -401,8 +401,15 @@ input[type=checkbox] {
     padding-top: 20px;
     width: 30px;
 }
-.block_1, .block_2, .block_3, .block_4, .block_5, .block_6 {
-    
+.sec_block {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sec_block h2 {
+    font-size: 16px;
+    padding-top: 10px;
 }
 
 
@@ -426,7 +433,7 @@ input[type=checkbox] {
 #frame_1 { 
     padding-top: 20px;
     margin: 0 auto; 
-    width: 800px; 
+    width: 900px; 
     max-width: 100%; 
     text-align: center; 
 } 
@@ -524,10 +531,10 @@ input[type=checkbox] {
     display: block; 
 } 
   
-#frame1_1:checked~#controls_1 label:nth-last-child(2), 
-#frame2_1:checked~#controls_1 label:nth-last-child(3), 
-#frame3_1:checked~#controls_1 label:nth-last-child(4), 
-#frame4_1:checked~#controls_1 label:nth-last-child(1) { 
+#frame1_1:checked~#controls_1 label:nth-last-child(1), 
+#frame2_1:checked~#controls_1 label:nth-last-child(4), 
+#frame3_1:checked~#controls_1 label:nth-last-child(3), 
+#frame4_1:checked~#controls_1 label:nth-last-child(2) { 
     background:  
     url(/img/Стрелка1.png) no-repeat;
     float: left; 
@@ -572,7 +579,7 @@ input[type=checkbox] {
 #frame_2 { 
     padding-top: 20px;
     margin: 0 auto; 
-    width: 800px; 
+    width: 900px; 
     max-width: 100%; 
     text-align: center; 
 } 
@@ -670,10 +677,10 @@ input[type=checkbox] {
     display: block; 
 } 
   
-#frame1_2:checked~#controls_2 label:nth-last-child(2), 
-#frame2_2:checked~#controls_2 label:nth-last-child(3), 
-#frame3_2:checked~#controls_2 label:nth-last-child(4), 
-#frame4_2:checked~#controls_2 label:nth-last-child(1) { 
+#frame1_2:checked~#controls_2 label:nth-last-child(1), 
+#frame2_2:checked~#controls_2 label:nth-last-child(4), 
+#frame3_2:checked~#controls_2 label:nth-last-child(3), 
+#frame4_2:checked~#controls_2 label:nth-last-child(2) { 
     background:  
     url(/img/Стрелка1.png) no-repeat;
     float: left; 
@@ -717,7 +724,7 @@ input[type=checkbox] {
 #frame_3 { 
     padding-top: 20px;
     margin: 0 auto; 
-    width: 800px; 
+    width: 900px; 
     max-width: 100%; 
     text-align: center; 
 } 
@@ -815,10 +822,10 @@ input[type=checkbox] {
     display: block; 
 } 
   
-#frame1_3:checked~#controls_3 label:nth-last-child(2), 
-#frame2_3:checked~#controls_3 label:nth-last-child(3), 
-#frame3_3:checked~#controls_3 label:nth-last-child(4), 
-#frame4_3:checked~#controls_3 label:nth-last-child(1) { 
+#frame1_3:checked~#controls_3 label:nth-last-child(1), 
+#frame2_3:checked~#controls_3 label:nth-last-child(4), 
+#frame3_3:checked~#controls_3 label:nth-last-child(3), 
+#frame4_3:checked~#controls_3 label:nth-last-child(2) { 
     background:  
     url(/img/Стрелка1.png) no-repeat;
     float: left; 
@@ -966,9 +973,14 @@ input[type=checkbox] {
         color: #060606;
         
     }
-    .block_1, .block_2, .block_3, .block_4, .block_5 {
+    .sec_block {
         padding-bottom: 50px;
+        width: 250px;
     }
+    .sec_block h2 {
+        font-size: 18px;
+    }
+
     .prise, .third_block_img, .fourth_block_img {
         display: none;
     }
@@ -977,17 +989,17 @@ input[type=checkbox] {
         font-size: 20px;
     }
 
-    .second_block h2, .third_block_wrap h2, .fourth_block_wrap h2 {
+    .third_block_wrap h2, .fourth_block_wrap h2 {
         font-size: 36px;
     }
-    .second_block h3, .third_block_wrap h3, .fourth_block_wrap h3 {
+    .third_block_wrap h3, .fourth_block_wrap h3 {
         font-size: 30px;
     }
     .second_block_card {
         display: block;
     }
     .second_block_card_1_1, .second_block_card_1_2 {
-        justify-content: space-around
+        justify-content: space-around;
     }
 
     .fourth_block_wrap {
@@ -1008,11 +1020,12 @@ input[type=checkbox] {
         display: none;
     }
     
-    .low_header {
-        margin-top: 0;
+    .logo {
+        padding-top: 0;
     }
     .low_header_wrap_logo {
         padding-top: 5px;                                               
+        width: 60%;
     }
 
     .burger {
@@ -1022,12 +1035,12 @@ input[type=checkbox] {
         width: 200px;
     }
 
-    .low_header_wrap_logo {
-        width: 60%;
-    }
-
     .wrap {
         max-width: 800px;
+    }
+
+    .sec_block h2 {
+        font-size: 14px;
     }
 
     .third_block_text {
