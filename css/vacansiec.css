@@ -156,7 +156,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .menu_msg_eyes {
     bottom: 10px;
     width: 150px;
-    padding-bottom: 30px;
+    padding-bottom: 200px;
     box-shadow: none;
     position: fixed;
     height: 60px!important;
@@ -167,11 +167,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     height: 50%;
     position: fixed;
     left: 0;
-    width: 250px;
+    width: 200px;
     margin-top: 0px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    margin-top: -300px;
+    margin-top: 100px;
 }
 .sidebarMenuInner0{
     margin:0;
@@ -232,7 +232,7 @@ input[type=checkbox] {
     bottom: 30px;
     margin-bottom: 50px;
     width: 150px;
-    padding-bottom: 30px;
+    padding-bottom: 200px;
     box-shadow: none;
     position: fixed;
     height: 60px!important;
@@ -243,12 +243,11 @@ input[type=checkbox] {
     height: 50%;
     position: fixed;
     left: 0;
-    width: 250px;
+    width: 200px;
     margin-top: 0px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    margin-top: -600px;
-    
+    margin-top: -350px;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu2 {
     transform: translateX(0);
@@ -276,10 +275,41 @@ input[type=checkbox] {
     border: 1px solid #FA4A0C;
     border-radius: 30px;
 }
-.sidebarIconToggle2 img:hover, .sidebarIconToggle1 img:hover, .footer_right img:hover {
+.sidebarIconToggle2 img:hover, 
+.sidebarIconToggle1 img:hover, 
+.footer_right img:hover {
     filter: drop-shadow(0px 0px 5px #FA4A0C);
 }
 
+
+.menhouse_faq {
+    right: -36px;
+    bottom: 0px;
+    padding-bottom: 30px;
+    width: 150px;
+    box-shadow: none;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.sidebarIconToggle_faq {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 10px;
+    height: 22px;
+    width: 61px;
+}
+.sidebarIconToggle_faq img {
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+}
 
 
 .header_up_wrap {
@@ -432,7 +462,7 @@ input[type=checkbox] {
     font-weight: 600;
 }
 .button_will_respond:hover {
-    filter: drop-shadow(0px 0px 10px #fff);
+    filter: drop-shadow(0px 0px 3px #fff);
     color: #fff;
 }
 
@@ -583,6 +613,9 @@ input[type=checkbox] {
     .menu_sv {
         margin-top: 550px;
     }
+    .menhouse_faq {
+        right: -80px;
+    }
     .sidebarIconToggle2, .sidebarIconToggle1 {
         left: 10px;
     }
@@ -722,6 +755,19 @@ input[type=checkbox] {
     }
     .footer_centre h2, .footer_centre a, .footer_right h2 {
         font-size: 20px;
+    }
+
+    .menu_msg_eyes {
+        padding-bottom: 20px;
+    }
+    .menu_sv {
+        padding-bottom: 20px;
+    }
+    #sidebarMenu1 {
+        margin-top: -260px;
+    }
+    #sidebarMenu2 {
+        margin-top: -400px;
     }
 }
 
