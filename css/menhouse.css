@@ -1023,15 +1023,6 @@ input[type=checkbox] {
     color: #FFF; 
 } 
   
-
-#slides_4 .frame_1_4 img,
-#slides_4 .frame_2_4 img,
-#slides_4 .frame_3_4 img,
-#slides_4 .frame_4_4 img{
-    width: 800px;
-    object-fit: cover;
-}
-  
 #controls_4 { 
     margin: -180px 0 0 0; 
     width: 100%; 
@@ -1086,6 +1077,19 @@ input[type=checkbox] {
 #frame4_4:checked~#bullets_4 label:nth-child(4) { 
     background: #444; 
 } 
+
+.frame_reviews {
+    display: flex;
+    align-items: center;
+
+}
+.frame_reviews_block1 img {
+    width: 80%;
+    padding-bottom: 20px;
+}
+.frame_reviews_block2 {
+    background-color: #fff;
+}
   
 @media screen and (max-width: 900px) { 
     #frame1_4:checked~#controls_4 label:nth-child(2), 
