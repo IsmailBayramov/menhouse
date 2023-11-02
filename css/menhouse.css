@@ -298,6 +298,7 @@ input[type=checkbox] {
     z-index: 99;
     height: 100%;
     width: 100%;
+    left: 50px;
     top: 10px;
     height: 22px;
     width: 61px;
@@ -307,6 +308,67 @@ input[type=checkbox] {
     background-color: #fff;
     border: 1px solid #fff;
     border-radius: 30px;
+}
+
+.menu_taxi {
+    bottom: 30px;
+    margin-bottom: 50px;
+    width: 150px;
+    padding-bottom: 200px;
+    right: 0;
+    box-shadow: none;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+#sidebarMenu3 {
+    height: 50%;
+    position: fixed;
+    right: 0;
+    width: 300px;
+    margin-top: 0px;
+    transform: translateX(300px);
+    transition: transform 250ms ease-in-out;
+    margin-top: -370px;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu3 {
+    transform: translateX(0);
+}
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle3 {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 10px;
+    left: 50px;
+    height: 22px;
+    width: 61px;
+}
+.sidebarIconToggle3 img {
+    background-color: #FA4A0C;
+    width: 100%;
+    border: 1px solid #FA4A0C;
+    border-radius: 30px;
+}
+#sidebarMenu3 input, button {
+    color: #fff;
+    background-color: #060606;
+    padding: 10px;
+    border-radius: 10px;
+}
+#sidebarMenu3 input {
+    border-color: #fff;
+}
+#sidebarMenu3 button {
+    border-color: #FA4A0C;
 }
 
 
@@ -1113,8 +1175,8 @@ input[type=checkbox] {
     .menu_sv {
         margin-top: 610px;
     }
-    .menhouse_faq {
-        right: -80px;
+    .menhouse_faq, .menu_taxi {
+        right: -30px;
     }
     .sidebarIconToggle2, .sidebarIconToggle1 {
         left: 10px;
@@ -1231,7 +1293,7 @@ input[type=checkbox] {
 
 
 @media (max-width: 800px) {
-    .header_up_wrap, .header {
+    .header_up_wrap, .header, .menhouse_faq_wrap {
         display: none;
     }
     
@@ -1306,12 +1368,15 @@ input[type=checkbox] {
         font-size: 20px;
     }
 
-    .menu_msg_eyes {
+    .menu_msg_eyes, .menu_sv {
         padding-bottom: 20px;
     }
-    .menu_sv {
+    .menu_taxi {
         padding-bottom: 20px;
+        bottom: 0;
+        margin-bottom: 10px;
     }
+
     #sidebarMenu1 {
         margin-top: -260px;
     }
