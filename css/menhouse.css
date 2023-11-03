@@ -1278,13 +1278,6 @@ input[type=checkbox] {
         width: 650px;
         object-fit: cover;
     }
-    #slides_4 .frame_1_4 img,
-    #slides_4 .frame_2_4 img,
-    #slides_4 .frame_3_4 img,
-    #slides_4 .frame_4_4 img{
-        width: 500px;
-        object-fit: cover;
-    }
 
     .menu_model_stats li {
         font-size: 18px;
@@ -1360,13 +1353,6 @@ input[type=checkbox] {
         width: 350px;
         object-fit: cover;
     }
-    #slides_4 .frame_1_4 img,
-    #slides_4 .frame_2_4 img,
-    #slides_4 .frame_3_4 img,
-    #slides_4 .frame_4_4 img{
-        width: 350px;
-        object-fit: cover;
-    }
 
     .button_will_respond {
         font-size: 20px;
@@ -1387,6 +1373,12 @@ input[type=checkbox] {
 
     .menu_model_stats li {
         font-size: 16px;
+    }
+
+    .frame_reviews h2, h3{
+        font-size: 16px;
+    }
+    .frame_reviews_block2 {
     }
 }
 
