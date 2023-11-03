@@ -1414,7 +1414,21 @@ input[type=checkbox] {
     }
 }
 
+@media (max-width: 500px) {
+    .frame_programm_2_block2_h2 {
+        font-size: 20px;
+    }
+    .frame_programm_2_block2_h3 {
+        font-size: 14px;
+    }
+    .frame_programm_2_block2_p {
+        font-size: 14px;
+    }
 
+    .menu_model_stats {
+        padding-left: 10px;
+    }
+}
 
 
 
