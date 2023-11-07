@@ -323,7 +323,7 @@ input[type=checkbox] {
     z-index: 10;
 }
 #sidebarMenu3 {
-    height: 50%;
+    height: 36%;
     position: fixed;
     right: 0;
     width: 300px;
@@ -331,6 +331,7 @@ input[type=checkbox] {
     transform: translateX(300px);
     transition: transform 250ms ease-in-out;
     margin-top: -370px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 input[type="checkbox"]:checked ~ #sidebarMenu3 {
     transform: translateX(0);
@@ -1198,8 +1199,9 @@ input[type=checkbox] {
 
 .footer_rights {
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     background-color: black;
+    padding: 5px 0;
 }
 
 
@@ -1331,7 +1333,7 @@ input[type=checkbox] {
         padding-top: 0;
     }
     .low_header_wrap_logo {
-        padding-top: 5px;                                               
+        padding-top: 100px;                                               
         width: 60%;
     }
 
