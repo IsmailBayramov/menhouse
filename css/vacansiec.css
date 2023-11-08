@@ -7,7 +7,7 @@
 
 
 body {
-    background-color: #060606;
+    background-color: #1a1a1a;
 }
 
 
@@ -100,8 +100,8 @@ input[type=checkbox] {
     z-index: 99;
     height: 100%;
     width: 100%;
-    top: 10px;
-    right: 16px;
+    top: 20px;
+    right: 25px;
     height: 22px;
     width: 25px;
 }
@@ -172,6 +172,10 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
     margin-top: 100px;
+}
+#sidebarMenu1 img {
+    width: 50px;
+    padding-left: 37px;
 }
 .sidebarMenuInner0{
     margin:0;
@@ -249,6 +253,10 @@ input[type=checkbox] {
     transition: transform 250ms ease-in-out;
     margin-top: -350px;
 }
+#sidebarMenu2 img {
+    width: 50px;
+    padding-left: 37px;
+}
 input[type="checkbox"]:checked ~ #sidebarMenu2 {
     transform: translateX(0);
 }
@@ -298,6 +306,7 @@ input[type=checkbox] {
 #sidebarMenu3 {
     height: 36%;
     position: fixed;
+    border-radius: 15px 0px 0px 0px;
     right: 0;
     width: 300px;
     margin-top: 0px;
@@ -504,9 +513,6 @@ input[type=checkbox] {
 .second_block_card h5 {
     font-size: 14px;
 }
-.second_block_card h6, .prise_1, .prise_2 {
-    display: none;
-}
 .second_block_button, .second_block_text {
     text-align: center;
 }
@@ -572,17 +578,24 @@ input[type=checkbox] {
 .third_block_img img {
     width: 200px;
 }
-.menu_content {
-    list-style: none;
+
+.third_menu_content {
+    list-style-type: none;
 }
-.menu_content li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: red; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
+.third_menu_content li {
+    position: relative;
 }
+.third_menu_content li::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    margin-right: 10px;
+    transform: translate(0, -50%) scaleY(1.5) rotate(45deg);
+}
+
 
 
 .fourth_block {
@@ -608,7 +621,18 @@ input[type=checkbox] {
     padding-bottom: 20px;
 }
 .fourth_block_img img {
-    width: 180px;
+    width: 100%;
+}
+.fourth_menu_content {
+    list-style: none;
+}
+.fourth_menu_content li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 
@@ -702,12 +726,10 @@ input[type=checkbox] {
         font-size: 16px;
     }
     .second_block_card {
-        flex-direction: column;
     }
     .second_block_card p {
         font-size: 20px;
         max-width: 300px;
-        margin-bottom: 20px;
     }
     .second_block_card h5 {
         font-size: 22px;
@@ -717,15 +739,6 @@ input[type=checkbox] {
     }
     .second_block_card_2 {
         justify-content: space-around;
-    }
-    .prise_1, .prise_2 {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 40px;
-    }
-
-    .block_1, .block_2, .block_3, .block_4, .block_5 {
-        padding-bottom: 50px;
     }
 
     .third_block_text, .fourth_block_text {
@@ -738,9 +751,6 @@ input[type=checkbox] {
     .second_block h3, .third_block_wrap h3, .fourth_block_wrap h3 {
         font-size: 30px;
     }
-    .second_block_card h6 {
-        display: block;
-    }
 
     .fourth_block_wrap {
         max-width: 600px;
@@ -748,9 +758,6 @@ input[type=checkbox] {
     .fourth_block_text {
         margin-left: 25px;
         width: 400px;
-    }
-    .prise {
-        display: none;
     }
 
     .footer {
@@ -793,7 +800,6 @@ input[type=checkbox] {
     .second_block_card p {
         font-size: 16px;
         max-width: 300px;
-        margin-bottom: 20px;
     }
     .second_block_card h5 {
         font-size: 20px;
@@ -810,7 +816,8 @@ input[type=checkbox] {
     }
 
     .fourth_block_separation {
-        justify-content: space-evenly
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .footer_left {
@@ -841,7 +848,6 @@ input[type=checkbox] {
     .second_block_card p {
         font-size: 14px;
         max-width: 300px;
-        margin-bottom: 20px;
     }
     .second_block_card h5 {
         font-size: 18px;
