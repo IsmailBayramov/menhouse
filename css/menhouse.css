@@ -7,7 +7,7 @@
 
 
 body {
-    background-color: #1a1a1a;
+    background-color: #151515;
 }
 
 
@@ -1024,7 +1024,6 @@ input[type=checkbox] {
     margin: 0 auto; 
     width: 900px; 
     max-width: 100%; 
-    text-align: center; 
 } 
   
 #frame_4 input[type=radio] { 
@@ -1130,16 +1129,30 @@ input[type=checkbox] {
 } 
 
 .frame_reviews_4 {
+}
+.frame_reviews_4_block1 {
     display: flex;
     align-items: center;
+    background-color: #fff;
+    border-radius: 100px 30px 30px 100px;
 }
 .frame_reviews_4_block1 img {
-    width: 80%;
-    padding-bottom: 20px;
+    width: 20%;
 }
-.frame_reviews_4_block2 {
+.frame_reviews_block1_text {
+    color: black;
+    padding-left: 20px;
+    font-size: 16px;
+}
 
+.frame_reviews_4_block2 {
+    padding-bottom: 60px;
 }
+.frame_reviews_block2_name {
+    font-size: 16px;
+    padding-left: 35px;
+}
+
 
 @media screen and (max-width: 900px) { 
     #frame1_4:checked~#controls_4 label:nth-child(2), 
@@ -1412,8 +1425,8 @@ input[type=checkbox] {
         font-size: 16px;
     }
 
-    .frame_reviews_block1_name, 
-    .frame_reviews_block2_text{
+    .frame_reviews_block2_name, 
+    .frame_reviews_block1_text{
         font-size: 16px;
     }
     .frame_reviews {
