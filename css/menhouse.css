@@ -174,7 +174,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 #sidebarMenu1 img {
     width: 50px;
-    padding-left: 37px;
 }
 .sidebarMenuInner0{
     margin:0;
@@ -250,11 +249,10 @@ input[type=checkbox] {
     margin-top: 0px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    margin-top: -350px;
+    margin-top: -230px;
 }
 #sidebarMenu2 img {
     width: 50px;
-    padding-left: 37px;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu2 {
     transform: translateX(0);
@@ -288,35 +286,19 @@ input[type=checkbox] {
     filter: drop-shadow(0px 0px 5px #FA4A0C);
 }
 
-.menhouse_faq {
-    right: -36px;
-    bottom: 0px;
-    padding-bottom: 30px;
-    width: 150px;
-    box-shadow: none;
-    position: fixed;
-    height: 60px!important;
-    overflow: hidden;
-    z-index: 10;
+.sidebarMenuInner1{
+    margin:0;
+    padding:0;
 }
-.sidebarIconToggle_faq {
-    box-sizing: border-box;
+.sidebarMenuInner1 li{
+    list-style: none;
+    padding-left: 55px;
+ }
+.sidebarMenuInner1 li a{
     cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    height: 100%;
-    width: 100%;
-    left: 50px;
-    top: 10px;
-    height: 22px;
-    width: 61px;
+    text-decoration: none;
 }
-.sidebarIconToggle_faq img {
-    width: 60px;
-    background-color: #fff;
-    border: 1px solid #fff;
-    border-radius: 30px;
-}
+
 
 .menu_taxi {
     bottom: 30px;
@@ -331,7 +313,7 @@ input[type=checkbox] {
     z-index: 10;
 }
 #sidebarMenu3 {
-    height: 36.5%;
+    height: 345px;
     position: fixed;
     right: 0;
     border-radius: 15px 0px 0px 0px;
@@ -379,6 +361,37 @@ input[type=checkbox] {
 }
 #sidebarMenu3 button {
     border-color: #FA4A0C;
+}
+
+
+.menhouse_faq {
+    right: 0px;
+    bottom: 0px;
+    padding-bottom: 30px;
+    width: 150px;
+    box-shadow: none;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.sidebarIconToggle_faq {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    left: 50px;
+    top: 10px;
+    height: 22px;
+    width: 61px;
+}
+.sidebarIconToggle_faq img {
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
 }
 
 
@@ -528,12 +541,23 @@ input[type=checkbox] {
 .arts_block{
     display: flex;
 }
-.arts_border img{
-    box-shadow: 0 200px 8px 5px rgba(0, 0, 0, 1);
+.arts_morder_menu {
+    background: url("/img/ПрямоугольникModel.png") no-repeat;
+    background-size: contain;
+    padding: 0 32px 20px 32px;
+}
+.arts_morder_menu_centre {
+    background: url("/img/ПрямоугольникModelB.png") no-repeat;
+    background-size: cover;
+    padding: 0 50px 20px 50px;
+    border-radius: 0 0 20px 20px;
+} 
+.arts_border img {
+    background-color: black;
+    border-radius: 10px 10px 0px 0px;
 }
 .menu_model_stats {
     padding-top: 10px;
-    padding-right: 40px;
 }
 .menu_model_stats li {
     list-style: none;
@@ -1068,7 +1092,7 @@ input[type=checkbox] {
     float: left; 
     display: flex; 
     justify-content: center; 
-    align-items: center; 
+    align-items: flex-end; 
     height: 100%; 
     color: #FFF; 
 } 
@@ -1129,6 +1153,8 @@ input[type=checkbox] {
 } 
 
 .frame_reviews_4 {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .frame_reviews_4_block1 {
     display: flex;
@@ -1150,7 +1176,7 @@ input[type=checkbox] {
 }
 .frame_reviews_block2_name {
     font-size: 16px;
-    padding-left: 35px;
+    padding-left: 6%;
 }
 
 
@@ -1335,14 +1361,6 @@ input[type=checkbox] {
         width: 650px;
         object-fit: cover;
     }
-
-    .menu_model_stats li {
-        font-size: 18px;
-    }
-    .arts_border img {
-        width: 70%;
-        box-shadow: 0 200px 8px 5px rgba(0, 0, 0, 1);
-    }
 }
 
 
@@ -1417,24 +1435,39 @@ input[type=checkbox] {
         margin-bottom: 10px;
     }
 
-    #sidebarMenu1 {
-        margin-top: -260px;
-    }
+    .sidebarMenuInner1 li{
+        padding-left: 18px;
+     }
 
-    .menu_model_stats li {
-        font-size: 16px;
+    #sidebarMenu1 {
+        margin-top: -190px;
     }
 
     .frame_reviews_block2_name, 
     .frame_reviews_block1_text{
         font-size: 16px;
     }
-    .frame_reviews {
+
+}
+
+@media (max-width: 600px) {
+    .menu_model_stats li {
+        font-size: 14px;
     }
-    .frame_reviews_block1 img {
+
+    .arts_morder_menu {
+        padding: 0 23px 20px 23px;
+        background: url("/img/ПрямоугольникModelB.png") no-repeat;
+        border-radius: 0 0 20px 20px;
     }
-    .frame_reviews_block2 {
-                
+    .arts_morder_menu_centre {
+        padding: 0 39px 20px 39px;
+    }
+    .arts_border img {
+        width: 125px;
+    }
+    .arts_border_centre img {
+        width: 160px;
     }
 }
 
@@ -1449,9 +1482,6 @@ input[type=checkbox] {
         font-size: 14px;
     }
 
-    .menu_model_stats {
-        padding-left: 10px;
-    }
 
     .frame_programm_2_block1_1 {
         margin-top: 180px;

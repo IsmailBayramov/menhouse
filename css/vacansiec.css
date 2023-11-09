@@ -175,7 +175,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 #sidebarMenu1 img {
     width: 50px;
-    padding-left: 37px;
 }
 .sidebarMenuInner0{
     margin:0;
@@ -251,11 +250,10 @@ input[type=checkbox] {
     margin-top: 0px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    margin-top: -350px;
+    margin-top: -230px;
 }
 #sidebarMenu2 img {
     width: 50px;
-    padding-left: 37px;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu2 {
     transform: translateX(0);
@@ -290,6 +288,19 @@ input[type=checkbox] {
     filter: drop-shadow(0px 0px 5px #FA4A0C);
 }
 
+.sidebarMenuInner1{
+    margin:0;
+    padding:0;
+}
+.sidebarMenuInner1 li{
+    list-style: none;
+    padding-left: 55px;
+ }
+.sidebarMenuInner1 li a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 .menu_taxi {
     bottom: 30px;
@@ -304,7 +315,7 @@ input[type=checkbox] {
     z-index: 10;
 }
 #sidebarMenu3 {
-    height: 36%;
+    height: 345px;
     position: fixed;
     border-radius: 15px 0px 0px 0px;
     right: 0;
@@ -837,11 +848,14 @@ input[type=checkbox] {
     }
 
     #sidebarMenu1 {
-        margin-top: -260px;
+        margin-top: -190px;
     }
     #sidebarMenu2 {
-        margin-top: -400px;
+        margin-top: -280px;
     }
+    .sidebarMenuInner1 li{
+        padding-left: 18px;
+     }
 }
 
 @media (max-width: 550px) {
