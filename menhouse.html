@@ -10,6 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css">  
+
     <title>MenHouse</title>
 </head>
 <body>
@@ -27,7 +34,7 @@
                         <li>Бесплатно привезём Вас в наш салон</li>
                         <li><input type="tel" id="phone" placeholder="+7(000)000-00-00"></li>
                         <li><input type="text" id="addres" placeholder="Адрес, откуда Вас забрать"></li>
-                        <li><button type="button" id="" class="">Вызвать бесплатное такси</button></li>
+                        <li><button type="button" id="" class="menu_taxi_button">Вызвать бесплатное такси</button></li>
                     </form>
                 </ul>
             </div>
@@ -109,7 +116,6 @@
                     <li><a href="" target="_blank">Контакты</a></li>
                     <li><a href="" target="_blank">Сертификаты</a></li>
                     <li><a href="vacancies.html" target="_blank">Вакансии</a></li>
-                    <li><a href="https://menhouse-club.ru/faq">Вопросы</a></li>
                 </ul>
             </div>
         </div>
@@ -425,63 +431,38 @@
             </div> 
         </div>
     </section>
+
     <section class="reviews">
         <div class="reviews_wrap">
             <div class="header_up_wrapp">
                 <h1>Отзыв <span>Гостей</span></h1>
             </div>
-            <div id="frame_4"> 
-                <input type="radio" name="frame_4" id="frame1_4" checked /> 
-                <input type="radio" name="frame_4" id="frame2_4" /> 
-                <input type="radio" name="frame_4" id="frame3_4" /> 
-                <input type="radio" name="frame_4" id="frame4_4" /> 
-                <div id="slides_4"> 
-                    <div id="overflow_4"> 
-                        <div class="inner_4"> 
-                            <div class="frame_4 frame_1_4"> 
-                                <div class="frame-content_4"> 
-                                    <div class="frame_reviews_4">
-                                        <div class="frame_reviews_4_block1">
-                                            <img src="img/frame_4/reviews_icon.png" alt="">
-                                            <h3 class="frame_reviews_block1_text">„Огромная благодарность мастер Алине за релакс.“</h3>
-                                        </div>
-                                        <div class="frame_reviews_4_block2">
-                                            <h2 class="frame_reviews_block2_name">Антон</h2>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div> 
-                            <div class="frame_4 frame_2_4"> 
-                                <div class="frame-content_4"> 
-                                    <img src="" alt=""> 
-                                </div> 
-                            </div> 
-                            <div class="frame_4 frame_3_4"> 
-                                <div class="frame-content_4"> 
-                                    <img src="" alt=""> 
-                                </div> 
-                            </div> 
-                            <div class="frame_4 frame_4_4"> 
-                                <div class="frame-content_4"> 
-                                    <img src="" alt=""> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-                <div id="controls_4"> 
-                    <label for="frame1_4"></label> 
-                    <label for="frame2_4"></label> 
-                    <label for="frame3_4"></label> 
-                    <label for="frame4_4"></label> 
-                </div> 
-                <div id="bullets_4"> 
-                    <label for="frame1_4"></label> 
-                    <label for="frame2_4"></label> 
-                    <label for="frame3_4"></label> 
-                    <label for="frame4_4"></label> 
-                </div> 
-            </div> 
+
+            <div class="slider">
+                <div class="slide">
+                    <div class="frame_reviews_4">
+                        <div class="frame_reviews_4_block1">
+                            <img src="img/frame_4/reviews_icon.png" alt="">
+                            <h3 class="frame_reviews_block1_text">„Огромная благодарность мастер Алине за релакс.“</h3>
+                        </div>
+                        <div class="frame_reviews_4_block2">
+                            <h2 class="frame_reviews_block2_name">Антон</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="frame_reviews_4">
+                        <div class="frame_reviews_4_block1">
+                            <img src="img/frame_4/reviews_icon.png" alt="">
+                            <h3 class="frame_reviews_block1_text">„Огромная благодарность мастер Алине за релакс.“</h3>
+                        </div>
+                        <div class="frame_reviews_4_block2">
+                            <h2 class="frame_reviews_block2_name">Антон</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="logo_1">
                 <a href="" class="button_will_respond">Оставить отзыв</a>
             </div>

@@ -490,8 +490,8 @@ input[type=checkbox] {
 
 .second_block {
     background-color: black;
-    padding-bottom: 40px;
     padding-top: 20px;
+    padding-bottom: 60px;
 }
 .second_block h4 {
     font-size: 16px;
@@ -568,7 +568,7 @@ input[type=checkbox] {
 .third_block {
     text-align: center;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 .third_block_separation {
     display: flex;
@@ -605,6 +605,7 @@ input[type=checkbox] {
     background-color: red;
     margin-right: 10px;
     transform: translate(0, -50%) scaleY(1.5) rotate(45deg);
+    margin-left: -1em;
 }
 
 
@@ -736,8 +737,6 @@ input[type=checkbox] {
     .second_block_text h4 {
         font-size: 16px;
     }
-    .second_block_card {
-    }
     .second_block_card p {
         font-size: 20px;
         max-width: 300px;
@@ -781,7 +780,7 @@ input[type=checkbox] {
 
 
 @media (max-width: 800px) {
-    .header_up_wrap, .header, .menhouse_faq_wrap {
+    .header_up_wrap, .header {
         display: none;
     }
     
@@ -838,13 +837,33 @@ input[type=checkbox] {
         font-size: 20px;
     }
 
-    .menu_msg_eyes, .menu_sv {
-        padding-bottom: 20px;
+    .menu_msg_eyes {
+        padding-bottom: 30px;
+        left: 125px;
+        width: 80px;
     }
+    .menu_sv {
+        padding-bottom: 13px;
+        margin-top: 710px;
+        margin-bottom: 0;
+        width: 80px;
+        left: 40px;
+    }
+
     .menu_taxi {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         bottom: 0;
         margin-bottom: 10px;
+        right: 125px;
+        width: 80px;
+        padding-right: 35px;
+    }
+
+    .menhouse_faq {
+        width: 80px;
+        bottom: 10px;
+        right: 40px;
+        padding-right: 35px;
     }
 
     #sidebarMenu1 {
@@ -855,6 +874,10 @@ input[type=checkbox] {
     }
     .sidebarMenuInner1 li{
         padding-left: 18px;
+     }
+
+     .third_block_img {
+        margin-right: 40px;
      }
 }
 
