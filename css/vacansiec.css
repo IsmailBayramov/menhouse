@@ -156,7 +156,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .menu_msg_eyes {
     bottom: 10px;
     width: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     box-shadow: none;
     position: fixed;
     height: 60px!important;
@@ -171,7 +171,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: 0px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    margin-top: 100px;
+    margin-top: -220px;
 }
 #sidebarMenu1 img {
     width: 50px;
@@ -234,8 +234,8 @@ input[type=checkbox] {
 .menu_sv {
     bottom: 30px;
     margin-bottom: 50px;
+    padding-bottom: 80px;
     width: 150px;
-    padding-bottom: 200px;
     box-shadow: none;
     position: fixed;
     height: 60px!important;
@@ -305,8 +305,8 @@ input[type=checkbox] {
 .menu_taxi {
     bottom: 30px;
     margin-bottom: 50px;
+    padding-bottom: 80px;
     width: 150px;
-    padding-bottom: 200px;
     right: 0;
     box-shadow: none;
     position: fixed;
@@ -368,8 +368,8 @@ input[type=checkbox] {
 
 .menhouse_faq {
     right: 0;
-    bottom: 0px;
-    padding-bottom: 30px;
+    bottom: 10px;
+    padding-bottom: 50px;
     width: 150px;
     box-shadow: none;
     position: fixed;

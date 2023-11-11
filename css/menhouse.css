@@ -155,7 +155,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .menu_msg_eyes {
     bottom: 10px;
     width: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     box-shadow: none;
     position: fixed;
     height: 60px!important;
@@ -170,7 +170,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: 0px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    margin-top: 100px;
+    margin-top: -220px;
 }
 #sidebarMenu1 img {
     width: 50px;
@@ -233,8 +233,8 @@ input[type=checkbox] {
 .menu_sv {
     bottom: 30px;
     margin-bottom: 50px;
+    padding-bottom: 80px;
     width: 150px;
-    padding-bottom: 200px;
     box-shadow: none;
     position: fixed;
     height: 60px!important;
@@ -303,8 +303,8 @@ input[type=checkbox] {
 .menu_taxi {
     bottom: 30px;
     margin-bottom: 50px;
+    padding-bottom: 80px;
     width: 150px;
-    padding-bottom: 200px;
     right: 0;
     box-shadow: none;
     position: fixed;
@@ -321,8 +321,8 @@ input[type=checkbox] {
     margin-top: 0px;
     transform: translateX(300px);
     transition: transform 250ms ease-in-out;
-    margin-top: -370px;
     background-color: rgba(0, 0, 0, 0.5);
+    margin-top: -370px;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu3 {
     transform: translateX(0);
@@ -366,8 +366,8 @@ input[type=checkbox] {
 
 .menhouse_faq {
     right: 0px;
-    bottom: 0px;
-    padding-bottom: 30px;
+    bottom: 10px;
+    padding-bottom: 50px;
     width: 150px;
     box-shadow: none;
     position: fixed;
@@ -423,7 +423,7 @@ input[type=checkbox] {
     color: #FA4A0C;
 }
 .header_up_wrapp {
-    padding-top: 30px;
+    padding-top: 35px;
 }
 .header_up_wrapp h1 {
     text-align: center;
@@ -468,7 +468,13 @@ input[type=checkbox] {
 .logo_1{
     text-align: center;
     text-decoration: none;
-    padding: 50px;
+    padding: 54px;
+
+}
+.logo_0{
+    text-align: center;
+    text-decoration: none;
+    padding: 40px;
 }
 .low_header {
     background-color: black;
@@ -671,7 +677,7 @@ input[type=checkbox] {
     background:  
     url(/img/Стрелка.png) no-repeat; 
     float: right; 
-    margin: -20px -50px 0 0; 
+    margin: 0px -50px 0 0; 
     display: block; 
 } 
   
@@ -802,7 +808,7 @@ input[type=checkbox] {
     background:  
     url(/img/Стрелка.png) no-repeat; 
     float: right; 
-    margin: -20px -50px 0 0; 
+    margin: 0px -50px 0 0; 
     display: block; 
 } 
   
@@ -994,7 +1000,7 @@ input[type=checkbox] {
     background:  
     url(/img/Стрелка.png) no-repeat; 
     float: right; 
-    margin: -20px -50px 0 0; 
+    margin: 0px -50px 0 0; 
     display: block; 
 } 
   
@@ -1071,6 +1077,9 @@ input[type=checkbox] {
     margin:20px auto;
     .parent-slide{padding:15px;}
     img{display: block;margin:auto;}
+}
+.reviews {
+    margin-top: 180px;
 }
 .reviews button {
     visibility: collapse;
@@ -1329,9 +1338,13 @@ input[type=checkbox] {
 
     .menhouse_faq {
         width: 80px;
-        bottom: 10px;
+        padding-bottom: 30px;
         right: 40px;
         padding-right: 35px;
+    }
+
+    .menu_border {
+        
     }
 
     .sidebarMenuInner1 li{
