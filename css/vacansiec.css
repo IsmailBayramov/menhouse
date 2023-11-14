@@ -164,7 +164,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     z-index: 10;
 }
 #sidebarMenu1 {
-    height: 50%;
+    height: fit-content;
     position: fixed;
     left: 0;
     width: 200px;
@@ -243,7 +243,7 @@ input[type=checkbox] {
     z-index: 10;
 }
 #sidebarMenu2 {
-    height: 50%;
+    height: fit-content;
     position: fixed;
     left: 0;
     width: 200px;
@@ -396,6 +396,21 @@ input[type=checkbox] {
     border-radius: 30px;
 }
 
+.backgroung_btn_p {
+    right: 0;
+    bottom: 18px;
+    width: 100%;
+    height: 81px;
+    box-shadow: none;
+    position: fixed;
+    overflow: hidden;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.background_btn_wrap {
+    display: none;
+}
+
 
 .header_up_wrap {
     margin-top: 10px;
@@ -410,6 +425,7 @@ input[type=checkbox] {
 .header_up_wrap h1 span {
     color: #FA4A0C;
 }
+
 
 .header {    
     margin: 0 auto;
@@ -433,6 +449,7 @@ input[type=checkbox] {
 .menu img {
     width: 100px;
 }
+
 
 
 .low_header {
@@ -552,7 +569,7 @@ input[type=checkbox] {
     margin: 30px 0px 40px 0px;
     text-align: center;
 }
-.prise h6, .second_block_card h6 {
+.prise h6 {
     font-size: 18px;
     border: 2px solid #fff;
     border-radius: 10px; 
@@ -839,31 +856,35 @@ input[type=checkbox] {
 
     .menu_msg_eyes {
         padding-bottom: 30px;
-        left: 125px;
+        left: 115px;
         width: 80px;
     }
     .menu_sv {
-        padding-bottom: 13px;
+        padding-bottom: 14px;
         margin-top: 710px;
-        margin-bottom: 0;
+        margin-bottom: -4px;
         width: 80px;
-        left: 40px;
+        left: 30px;
     }
 
     .menu_taxi {
         padding-bottom: 30px;
         bottom: 0;
         margin-bottom: 10px;
-        right: 125px;
+        right: 115px;
         width: 80px;
         padding-right: 35px;
     }
 
     .menhouse_faq {
         width: 80px;
-        bottom: 10px;
-        right: 40px;
+        padding-bottom: 30px;
+        right: 30px;
         padding-right: 35px;
+    }
+
+    .background_btn_wrap {
+        display: block;
     }
 
     #sidebarMenu1 {
@@ -894,5 +915,11 @@ input[type=checkbox] {
     }
     .second_block_card_2 {
         justify-content: space-around;
+    }
+    .prise h6 {
+        font-size: 16px;
+    }
+    .block_5 h5 {
+        font-size: 14px;
     }
 }

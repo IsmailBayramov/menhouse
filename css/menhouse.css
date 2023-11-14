@@ -163,7 +163,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     z-index: 10;
 }
 #sidebarMenu1 {
-    height: 50%;
+    height: fit-content;
     position: fixed;
     left: 0;
     width: 200px;
@@ -242,7 +242,7 @@ input[type=checkbox] {
     z-index: 10;
 }
 #sidebarMenu2 {
-    height: 50%;
+    height: fit-content;
     position: fixed;
     left: 0;
     width: 200px;
@@ -1341,10 +1341,6 @@ input[type=checkbox] {
         padding-bottom: 30px;
         right: 40px;
         padding-right: 35px;
-    }
-
-    .menu_border {
-        
     }
 
     .sidebarMenuInner1 li{
