@@ -394,6 +394,22 @@ input[type=checkbox] {
     border-radius: 30px;
 }
 
+.backgroung_btn_p {
+    right: 0;
+    bottom: 18px;
+    width: 100%;
+    height: 81px;
+    box-shadow: none;
+    position: fixed;
+    overflow: hidden;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.background_btn_wrap {
+    display: none;
+}
+
+
 
 
 .header_up_wrap {
@@ -1358,6 +1374,10 @@ input[type=checkbox] {
 
     .slider {
         width: auto;
+    }
+
+    .background_btn_wrap {
+        display: block;
     }
 
 }
