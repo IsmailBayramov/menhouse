@@ -6,4 +6,3 @@ window.onload = function () {
       slidesToScroll: 1
     });
   };
-  
