@@ -566,7 +566,6 @@ input[type=checkbox] {
 .open-popup {
     display: inline-block;
     padding: 10px 20px;
-    text-transform: uppercase;
     background: #FA4A0C;
     color: #060606;
     text-decoration: none;
@@ -676,6 +675,9 @@ input[type=checkbox] {
     background: #fff;
     color:#FA4A0C;
     transition: 0.5s all;
+} 
+.popup option:checked {  
+    color: #FA4A0C;
 }
 
 
