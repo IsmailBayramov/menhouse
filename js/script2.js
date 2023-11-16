@@ -22,3 +22,29 @@ document.addEventListener('click', (e) => {
         popup.classList.remove('active');
     }
 });
+
+
+let popupBg2 = document.querySelector('.popup__bg2');
+let popup2 = document.querySelector('.popup2');
+let openPopupButtons2 = document.querySelectorAll('.button_will_respond_ozn');
+let closePopupButton2 = document.querySelector('.close-popup2');
+
+openPopupButtons2.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        popupBg2.classList.add('active');
+        popup2.classList.add('active');
+    })
+});
+
+closePopupButton2.addEventListener('click',() => {
+    popupBg2.classList.remove('active');
+    popup2.classList.remove('active');
+});
+
+document.addEventListener('click', (e) => {
+    if(e.target === popupBg2) {
+        popupBg2.classList.remove('active');
+        popup2.classList.remove('active');
+    }
+});
