@@ -238,13 +238,13 @@
             </label>
             <div id="sidebarMenu">
                 <ul class="sidebarMenuInner">
-                    <li><a href="menhouse.html" target="_blank"><img src="img/LOGO.png" alt></a></li>
-                    <li><a href target="_blank">Модели</a></li>
-                    <li><a href target="_blank">Программы</a></li>
-                    <li><a href target="_blank">Апартаменты</a></li>
-                    <li><a href target="_blank">Контакты</a></li>
-                    <li><a href target="_blank">Сертификаты</a></li>
-                    <li><a href="vacancies.html" target="_blank">Вакансии</a></li>
+                    <li><a href="./" target="_blank"><img src="img/LOGO.png" alt=""></a></li>
+                    <li><a href="./modeli" target="_blank">Модели</a></li>
+                    <li><a href="./programms" target="_blank">Программы</a></li>
+                    <li><a href="./appartamenti" target="_blank">Апартаменты</a></li>
+                    <li><a href="./kontakti" target="_blank">Контакты</a></li>
+                    <li><a href="./sertificaty" target="_blank">Сертификаты</a></li>
+                    <li><a href="./vacancies.php" target="_blank">Вакансии</a></li>
                 </ul>
             </div>
         </div>
@@ -268,13 +268,13 @@
         <header class="header">
             <nav>
                 <ul class="menu">
-                    <li><a href="menhouse.html"><img src="img/LOGO.png" alt></a></li>
-                    <li><a href>Модели</a></li>
-                    <li><a href>Программы</a></li>
-                    <li><a href>Апартаменты</a></li>
-                    <li><a href>Контакты</a></li>
-                    <li><a href>Сертификаты</a></li>
-                    <li><a href="vacancies.html">Вакансии</a></li>
+                    <li><a href="./"><img src="img/LOGO.png" alt=""></a></li>
+                    <li><a href="./modeli">Модели</a></li>
+                    <li><a href="./programms">Программы</a></li>
+                    <li><a href="./appartamenti">Апартаменты</a></li>
+                    <li><a href="./kontakti">Контакты</a></li>
+                    <li><a href="./sertificaty">Сертификаты</a></li>
+                    <li><a href="./vacancies.php">Вакансии</a></li>
                 </ul>
             </nav>
         </header>
