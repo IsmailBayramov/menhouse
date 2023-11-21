@@ -52,6 +52,7 @@ body {
     height: 100%;
     position: fixed;
     left: 0;
+    display: none;
     width: 250px;
     margin-top: 0px;
  
@@ -1230,7 +1231,7 @@ input[type=checkbox] {
 .footer_left_text h2 {
     width: 230px;
     font-size: 16px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 .footer_left_text a {
     font-size: 14px;

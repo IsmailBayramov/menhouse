@@ -86,6 +86,15 @@ async function toggleSidebar(sb) {
   }
 }
 
+
+function hidePanel() {
+  var panel = document.getElementById('sidebarMenu');
+  var hideCheckbox = document.getElementById('openSidebarMenu');
+  panel.style.display = hideCheckbox.checked ? 'block' : 'none';
+}
+
+
+$("#openSidebarMenu").click(() => hidePanel());
 $("#openSidebarMenu1").click(() => toggleSidebar(1));
 $("#openSidebarMenu2").click(() => toggleSidebar(2));
 
