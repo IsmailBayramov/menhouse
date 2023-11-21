@@ -154,7 +154,7 @@
             <div id="sidebarMenu3">
                 <ul class="sidebarMenuInner0">
                     <form action="./newCustomer.php" method="POST">
-                        <input type="hidden" name="page" value="index">
+                        <input type="hidden" name="page" value="vacancies">
                         <ul>
                             <li>Бесплатно привезём Вас в наш салон</li>
                             <li>
@@ -218,8 +218,8 @@
         </div>
     </section>
     <section class="menhouse_faq_wrap">
-        <div class="menhouse_faq menu_border">
-            <a href="https://menhouse-club.ru/faq" class="sidebarIconToggle_faq"><img src="/img/pngegg.png" alt=""></a>
+        <div class="menhouse_faq">
+            <a href="https://menhouse-club.ru/faq" class="sidebarIconToggle_faq"><img src="/img/pngegg.png" alt></a>
         </div>
     </section>
     <section class="background_btn_wrap">
@@ -645,7 +645,7 @@
             </div>
             <div class="footer_centre">
                 <h2>Правила посещения</h2>
-                <a href="" class="button_will_respond_ozn">Ознакомится</a>
+                <a href="" class="button_will_respond_ozn">Ознакомиться</a>
             </div>
             <div class="footer_right">
                 <h2>Мы в социальных сетях</h2>

@@ -52,6 +52,7 @@ body {
     height: 100%;
     position: fixed;
     left: 0;
+    display: none;
     width: 250px;
     margin-top: 0px;
  
