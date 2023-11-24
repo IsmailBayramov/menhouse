@@ -10,8 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let countApartments = 0;
   let widthSales;
   let widthApartments;
+  let intervalIdSales;
+  let intervalIdApartments;
 
-  const initSlider = (sliderClass, countVar, widthVar) => {
+  const initSlider = (sliderClass, countVar, widthVar, intervalIdVar) => {
+    // ... (код инициализации слайдера остается без изменений)
     const images = document.querySelectorAll(`.${sliderClass} .slider .slider-line img`);
     const sliderLine = document.querySelector(`.${sliderClass} .slider .slider-line`);
 
@@ -35,11 +38,39 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', init);
     document.querySelector(`.${sliderClass} .slider-prev`).addEventListener('click', prevSlide);
     document.querySelector(`.${sliderClass} .slider-next`).addEventListener('click', nextSlide);
+
+    const startAutoSlide = () => {
+      intervalIdVar = setInterval(() => {
+        nextSlide();
+      }, 4000);
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(intervalIdVar);
+    };
+
+    const resetAutoSlide = () => {
+      stopAutoSlide();
+      startAutoSlide();
+    };
+
+    document.querySelector(`.${sliderClass} .slider-prev`).addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    document.querySelector(`.${sliderClass} .slider-next`).addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    startAutoSlide();
   };
 
-  initSlider('sales', countSales, widthSales);
-  initSlider('apartments', countApartments, widthApartments);
+  initSlider('sales', countSales, widthSales, intervalIdSales);
+  initSlider('apartments', countApartments, widthApartments, intervalIdApartments);
 });
+
 </script>
 
 <template>
@@ -168,7 +199,7 @@ progress {
   display: flex;
   position: relative;
   left: 0;
-  transition: all ease .6s;
+  transition: all ease .9s;
 }
 
 .slider-button {

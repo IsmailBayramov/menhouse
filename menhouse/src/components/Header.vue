@@ -1,13 +1,26 @@
 <script setup>
-
 // Скрывает Header при скроллинге
 window.onscroll = function() {
+  const nav = document.querySelector('nav');
+  const headerText = document.querySelector('.header-text');
+  const advantageItems = document.querySelectorAll(".advantage-item");
+  const screenWidth = window.innerWidth;
   const currentScrollPos = window.pageYOffset;
 
-  if (currentScrollPos <= 50) {
-    document.querySelector(".header-text").classList.remove("header-text-hidden");
-  } else {
-    document.querySelector(".header-text").classList.add("header-text-hidden");
+  advantageItems.forEach(function(item) {
+    if (currentScrollPos >= 50) {
+      item.classList.remove("advantage-item-hidden");
+    } else {
+      item.classList.add("advantage-item-hidden");
+    }
+  });
+
+  if (currentScrollPos <= 50  && screenWidth > 450) {
+    headerText.classList.remove("header-text-hidden");
+    nav.classList.remove("hidden");
+  } else if (screenWidth > 450) {
+    headerText.classList.add("header-text-hidden");
+    nav.classList.add("hidden");
   }
 };
 
@@ -21,7 +34,10 @@ window.addEventListener('resize', () => {
   if (screenWidth > 450 && getComputedStyle(menu).display === 'none') {
     menu.style.display = 'flex';
   }
-  if (screenWidth <= 450 && getComputedStyle(menu).display === 'flex') {
+  else if (screenWidth < 450) {
+    document.querySelector("nav").classList.remove("hidden");
+  }
+  else if (screenWidth <= 450 && getComputedStyle(menu).display === 'flex') {
     burgerMenu.classList.remove('active');
     menu.style.display = 'none';
   }
@@ -100,10 +116,14 @@ const toggleMenu = () => {
   font-weight: 700;
   border-bottom: 1px solid #474747;
   padding-bottom: 10px;
+  opacity: 1;
+  transition: opacity 1s, visibility 0s;
 }
 
 .header-text-hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 0s 1s;
 }
 
 .header-text-orange {
@@ -120,6 +140,11 @@ nav {
   justify-content: center;
   padding-bottom: 5px;
   margin-top: 15px;
+  transition: .8s;
+}
+
+nav.hidden {
+  margin-top: -28px;
 }
 
 nav a {

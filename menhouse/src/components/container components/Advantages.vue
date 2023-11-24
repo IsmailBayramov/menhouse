@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
     <p class="container-title">Наши <span class="container-orange-title">Преимущества</span></p>
     <div class="our advantages">
@@ -45,6 +49,11 @@
 .advantage-item {
   text-align: center;
   margin-right: calc(.5em + 3.5vw);
+  transition: opacity 0.6s ease-in-out;
+}
+
+.advantage-item-hidden {
+  opacity: 0;
 }
 
 .advantage-item:last-child {
