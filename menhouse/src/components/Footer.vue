@@ -42,7 +42,7 @@
 .footer-content {
   padding: 2em 0 4em 0;
   display: flex;
-  background-color: #1f1f1f;
+  background-color: #0f0f0f;
   width: 100%;
 }
 
@@ -101,6 +101,10 @@
 
   .column {
     align-items: center;
+  }
+
+  .column:nth-child(n+2) {
+    padding-top: 15px;
   }
   
 }

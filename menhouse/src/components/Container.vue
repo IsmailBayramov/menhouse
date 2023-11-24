@@ -1,7 +1,45 @@
 <script setup>
-import { ref, reactive } from 'vue';
+import Models from './container components/Models.vue'
+import Map from './container components/Map.vue'
+import Advantages from './container components/Advantages.vue'
+import Sales from './container components/Sales.vue'
+import Apartments from './container components/Apartments.vue'
 
+document.addEventListener('DOMContentLoaded', () => {
+  let countSales = 0;
+  let countApartments = 0;
+  let widthSales;
+  let widthApartments;
 
+  const initSlider = (sliderClass, countVar, widthVar) => {
+    const images = document.querySelectorAll(`.${sliderClass} .slider .slider-line img`);
+    const sliderLine = document.querySelector(`.${sliderClass} .slider .slider-line`);
+
+    const rollSlider = () => sliderLine.style.transform = `translate(-${countVar * widthVar}px)`;
+    const nextSlide = () => rollSlider(countVar = (countVar + 1) % images.length);
+    const prevSlide = () => rollSlider(countVar = (countVar - 1 + images.length) % images.length);
+
+    const init = () => {
+      widthVar = document.querySelector(`.${sliderClass} .slider`).offsetWidth;
+      sliderLine.style.width = `${widthVar * images.length}px`;
+
+      images.forEach(item => {
+        item.style.width = `${widthVar}px`;
+        item.style.height = 'auto';
+      });
+
+      rollSlider();
+    };
+
+    init();
+    window.addEventListener('resize', init);
+    document.querySelector(`.${sliderClass} .slider-prev`).addEventListener('click', prevSlide);
+    document.querySelector(`.${sliderClass} .slider-next`).addEventListener('click', nextSlide);
+  };
+
+  initSlider('sales', countSales, widthSales);
+  initSlider('apartments', countApartments, widthApartments);
+});
 </script>
 
 <template>
@@ -10,35 +48,26 @@ import { ref, reactive } from 'vue';
       <img src="../assets/logo.png" alt="body_image" class="container-background-logo">
       <form action="https://apple.com" target="_blank"><button class="container-background-button">Записаться</button></form>
     </div>
-    <p class="container-title">Наши <span class="container-orange-title">Преимущества</span></p>
-    <p class="container-title">Текущие <span class="container-orange-title">Акции</span></p>
-    <p class="container-title">Модели <span class="container-orange-title">Студии</span></p>
-    <p class="container-title">Популярные <span class="container-orange-title">Программы</span></p>
-    <p class="container-title">Отзывы <span class="container-orange-title">Гостей</span></p>
 
-    <section class="map">
-        <div class="map_wrap">
-            <div class="header_up_wrapp">
-                <p class="container-title">Наши <span class="container-orange-title">Координаты</span></p>
-            </div>
-            <div style="position:relative;overflow:hidden;margin-bottom: 50px;">
-                <a href="https://yandex.ru/maps/11184/nefteugansk/?utm_medium=mapframe&utm_source=maps"
-                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Нефтеюганск</a>
-                <a href="https://yandex.ru/maps/11184/nefteugansk/house/14_y_mikrorayon_40/Y0sYcAViTkYBQFhrfXx2c3piYA==/?ll=72.622770%2C61.072573&utm_medium=mapframe&utm_source=maps&z=18"
-                    style="color:#eee;font-size:12px;position:absolute;top:14px;">14-й микрорайон, 40 на карте
-                    Нефтеюганска — Яндекс Карты</a>
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=72.622770%2C61.072573&mode=whatshere&whatshere%5Bpoint%5D=72.622736%2C61.072614&whatshere%5Bzoom%5D=17&z=18"
-                    width="100%" height="500" frameborder="1" allowfullscreen="true"
-                    style="position:relative;"></iframe>
-            </div>
-        </div>
-    </section>
+    <Advantages></Advantages>
+
+    <Sales></Sales>
+
+    <Models></Models>
+
+    <p class="container-title">Популярные <span class="container-orange-title">Программы</span></p>
+    <form action="https://apple.com" target="_blank"><button class="container-background-button">Смотреть больше</button></form>
+
+    <Apartments></Apartments>
+
+    <p class="container-title">Отзывы <span class="container-orange-title">Гостей</span></p>
+    <form action="https://apple.com" target="_blank"><button class="container-background-button">Оставить отзыв</button></form>
+
+    <Map></Map>
   </div>
-  
 </template>
 
-<style scoped>
+<style>
 progress {
   width: 70vw;
   max-width: 350px;
@@ -83,6 +112,7 @@ progress {
 }
 
 .container-background-button {
+  cursor: pointer;
   color: white;
   padding: 10px 20px 10px 20px;
   background-color: #ff320d;
@@ -93,17 +123,12 @@ progress {
   border-radius: 10px;
 }
 
+.container-background-button.advantage {
+  margin-top: calc(.5em + .5vw);
+}
+
 .container-background-button:hover {
   background-color: rgb(168, 34, 11);
-}
-
-.count-text {
-  margin-bottom: 10px;
-  font-size: calc(.7em + 1.3vw);
-}
-
-.count-value {
-  color: gold;
 }
 
 .container-button {
@@ -121,5 +146,57 @@ progress {
 
 .container-button:hover {
   background-color: rgb(202, 202, 202);
+}
+
+.our.sales, .our.apartments, .our.models {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  border: 2px solid black;
+  /* width: 100%; */
+  max-width: 60%;
+  /* height: 300px; */
+  margin: 20px 1em;
+  overflow: hidden;
+}
+
+.slider-line {
+  width: 1024px;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease .6s;
+}
+
+.slider-button {
+  background: none;
+  font-size: calc(.5em + 1vw);
+  max-width: fit-content;
+  border: none;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  border-top: 5px solid #ff320d !important;
+  border-right: 5px solid #ff320d !important;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  border-top: 5px solid rgb(168, 34, 11) !important;
+  border-right: 5px solid rgb(168, 34, 11) !important;
+}
+
+.arrow.left {
+  transform: rotate(-135deg);
+}
+
+.arrow.right {
+  transform: rotate(45deg);
 }
 </style>
