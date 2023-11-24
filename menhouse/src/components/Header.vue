@@ -28,18 +28,22 @@ window.onscroll = function() {
 window.addEventListener('resize', () => {
   const menu = document.querySelector('.menu');
   const burgerMenu = document.querySelector('.burger-menu');
+  const nav = document.querySelector('nav');
+  const headerText = document.querySelector('.header-text');
   const screenWidth = window.innerWidth;
 
   // Если ширина экрана больше 450px и меню видимо, скрываем его
   if (screenWidth > 450 && getComputedStyle(menu).display === 'none') {
     menu.style.display = 'flex';
-  }
-  else if (screenWidth < 450) {
-    document.querySelector("nav").classList.remove("hidden");
+    headerText.classList.remove("header-text-hidden");
+    nav.classList.remove("hidden");
   }
   else if (screenWidth <= 450 && getComputedStyle(menu).display === 'flex') {
     burgerMenu.classList.remove('active');
     menu.style.display = 'none';
+  }
+  else if (screenWidth < 450) {
+    document.querySelector("nav").classList.remove("hidden");
   }
 });
 
