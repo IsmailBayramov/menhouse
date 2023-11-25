@@ -4,6 +4,8 @@ import Map from './container components/Map.vue'
 import Advantages from './container components/Advantages.vue'
 import Sales from './container components/Sales.vue'
 import Apartments from './container components/Apartments.vue'
+import Review from './container components/Review.vue'
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let countSales = 0;
@@ -14,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let intervalIdApartments;
 
   const initSlider = (sliderClass, countVar, widthVar, intervalIdVar) => {
-    // ... (код инициализации слайдера остается без изменений)
     const images = document.querySelectorAll(`.${sliderClass} .slider .slider-line img`);
     const sliderLine = document.querySelector(`.${sliderClass} .slider .slider-line`);
 
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initSlider('sales', countSales, widthSales, intervalIdSales);
   initSlider('apartments', countApartments, widthApartments, intervalIdApartments);
+  initSlider('review', countApartments, widthApartments, intervalIdApartments);
 });
 
 </script>
@@ -91,19 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <Apartments></Apartments>
 
-    <p class="container-title">Отзывы <span class="container-orange-title">Гостей</span></p>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button">Оставить отзыв</button></form>
+    <Review></Review>
 
     <Map></Map>
   </div>
 </template>
 
 <style>
-progress {
-  width: 70vw;
-  max-width: 350px;
-}
-
 .container {
   padding-top: 50px;
   text-align: center;
@@ -179,7 +175,7 @@ progress {
   background-color: rgb(202, 202, 202);
 }
 
-.our.sales, .our.apartments, .our.models {
+.our.sales, .our.apartments, .our.models, .our.review {
   display: flex;
   justify-content: center;
   align-items: center;
