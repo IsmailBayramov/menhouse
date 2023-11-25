@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initSlider('sales', countSales, widthSales, intervalIdSales);
   initSlider('apartments', countApartments, widthApartments, intervalIdApartments);
-  initSlider('review', countApartments, widthApartments, intervalIdApartments);
 });
 
 </script>
@@ -225,5 +224,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .arrow.right {
   transform: rotate(45deg);
+}
+
+
+.reviews button {
+    visibility: collapse;
 }
 </style>

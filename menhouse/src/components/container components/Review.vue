@@ -1,68 +1,99 @@
+<script setup>
+    window.onload = function () {
+        $(".reviews-slider").slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            arrows: true,
+            slidesToScroll: 1,
+        });
+    };
+</script>
+
 <template>
     <p class="container-title">Отзывы <span class="container-orange-title">Гостей</span></p>
-    <div class="our review">
-        <button class="slider-button slider-prev"><div class="arrow left"></div></button>
-        <div class="slider">
-            <div class="slider-line">
-                <div class="review-card">
-                    <div class="text-container">
-                        <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
+    <section class="our reviews">
+        <div class="reviews-container">
+            <div class="reviews-slider">
+                <div class="slide">
+                    <div class="review">
+                        <div class="review-content">
+                            <img src="../../assets/review_template.png" alt="">
+                            <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
+                        </div>
+                        <div class="review-author">
+                            <h2 class="author-name">Антон</h2>
+                        </div>
                     </div>
-                    <p class="reviewer-name">Антон</p>
                 </div>
-                <div class="review-card">
-                    <div class="text-container">
-                        <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
+                <div class="slide">
+                    <div class="review">
+                        <div class="review-content">
+                            <img src="../../assets/review_template.png" alt="">
+                            <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
+                        </div>
+                        <div class="review-author">
+                            <h2 class="author-name">Антон</h2>
+                        </div>
                     </div>
-                    <p class="reviewer-name">Антон</p>
-                </div>
-                <div class="review-card">
-                    <div class="text-container">
-                        <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
-                    </div>
-                    <p class="reviewer-name">Антон</p>
                 </div>
             </div>
         </div>
-        <button class="slider-button slider-next"><div class="arrow right"></div></button>
-    </div>
+    </section>
     <form action="https://apple.com" target="_blank"><button class="container-background-button">Оставить отзыв</button></form>
 </template>
 
 <style scoped>
+
+.reviews {
+    margin-bottom: -3rem;
+}
+
+.reviews button {
+    visibility: collapse;
+}
+
+.reviews-slider {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.slider img {
+    display: block;
+    margin: auto;
+}
+
 .review {
-    margin: 10px;
-    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
-.review-card {
-    height: auto;
+.review-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    background-color: #fff;
+    border-radius: 100px 30px 30px 100px;
+}
+.review-content img {
+    width: 20%;
 }
 
-.text-container {
-    background: url("../../assets/review_template.png") no-repeat center center;
-    background-size: contain;
-    padding: 5% 5% 5% 20%;
-}
-
-/* .review img {
-    width: calc(5em + 45vw);
-} */
-
-.review p {
+.author-name {
     font-size: calc(.4em + .8vw);
-    font-weight: 500;
-}   
+    padding-left: 0.6em; /* Используем em */
+    text-align: left;
+}
 
 .review-text {
     color: black;
-    width: 100%;
-    /* margin: calc(5% + 20px) calc(1% + 45px) calc(5% + 20px) calc(17% + 45px); */
+    font-size: calc(.5em + .8vw);
+    font-weight: 500;
+    padding-left: 2.5em; /* Используем em */
+    padding-right: 1.25em; /* Используем em */
 }
 
-.reviewer-name {
+@media (max-width: 455px) {
+    .reviews-slider {
+        width: auto;
+    }
 }
+
 </style>
