@@ -2,7 +2,7 @@
   <footer class="footer-container">
     <div class="footer-content">
       <div class="column">
-        <img src="../assets/logo.png" alt="" class="footer-logo">
+        <img src="../../assets/logo.png" alt="" class="footer-logo">
       </div>
       <div class="column">
         <p>Спа салон для независимых и сильных мужчин</p>
@@ -15,10 +15,10 @@
       <div class="column">
         <p>Мы в социальных сетях</p>
         <div class="column-buttons">
-          <a href="https://apple.com" target="_blank"><img src="../assets/icon-whatsapp.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../assets/icon-instagram.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../assets/icon-vk.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../assets/icon-telegram.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-whatsapp.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-instagram.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-vk.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-telegram.png" alt="" class="column-link-button"></a>
         </div>
       </div>
     </div>
@@ -94,7 +94,15 @@
   height: auto; /* Сохранение пропорций */
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 550px) {
+  .footer-container {
+    font-size: calc(.8em + .5vw);
+  }
+
+  .footer-container p {
+    text-align: center;
+  }
+
   .footer-content {
     flex-direction: column;
   }

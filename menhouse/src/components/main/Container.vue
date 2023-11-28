@@ -5,7 +5,7 @@ import Advantages from './container components/Advantages.vue'
 import Sales from './container components/Sales.vue'
 import Apartments from './container components/Apartments.vue'
 import Review from './container components/Review.vue'
-
+import Programms from './container components/Programms.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
   let countSales = 0;
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let intervalIdApartments;
 
   const initSlider = (sliderClass, countVar, widthVar, intervalIdVar) => {
-    const images = document.querySelectorAll(`.${sliderClass} .slider .slider-line img`);
+    const images = document.querySelectorAll(`.${sliderClass} .slider .slider-line .slide-content`);
     const sliderLine = document.querySelector(`.${sliderClass} .slider .slider-line`);
 
     const rollSlider = () => sliderLine.style.transform = `translate(-${countVar * widthVar}px)`;
-    const nextSlide = () => rollSlider(countVar = (countVar + 1) % images.length);
-    const prevSlide = () => rollSlider(countVar = (countVar - 1 + images.length) % images.length);
+    const prevSlide = () => rollSlider(countVar = (countVar + 1) % images.length);
+    const nextSlide = () => rollSlider(countVar = (countVar - 1 + images.length) % images.length);
 
     const init = () => {
       widthVar = document.querySelector(`.${sliderClass} .slider`).offsetWidth;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startAutoSlide = () => {
       intervalIdVar = setInterval(() => {
-        nextSlide();
+        prevSlide();
       }, 4000);
     };
 
@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initSlider('sales', countSales, widthSales, intervalIdSales);
+  initSlider('programms', countSales, widthSales, intervalIdSales);
   initSlider('apartments', countApartments, widthApartments, intervalIdApartments);
 });
 
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <template>
   <div class="container">
     <div class="container-background">
-      <img src="../assets/logo.png" alt="body_image" class="container-background-logo">
+      <img src="../../assets/logo.png" alt="body_image" class="container-background-logo">
       <form action="https://apple.com" target="_blank"><button class="container-background-button">Записаться</button></form>
     </div>
 
@@ -87,8 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <Models></Models>
 
-    <p class="container-title">Популярные <span class="container-orange-title">Программы</span></p>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button">Смотреть больше</button></form>
+    <Programms></Programms>
 
     <Apartments></Apartments>
 
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 .container-background {
-  background: url("../assets/body-background.png") no-repeat center center;
+  background: url("../../assets/body-background.png") no-repeat center center;
   background-size: cover; /* или background-size: 100% 100%; */
   background-repeat: repeat; /* Или background-repeat: no-repeat; если не хотите замощения */
   position: relative;
@@ -226,8 +226,17 @@ document.addEventListener('DOMContentLoaded', () => {
   transform: rotate(45deg);
 }
 
-
 .reviews button {
-    visibility: collapse;
+  visibility: collapse;
+}
+
+@media (max-width: 550px) {
+  .container-title {
+    font-size: calc(1em + 2vw);
+  }
+
+  .container-background-button {
+    font-size: calc(.7em + 1vw);
+  }
 }
 </style>

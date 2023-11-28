@@ -17,7 +17,7 @@
                 <div class="slide">
                     <div class="review">
                         <div class="review-content">
-                            <img src="../../assets/review_template.png" alt="">
+                            <img src="../../../assets/review_template.png" alt="">
                             <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
                         </div>
                         <div class="review-author">
@@ -28,7 +28,7 @@
                 <div class="slide">
                     <div class="review">
                         <div class="review-content">
-                            <img src="../../assets/review_template.png" alt="">
+                            <img src="../../../assets/review_template.png" alt="">
                             <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
                         </div>
                         <div class="review-author">

@@ -2,7 +2,7 @@
     <p class="container-title">Модели <span class="container-orange-title">Студии</span></p>
     <div class="our models">
       <div class="model-card">
-        <img src="../../assets/models/1.png" alt="model"/>
+        <img src="../../../assets/models/1.png" alt="model"/>
         <p>
           Имя: <span>Вика</span><br>
           Вес: <span>50</span><br>
@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="model-card">
-        <img src="../../assets/models/2.png" alt="model"/>
+        <img src="../../../assets/models/2.png" alt="model"/>
         <p>
           Имя: <span>Илона</span><br>
           Вес: <span>45</span><br>
@@ -22,7 +22,7 @@
         </p>
       </div>
       <div class="model-card">
-        <img src="../../assets/models/3.png" alt="model"/>
+        <img src="../../../assets/models/3.png" alt="model"/>
         <p>
           Имя: <span>Аиша</span><br>
           Вес: <span>50</span><br>
@@ -76,7 +76,7 @@
   font-weight: 100;
 }
 
-@media (max-width: 435px) {
+@media (max-width: 550px) {
   .our.models {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -87,16 +87,18 @@
     margin-top: 15px;
   }
 
-  .model-card:first-child, .model-card:last-child {
-    top: 0;
-  }
-
   .model-card img {
     width: calc(5em + 15vw);
   }
 
   .model-card p {
-    font-size: calc(.4em + 1.5vw);
+    font-size: calc(.5em + 1.5vw);
+  }
+}
+
+@media (max-width: 435px) {
+  .model-card:first-child, .model-card:last-child {
+    top: 0;
   }
 }
 </style>

@@ -1,4 +1,5 @@
 <script setup>
+const sizeForBurger = 550
 // Скрывает Header при скроллинге
 window.onscroll = function() {
   const nav = document.querySelector('nav');
@@ -15,10 +16,10 @@ window.onscroll = function() {
     }
   });
 
-  if (currentScrollPos <= 50  && screenWidth > 450) {
+  if (currentScrollPos <= 50 ) {
     headerText.classList.remove("header-text-hidden");
     nav.classList.remove("hidden");
-  } else if (screenWidth > 450) {
+  } else if (screenWidth > sizeForBurger) {
     headerText.classList.add("header-text-hidden");
     nav.classList.add("hidden");
   }
@@ -33,16 +34,16 @@ window.addEventListener('resize', () => {
   const screenWidth = window.innerWidth;
 
   // Если ширина экрана больше 450px и меню видимо, скрываем его
-  if (screenWidth > 450 && getComputedStyle(menu).display === 'none') {
+  if (screenWidth > sizeForBurger && getComputedStyle(menu).display === 'none') {
     menu.style.display = 'flex';
     headerText.classList.remove("header-text-hidden");
     nav.classList.remove("hidden");
   }
-  else if (screenWidth <= 450 && getComputedStyle(menu).display === 'flex') {
+  else if (screenWidth <= sizeForBurger && getComputedStyle(menu).display === 'flex') {
     burgerMenu.classList.remove('active');
     menu.style.display = 'none';
   }
-  else if (screenWidth < 450) {
+  else if (screenWidth < sizeForBurger) {
     document.querySelector("nav").classList.remove("hidden");
   }
 });
@@ -52,7 +53,7 @@ const scrollToTop = () => {
   const menu = document.querySelector('.menu');
   const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 450 && getComputedStyle(menu).display === 'flex') {
+  if (screenWidth <= sizeForBurger && getComputedStyle(menu).display === 'flex') {
     menu.style.display = 'none';
     burgerMenu.classList.remove('active');
   }
@@ -196,7 +197,7 @@ nav a:hover {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .header-text {
     display: none;
   }
