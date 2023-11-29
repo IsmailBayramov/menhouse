@@ -1,11 +1,11 @@
 <script setup>
-import Models from './container components/Models.vue'
-import Map from './container components/Map.vue'
-import Advantages from './container components/Advantages.vue'
-import Sales from './container components/Sales.vue'
-import Apartments from './container components/Apartments.vue'
-import Review from './container components/Review.vue'
-import Programms from './container components/Programms.vue'
+import Models from '../Home/Components/Models.vue'
+import Map from '../Home/components/Map.vue'
+import Advantages from '../Home/Components/Advantages.vue'
+import Sales from '../Home/Components/Sales.vue'
+import Apartments from '../Home/Components/Apartments.vue'
+import Review from '../Home/Components/Review.vue'
+import Programms from '../Home/Components/Programms.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
   let countSales = 0;
@@ -81,19 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
       <img src="../../assets/logo.png" alt="body_image" class="container-background-logo">
       <form action="https://apple.com" target="_blank"><button class="container-background-button">Записаться</button></form>
     </div>
-
     <Advantages></Advantages>
-
     <Sales></Sales>
-
     <Models></Models>
-
     <Programms></Programms>
-
     <Apartments></Apartments>
-
     <Review></Review>
-
     <Map></Map>
   </div>
 </template>

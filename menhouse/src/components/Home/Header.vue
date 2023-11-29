@@ -82,13 +82,13 @@ const toggleMenu = () => {
       </span>
       <nav>
         <div class="menu">
-          <a @click="scrollToTop">Men<span class="header-text-orange">house</span></a>
-          <a href="./models">Модели</a>
-          <a href="./programms">Программы</a>
-          <a href="./apartments">Апартаменты</a>
-          <a href="./contacts">Контакты</a>
-          <a href="./certificates">Сертификаты</a>
-          <a href="./vacancies">Вакансии</a>
+          <RouterLink to="/" @click="scrollToTop">Men<span class="header-text-orange">house</span></RouterLink>
+          <RouterLink to="/">Модели</RouterLink>
+          <RouterLink to="/">Программы</RouterLink>
+          <RouterLink to="/">Апартаменты</RouterLink>
+          <RouterLink to="/">Контакты</RouterLink>
+          <RouterLink to="/">Сертификаты</RouterLink>
+          <RouterLink to="/vacancies">Вакансии</RouterLink>
         </div>
         <div class="burger-menu" @click="toggleMenu">
           <div class="burger-line"></div>
