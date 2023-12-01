@@ -6,8 +6,9 @@ import Sales from '../Home/Components/Sales.vue'
 import Apartments from '../Home/Components/Apartments.vue'
 import Review from '../Home/Components/Review.vue'
 import Programms from '../Home/Components/Programms.vue'
+import { onMounted } from 'vue'
 
-document.addEventListener('DOMContentLoaded', () => {
+onMounted(() => {
   let countSales = 0;
   let countApartments = 0;
   let widthSales;
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlider('sales', countSales, widthSales, intervalIdSales);
   initSlider('programms', countSales, widthSales, intervalIdSales);
   initSlider('apartments', countApartments, widthApartments, intervalIdApartments);
-});
+})
 
 </script>
 

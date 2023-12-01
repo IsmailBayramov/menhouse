@@ -2,6 +2,8 @@
 import Background from '../Vacancies/Background.vue';
 import Salaries from '../Vacancies/Salaries.vue';
 import FreeVacancies from '../Vacancies/FreeVacancies.vue';
+import Requirements from '../Vacancies/Requirements.vue';
+import Advantages from '../Vacancies/Advantages.vue';
 </script>
 
 <template>
@@ -9,6 +11,8 @@ import FreeVacancies from '../Vacancies/FreeVacancies.vue';
     <Background></Background>
     <Salaries></Salaries>
     <FreeVacancies></FreeVacancies>
+    <Requirements></Requirements>
+    <Advantages></Advantages>
   </div>
 </template>
 
