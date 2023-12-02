@@ -1,11 +1,12 @@
 <script setup>
-import Models from '../Home/Components/Models.vue'
-import Map from '../Home/components/Map.vue'
-import Advantages from '../Home/Components/Advantages.vue'
-import Sales from '../Home/Components/Sales.vue'
-import Apartments from '../Home/Components/Apartments.vue'
-import Review from '../Home/Components/Review.vue'
-import Programms from '../Home/Components/Programms.vue'
+import Models from '../Home/Models.vue'
+import Map from '../Home/Map.vue'
+import Advantages from '../Home/Advantages.vue'
+import Sales from '../Home/Sales.vue'
+import Apartments from '../Home/Apartments.vue'
+import Review from '../Home/Review.vue'
+import Programms from '../Home/Programms.vue'
+import BorderButtons from '../General/BorderButtons.vue'
 import { onMounted } from 'vue'
 
 onMounted(() => {
@@ -77,7 +78,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" id="modalWindow">
     <div class="container-background">
       <img src="../../assets/logo.png" alt="body_image" class="container-background-logo">
       <form action="https://apple.com" target="_blank"><button class="container-background-button">Записаться</button></form>
@@ -89,6 +90,7 @@ onMounted(() => {
     <Apartments></Apartments>
     <Review></Review>
     <Map></Map>
+    <BorderButtons></BorderButtons>
   </div>
 </template>
 
@@ -104,7 +106,6 @@ onMounted(() => {
 .container-title {
   padding: 1em 0 0 0;
   font-weight: 500;
-  /* font-size: calc(.8em + 1.7vw); */
   font-size: calc(.5em + 2vw);
 }
 
@@ -113,7 +114,7 @@ onMounted(() => {
 }
 
 .container-background {
-  background: url("../../assets/body-background.png") no-repeat center center;
+  background: url("../../assets/background.png") no-repeat center center;
   background-size: cover; /* или background-size: 100% 100%; */
   background-repeat: repeat; /* Или background-repeat: no-repeat; если не хотите замощения */
   position: relative;

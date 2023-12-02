@@ -6,27 +6,31 @@
       </div>
       <div class="column">
         <p>Спа салон для независимых и сильных мужчин</p>
-        <form action="tel:+7 912 512 0016"><button class="column-button">Записаться</button></form>
+        <a href="tel:+7 912 512 0016"><button class="column-button">Записаться</button></a>
       </div>
       <div class="column">
         <p>Правила посещения</p>
-        <form action="https://apple.com" target="_blank"><button class="column-button">Ознакомиться</button></form>
+        <a href="https://apple.com" target="_blank"><button class="column-button">Ознакомиться</button></a>
       </div>
       <div class="column">
         <p>Мы в социальных сетях</p>
         <div class="column-buttons">
-          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-whatsapp.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-instagram.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-vk.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../../assets/icon-telegram.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-whatsapp.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-instagram.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-vk.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-telegram.png" alt="" class="column-link-button"></a>
         </div>
       </div>
     </div>
     <p>2023 &copy; Все права защищены.</p>
   </footer>
 </template>
-  
+
 <style scoped>
+a {
+  width: fit-content;
+}
+
 .footer-container {
   font-size: calc(.5em + .5vw);
   display: flex;
@@ -101,10 +105,16 @@
 
   .footer-container p {
     text-align: center;
+    max-width: 80vw;
   }
 
   .footer-content {
     flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-left: 0;
+    width: 50vw;
   }
 
   .column {

@@ -1,5 +1,6 @@
 <script setup>
 const sizeForBurger = 550
+
 // Скрывает Header при скроллинге
 window.onscroll = function() {
   const nav = document.querySelector('nav');
@@ -64,6 +65,11 @@ const scrollToTop = () => {
   });
 };
 
+const allButtons = () => {
+  const burgerMenu = document.querySelector('.burger-menu');
+  burgerMenu.classList.remove('active');
+}
+
 const toggleMenu = () => {
   const burgerMenu = document.querySelector('.burger-menu');
   const menu = document.querySelector('.menu');
@@ -82,13 +88,13 @@ const toggleMenu = () => {
       </span>
       <nav>
         <div class="menu">
-          <RouterLink to="/" @click="scrollToTop">Men<span class="header-text-orange">house</span></RouterLink>
-          <RouterLink to="/">Модели</RouterLink>
-          <RouterLink to="/">Программы</RouterLink>
-          <RouterLink to="/">Апартаменты</RouterLink>
-          <RouterLink to="/">Контакты</RouterLink>
-          <RouterLink to="/">Сертификаты</RouterLink>
-          <RouterLink to="/vacancies">Вакансии</RouterLink>
+          <RouterLink to="/menhouse-app/" @click="scrollToTop">Men<span class="header-text-orange">house</span></RouterLink>
+          <RouterLink to="/menhouse-app/" @click="scrollToTop">Модели</RouterLink>
+          <RouterLink to="/menhouse-app/" @click="scrollToTop">Программы</RouterLink>
+          <RouterLink to="/menhouse-app/" @click="scrollToTop">Апартаменты</RouterLink>
+          <RouterLink to="/menhouse-app/" @click="scrollToTop">Контакты</RouterLink>
+          <RouterLink to="/menhouse-app/" @click="scrollToTop">Сертификаты</RouterLink>
+          <RouterLink to="/menhouse-app/vacancies" @click="scrollToTop">Вакансии</RouterLink>
         </div>
         <div class="burger-menu" @click="toggleMenu">
           <div class="burger-line"></div>

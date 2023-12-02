@@ -34,7 +34,9 @@
             </div>
         </div>
     </div>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button">Откликнуться</button></form>
+    <form action="https://apple.com" target="_blank">
+        <button class="container-background-button">Откликнуться</button>
+    </form>
 </template>
 
 <style scoped>
@@ -105,5 +107,19 @@
         max-width: 60%;
     }
 
+}
+
+@media (max-width: 450px) {
+    .requirements-container img {
+        display: none;
+    }
+
+    .title {
+        font-size: calc(.8em + .5vw);
+    }
+
+    .quality p {
+        font-size: calc(.7em + .5vw);
+    }
 }
 </style>

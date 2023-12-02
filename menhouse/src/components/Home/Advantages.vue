@@ -6,36 +6,38 @@
     <p class="container-title">Наши <span class="container-orange-title">Преимущества</span></p>
     <div class="our advantages">
       <div class="advantage-item">
-        <img src="../../../assets/icons/1.png" class="our-advantages-img" alt="24/7">
+        <img src="../../assets/icons/1.png" class="our-advantages-img" alt="24/7">
         <p class="our-advantages-img-caption">24/7</p>
       </div>
 
       <div class="advantage-item">
-        <img src="../../../assets/icons/2.png" class="our-advantages-img" alt="security">
+        <img src="../../assets/icons/2.png" class="our-advantages-img" alt="security">
         <p class="our-advantages-img-caption">Полная секретность</p>
       </div>
 
       <div class="advantage-item">
-        <img src="../../../assets/icons/3.png" class="our-advantages-img" alt="heart">
+        <img src="../../assets/icons/3.png" class="our-advantages-img" alt="heart">
         <p class="our-advantages-img-caption">Теплый прием</p>
       </div>
 
       <div class="advantage-item">
-        <img src="../../../assets/icons/4.png" class="our-advantages-img" alt="pay">
+        <img src="../../assets/icons/4.png" class="our-advantages-img" alt="pay">
         <p class="our-advantages-img-caption">Оплата по безналу</p>
       </div>
 
       <div class="advantage-item">
-        <img src="../../../assets/icons/5.png" class="our-advantages-img" alt="design">
+        <img src="../../assets/icons/5.png" class="our-advantages-img" alt="design">
         <p class="our-advantages-img-caption">Современный дизайн</p>
       </div>
 
       <div class="advantage-item">
-        <img src="../../../assets/icons/6.png" class="our-advantages-img" alt="programms">
+        <img src="../../assets/icons/6.png" class="our-advantages-img" alt="programms">
         <p class="our-advantages-img-caption">Большой выбор программ</p>
       </div>
     </div>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button advantage">Записаться</button></form>
+    <form action="https://apple.com" target="_blank">
+      <button class="container-background-button advantage">Записаться</button>
+    </form>
 </template>
 
 <style scoped>

@@ -7,7 +7,6 @@
         НАЧНИ ЗАРАБАТЫВАТЬ<br>
         <span class="salaries-orange-title">ОТ 50 000</span> РУБЛЕЙ В МЕСЯЦ
     </p>
-
     <div class="salaries-container">
         <div class="image-block">
             <div class="caption">
@@ -45,8 +44,6 @@
             <img src="../../assets/vacancies/salaries/5.png" alt="Картинка 2">
         </div>
     </div>
-
-    
 </template>
 
 <style scoped>

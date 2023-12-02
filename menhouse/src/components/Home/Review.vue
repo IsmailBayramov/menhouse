@@ -1,23 +1,35 @@
 <script setup>
-    window.onload = function () {
-        $(".reviews-slider").slick({
+import { ref, onBeforeMount, onMounted } from 'vue';
+
+const reviewsSlider = ref(null);
+
+onBeforeMount(() => {
+    if (reviewsSlider.value) {
+        $(reviewsSlider.value).slick('unslick');
+    }
+});
+
+onMounted(() => {
+    if (reviewsSlider.value) {
+        $(reviewsSlider.value).slick({
             autoplay: true,
             autoplaySpeed: 4000,
-            arrows: true,
+            arrows: false,
             slidesToScroll: 1,
         });
-    };
+    }
+});
 </script>
 
 <template>
     <p class="container-title">Отзывы <span class="container-orange-title">Гостей</span></p>
     <section class="our reviews">
         <div class="reviews-container">
-            <div class="reviews-slider">
+            <div ref="reviewsSlider" class="reviews-slider">
                 <div class="slide">
                     <div class="review">
                         <div class="review-content">
-                            <img src="../../../assets/review_template.png" alt="">
+                            <img src="../../assets/reviews/review_icon.png" alt="">
                             <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
                         </div>
                         <div class="review-author">
@@ -28,7 +40,7 @@
                 <div class="slide">
                     <div class="review">
                         <div class="review-content">
-                            <img src="../../../assets/review_template.png" alt="">
+                            <img src="../../assets/reviews/review_icon.png" alt="">
                             <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
                         </div>
                         <div class="review-author">
@@ -39,7 +51,9 @@
             </div>
         </div>
     </section>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button">Оставить отзыв</button></form>
+    <form action="https://apple.com" target="_blank">
+        <button class="container-background-button">Оставить отзыв</button>
+    </form>
 </template>
 
 <style scoped>

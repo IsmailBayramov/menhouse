@@ -10,10 +10,10 @@
             <div class="slider-line programm-container">
                 <div class="slide-content programm">
                     <div class="first-container">
-                        <img class="programm-photo" src="../../../assets/programms/photo.png" alt="">
+                        <img class="programm-photo" src="../../assets/programms/photo.png" alt="">
                         <p class="price">
                             От 14 990 ₽
-                            <img class="price-mark" src="../../../assets/programms/icons/question.png" alt="">
+                            <img class="price-mark" src="../../assets/programms/icons/question.png" alt="">
                         </p>
                     </div>
                     <div class="second-container">
@@ -28,18 +28,18 @@
                             развития событий</span>
                         </p>
                         <div class="icons">
-                            <img src="../../../assets/programms/icons/1.png" alt="">
-                            <img src="../../../assets/programms/icons/2.png" alt="">
-                            <img src="../../../assets/programms/icons/3.png" alt="">
+                            <img src="../../assets/programms/icons/1.png" alt="">
+                            <img src="../../assets/programms/icons/2.png" alt="">
+                            <img src="../../assets/programms/icons/3.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="slide-content programm">
                     <div class="first-container">
-                        <img class="programm-photo" src="../../../assets/programms/photo.png" alt="">
+                        <img class="programm-photo" src="../../assets/programms/photo.png" alt="">
                         <p class="price">
                             От 14 990 ₽
-                            <img class="price-mark" src="../../../assets/programms/icons/question.png" alt="">
+                            <img class="price-mark" src="../../assets/programms/icons/question.png" alt="">
                         </p>
                     </div>
                     <div class="second-container">
@@ -54,18 +54,18 @@
                             развития событий</span>
                         </p>
                         <div class="icons">
-                            <img src="../../../assets/programms/icons/1.png" alt="">
-                            <img src="../../../assets/programms/icons/2.png" alt="">
-                            <img src="../../../assets/programms/icons/3.png" alt="">
+                            <img src="../../assets/programms/icons/1.png" alt="">
+                            <img src="../../assets/programms/icons/2.png" alt="">
+                            <img src="../../assets/programms/icons/3.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="slide-content programm">
                     <div class="first-container">
-                        <img class="programm-photo" src="../../../assets/programms/photo.png" alt="">
+                        <img class="programm-photo" src="../../assets/programms/photo.png" alt="">
                         <p class="price">
                             От 14 990 ₽
-                            <img class="price-mark" src="../../../assets/programms/icons/question.png" alt="">
+                            <img class="price-mark" src="../../assets/programms/icons/question.png" alt="">
                         </p>
                     </div>
                     <div class="second-container">
@@ -80,9 +80,9 @@
                             развития событий</span>
                         </p>
                         <div class="icons">
-                            <img src="../../../assets/programms/icons/1.png" alt="">
-                            <img src="../../../assets/programms/icons/2.png" alt="">
-                            <img src="../../../assets/programms/icons/3.png" alt="">
+                            <img src="../../assets/programms/icons/1.png" alt="">
+                            <img src="../../assets/programms/icons/2.png" alt="">
+                            <img src="../../assets/programms/icons/3.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,9 @@
         </div>
         <button class="slider-button slider-next"><div class="arrow right"></div></button>
     </div>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button">Смотреть больше</button></form>
+    <form action="https://apple.com" target="_blank">
+        <button class="container-background-button">Смотреть больше</button>
+    </form>
 </template>
 
 <style scoped>

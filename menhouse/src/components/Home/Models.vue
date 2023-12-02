@@ -2,7 +2,7 @@
     <p class="container-title">Модели <span class="container-orange-title">Студии</span></p>
     <div class="our models">
       <div class="model-card">
-        <img src="../../../assets/models/1.png" alt="model"/>
+        <img src="../../assets/models/1.png" alt="model"/>
         <p>
           Имя: <span>Вика</span><br>
           Вес: <span>50</span><br>
@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="model-card">
-        <img src="../../../assets/models/2.png" alt="model"/>
+        <img src="../../assets/models/2.png" alt="model"/>
         <p>
           Имя: <span>Илона</span><br>
           Вес: <span>45</span><br>
@@ -22,7 +22,7 @@
         </p>
       </div>
       <div class="model-card">
-        <img src="../../../assets/models/3.png" alt="model"/>
+        <img src="../../assets/models/3.png" alt="model"/>
         <p>
           Имя: <span>Аиша</span><br>
           Вес: <span>50</span><br>
@@ -32,7 +32,9 @@
         </p>
       </div>
     </div>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button">Смотреть больше</button></form>
+    <form action="https://apple.com" target="_blank">
+      <button class="container-background-button">Смотреть больше</button>
+    </form>
 </template>
 
 <style scoped>

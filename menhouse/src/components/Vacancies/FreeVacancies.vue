@@ -90,7 +90,9 @@
             </div>
         </div>
     </div>
-    <form action="https://apple.com" target="_blank"><button class="container-background-button">Откликнуться</button></form>
+    <form action="https://apple.com" target="_blank">
+        <button class="container-background-button">Откликнуться</button>
+    </form>
 </template>
 
 <style scoped>
