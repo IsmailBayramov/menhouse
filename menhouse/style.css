@@ -5,6 +5,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Bahnscrift'; /* Укажите имя шрифта */
+    src: url('../menhouse/src/assets/fonts/Bahnscrift.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 body {

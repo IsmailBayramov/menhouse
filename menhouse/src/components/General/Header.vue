@@ -90,9 +90,7 @@ const toggleMenu = () => {
         <div class="menu">
           <RouterLink to="/menhouse-app/" @click="scrollToTop">Men<span class="header-text-orange">house</span></RouterLink>
           <RouterLink to="/menhouse-app/" @click="scrollToTop">Модели</RouterLink>
-          <RouterLink to="/menhouse-app/" @click="scrollToTop">Программы</RouterLink>
-          <RouterLink to="/menhouse-app/" @click="scrollToTop">Апартаменты</RouterLink>
-          <RouterLink to="/menhouse-app/" @click="scrollToTop">Контакты</RouterLink>
+          <RouterLink to="/menhouse-app/programms" @click="scrollToTop">Программы</RouterLink>
           <RouterLink to="/menhouse-app/" @click="scrollToTop">Сертификаты</RouterLink>
           <RouterLink to="/menhouse-app/vacancies" @click="scrollToTop">Вакансии</RouterLink>
         </div>

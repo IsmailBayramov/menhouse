@@ -4,6 +4,7 @@ import Salaries from '../Vacancies/Salaries.vue';
 import FreeVacancies from '../Vacancies/FreeVacancies.vue';
 import Requirements from '../Vacancies/Requirements.vue';
 import Advantages from '../Vacancies/Advantages.vue';
+import BorderButtons from '../General/BorderButtons.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Advantages from '../Vacancies/Advantages.vue';
     <FreeVacancies></FreeVacancies>
     <Requirements></Requirements>
     <Advantages></Advantages>
+    <BorderButtons></BorderButtons>
   </div>
 </template>
 

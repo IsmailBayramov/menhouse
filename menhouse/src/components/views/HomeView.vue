@@ -119,7 +119,6 @@ onMounted(() => {
   background-repeat: repeat; /* Или background-repeat: no-repeat; если не хотите замощения */
   position: relative;
   height: calc(10em + 25vw); /* Задайте высоту в соответствии с вашими требованиями */
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
