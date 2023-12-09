@@ -22,7 +22,7 @@
 
       <div class="advantage-item">
         <img src="../../assets/icons/4.png" class="our-advantages-img" alt="pay">
-        <p class="our-advantages-img-caption">Оплата по безналу</p>
+        <p class="our-advantages-img-caption">Оплата по&nbsp;безналу</p>
       </div>
 
       <div class="advantage-item">

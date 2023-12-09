@@ -17,7 +17,7 @@
                     <p><span>◆</span>Общительная.</p>
                 </div>
                 <div class="quality">
-                    <p><span>◆</span>Возрастом от 18.</p>
+                    <p><span>◆</span>Возрастом от&nbsp;18.</p>
                 </div>
                 <div class="quality">
                     <p><span>◆</span>Любишь всегда хорошо выглядеть.</p>

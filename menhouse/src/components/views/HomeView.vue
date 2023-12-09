@@ -7,78 +7,16 @@ import Apartments from '../Home/Apartments.vue'
 import Review from '../Home/Review.vue'
 import Programms from '../Home/Programms.vue'
 import BorderButtons from '../General/BorderButtons.vue'
-import { onMounted } from 'vue'
+import { useSliderLogic } from '../../sliderLogic.js'; // Укажите правильный путь к файлу
 
-onMounted(() => {
-  let countSales = 0;
-  let countApartments = 0;
-  let widthSales;
-  let widthApartments;
-  let intervalIdSales;
-  let intervalIdApartments;
-
-  const initSlider = (sliderClass, countVar, widthVar, intervalIdVar) => {
-    const images = document.querySelectorAll(`.${sliderClass} .slider .slider-line .slide-content`);
-    const sliderLine = document.querySelector(`.${sliderClass} .slider .slider-line`);
-
-    const rollSlider = () => sliderLine.style.transform = `translate(-${countVar * widthVar}px)`;
-    const prevSlide = () => rollSlider(countVar = (countVar + 1) % images.length);
-    const nextSlide = () => rollSlider(countVar = (countVar - 1 + images.length) % images.length);
-
-    const init = () => {
-      widthVar = document.querySelector(`.${sliderClass} .slider`).offsetWidth;
-      sliderLine.style.width = `${widthVar * images.length}px`;
-
-      images.forEach(item => {
-        item.style.width = `${widthVar}px`;
-        item.style.height = 'auto';
-      });
-
-      rollSlider();
-    };
-
-    init();
-    window.addEventListener('resize', init);
-    document.querySelector(`.${sliderClass} .slider-prev`).addEventListener('click', prevSlide);
-    document.querySelector(`.${sliderClass} .slider-next`).addEventListener('click', nextSlide);
-
-    const startAutoSlide = () => {
-      intervalIdVar = setInterval(() => {
-        prevSlide();
-      }, 4000);
-    };
-
-    const stopAutoSlide = () => {
-      clearInterval(intervalIdVar);
-    };
-
-    const resetAutoSlide = () => {
-      stopAutoSlide();
-      startAutoSlide();
-    };
-
-    document.querySelector(`.${sliderClass} .slider-prev`).addEventListener('click', () => {
-      prevSlide();
-      resetAutoSlide();
-    });
-
-    document.querySelector(`.${sliderClass} .slider-next`).addEventListener('click', () => {
-      nextSlide();
-      resetAutoSlide();
-    });
-
-    startAutoSlide();
-  };
-
-  initSlider('sales', countSales, widthSales, intervalIdSales);
-  initSlider('programms', countSales, widthSales, intervalIdSales);
-  initSlider('apartments', countApartments, widthApartments, intervalIdApartments);
-})
+useSliderLogic("sales");
+useSliderLogic("programms");
+useSliderLogic("apartments");
 
 </script>
 
 <template>
-  <div class="container" id="modalWindow">
+  <div class="container">
     <div class="container-background">
       <img src="../../assets/logo.png" alt="body_image" class="container-background-logo">
       <form action="https://apple.com" target="_blank"><button class="container-background-button">Записаться</button></form>
@@ -104,7 +42,7 @@ onMounted(() => {
 }
 
 .container-title {
-  padding: 1em 0 0 0;
+  padding: 1em .5em 0 .5em;
   font-weight: 500;
   font-size: calc(.5em + 2vw);
 }

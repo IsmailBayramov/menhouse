@@ -14,7 +14,7 @@ onMounted(() => {
         $(reviewsSlider.value).slick({
             autoplay: true,
             autoplaySpeed: 4000,
-            arrows: false,
+            arrows: true,
             slidesToScroll: 1,
         });
     }
@@ -30,7 +30,7 @@ onMounted(() => {
                     <div class="review">
                         <div class="review-content">
                             <img src="../../assets/reviews/review_icon.png" alt="">
-                            <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
+                            <p class="review-text">„Огромная благодарность мастер Алине за&nbsp;релакс.“</p>
                         </div>
                         <div class="review-author">
                             <h2 class="author-name">Антон</h2>
@@ -41,7 +41,7 @@ onMounted(() => {
                     <div class="review">
                         <div class="review-content">
                             <img src="../../assets/reviews/review_icon.png" alt="">
-                            <p class="review-text">„Огромная благодарность мастер Алине за релакс.“</p>
+                            <p class="review-text">„Огромная благодарность мастер Алине за&nbsp;релакс.“</p>
                         </div>
                         <div class="review-author">
                             <h2 class="author-name">Антон</h2>

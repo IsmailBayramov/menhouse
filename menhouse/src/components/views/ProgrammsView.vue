@@ -28,7 +28,7 @@ import BorderButtons from '../General/BorderButtons.vue'
                     </div>
                 </div>
                 <div class="back">
-
+                    привет
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@ import BorderButtons from '../General/BorderButtons.vue'
 }
 
 .container-title {
-    padding: 1em 0 0 0;
+    padding: 1em .5em 0 .5em;
     font-weight: 500;
     font-size: calc(.5em + 2vw);
 }
@@ -66,25 +66,37 @@ import BorderButtons from '../General/BorderButtons.vue'
 .card {
     position: relative;
     border-radius: 30px;
-    background-color: rgb(255, 255, 255);
     width: fit-content;
     height: auto;
     margin-bottom: 25px;
+    perspective: 1000px;
+    width: 300px;
+    height: 40%;
+    position: relative;
+    perspective: 1000px;
 }
 
 .front, .back {
-    position: relative;
+    background-color: #fff;
+    position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 1s;
     backface-visibility: hidden;
+    border-radius: 10px;
 }
 
 .back {
     transform: rotateY(180deg);
 }
+
+.card:hover .front {transform: rotateY(180deg);}
+.card:hover .back {transform: rotateY(360deg);}
 
 .number {
     font-family: "Bahnscrift", sans-serif;
@@ -140,66 +152,10 @@ import BorderButtons from '../General/BorderButtons.vue'
     bottom: 13%;
 }
 
-@media (min-width: 1920px) {
-    .card-container {
-        width: 35%;
-    }
-}
-
-@media (max-width: 1920px) {
-    .card-container {
-        width: 40%;
-    }
-}
-
-@media (max-width: 1600px) {
-    .card-container {
-        width: 50%;
-    }
-}
-@media (max-width: 1280px) {
-    .card-container {
-        width: 62%;
-    }
-}
-@media (max-width: 1024px) {
-    .card-container {
-        width: 80%;
-    }
-}
-
-@media (max-width: 900px) {
-    .card-container {
-        width: 90%;
-    }
-}
-
-@media (max-width: 780px) {
-    .card-container {
-        width: 98%;
-    }
-
-    .card {
-        width: 30%;
-        border-radius: 20px;
-    }
-}
-
 @media (max-width: 550px) {
     .container-title {
         font-size: calc(1em + 2vw);
         margin-top: 0;
     }
 }
-
-@media (max-width: 480px) {
-    .card-container {
-        width: 95%;
-    }
-
-    .card {
-        width: 45%;
-    }
-}
-
 </style>

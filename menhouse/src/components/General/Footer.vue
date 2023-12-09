@@ -5,7 +5,7 @@
         <img src="../../assets/logo.png" alt="" class="footer-logo">
       </div>
       <div class="column">
-        <p>Спа салон для независимых и сильных мужчин</p>
+        <p>Спа салон для&nbsp;независимых и&nbsp;сильных мужчин</p>
         <a href="tel:+7 912 512 0016"><button class="column-button">Записаться</button></a>
       </div>
       <div class="column">
@@ -13,7 +13,7 @@
         <a href="https://apple.com" target="_blank"><button class="column-button">Ознакомиться</button></a>
       </div>
       <div class="column">
-        <p>Мы в социальных сетях</p>
+        <p>Мы в&nbsp;социальных сетях</p>
         <div class="column-buttons">
           <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-whatsapp.png" alt="" class="column-link-button"></a>
           <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-instagram.png" alt="" class="column-link-button"></a>

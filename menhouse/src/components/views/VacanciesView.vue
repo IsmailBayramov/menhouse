@@ -28,7 +28,7 @@ import BorderButtons from '../General/BorderButtons.vue'
 }
 
 .container-title {
-  padding: 1em 0 0 0;
+  padding: 1em .5em 0 .5em;
   font-weight: 500;
   /* font-size: calc(.8em + 1.7vw); */
   font-size: calc(.5em + 2vw);

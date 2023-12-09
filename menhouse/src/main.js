@@ -4,6 +4,8 @@ import App from './App.vue'
 import HomeView from './components/views/HomeView.vue'
 import VacanciesView from './components/views/VacanciesView.vue'
 import ProgrammsView from './components/views/ProgrammsView.vue'
+import ModelsView from './components/views/ModelsView.vue'
+import CertificatesView from './components/views/CertificatesView.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -19,6 +21,14 @@ const router = createRouter({
         name: 'Programms',
         path: '/menhouse-app/programms',
         component: ProgrammsView
+    }, {
+        name: 'Models',
+        path: '/menhouse-app/models',
+        component: ModelsView
+    }, {
+        name: 'Certificates',
+        path: '/menhouse-app/certificates',
+        component: CertificatesView 
     }]
 })
 

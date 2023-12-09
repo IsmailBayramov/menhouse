@@ -11,7 +11,7 @@
         <img src="../../assets/vacancies/advantages/1.png" alt="">
         <div class="description">
             <!-- <p class="title"></p> -->
-            <p class="title">Строго без интима</p>
+            <p class="title">Строго без&nbsp;интима</p>
             <div class="qualities">
                 <div class="quality">
                     <p><span>•</span>Высокая оплата (ежедневный расчет)</p>
@@ -26,13 +26,13 @@
                     <p><span>•</span>Дружелюбный коллектив, понимающее руководство</p>
                 </div>
                 <div class="quality">
-                    <p><span>•</span>Безопасность и комфорт</p>
+                    <p><span>•</span>Безопасность и&nbsp;комфорт</p>
                 </div>
                 <div class="quality">
                     <p><span>•</span>Удобное расположение студии (легко добираться)</p>
                 </div>
                 <div class="quality">
-                    <p><span>•</span>Помощь с проживанием иногородним.</p>
+                    <p><span>•</span>Помощь с&nbsp;проживанием иногородним.</p>
                 </div>
             </div>
         </div>
