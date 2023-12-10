@@ -18,6 +18,7 @@ import Ordering from "../Certificates/Ordering.vue"
   display: flex;
   color: white;
   flex-direction: column;
+  align-items: center;
 }
 
 .container-title {

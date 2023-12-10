@@ -40,6 +40,12 @@
     font-size: calc(.6em + .5vw);;
 }
 
+@media (max-width: 768px) {
+    .description p {
+        width: 60%;
+    }
+}
+
 @media (max-width: 550px) {
     .description p {
         font-size: calc(.8em + .6vw);
