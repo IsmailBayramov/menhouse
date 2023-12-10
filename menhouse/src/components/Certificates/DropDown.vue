@@ -2,6 +2,7 @@
 import { defineProps, ref, computed, defineEmits, onMounted, onBeforeUnmount } from 'vue';
 
 const dropDown = ref(null)
+const isActive = ref(false)
 
 const props = defineProps({
     options: {
@@ -26,12 +27,20 @@ const toggleOptionSelect = (option) => {
     selectedOption.value = option;
     emit('update:modelValue', option)
     isDropDownVisible.value = false
+    setTimeout(() => {
+        isActive.value = false
+    }, 300);
 }
 
 const closeDropDown = (element) => {
     if(!dropDown.value.contains(element.target)) {
         isDropDownVisible.value = false
     }
+}
+
+const changeClass = () => {
+    isDropDownVisible.value = true
+    isActive.value = true
 }
 
 onMounted(() => {
@@ -46,8 +55,8 @@ onBeforeUnmount(() => {
 <template>
     <div class="dropdown-wrapper" ref="dropDown">
         <div class="dropdown-selected-option" 
-            :class="{ active: isDropDownVisible }"
-            @click="isDropDownVisible = true"
+            :class="{ active: isActive }"
+            @click="changeClass"
         >
             {{ mappedSelectedOption }}
         </div>
@@ -103,8 +112,8 @@ onBeforeUnmount(() => {
 }
 
 .option:last-of-type {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .slide-fade-enter-active {
@@ -117,7 +126,7 @@ onBeforeUnmount(() => {
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-    transform: translateX(20px);
+    transform: translateY(0px);
     opacity: 0;
 }
 </style>
