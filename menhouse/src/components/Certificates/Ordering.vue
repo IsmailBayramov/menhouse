@@ -9,10 +9,15 @@ const options = ref([
 ])
 
 const parentSelectedOption = ref(null)
+const isActive = ref(false)
+
+const handleDataFromChild = (data) => {
+    isActive.value = data
+}
 </script>
 
 <template>
-    <div class="order-container">
+    <div class="order-container" :class="{ active: isActive }">
         <div class="certificate-photo">
             <img src="../../assets/certificates/cards.png" alt="">
         </div>
@@ -22,6 +27,7 @@ const parentSelectedOption = ref(null)
                 <drop-down
                     :options="options"
                     v-model="parentSelectedOption"
+                    @isActive="handleDataFromChild"
                 />
                 <input type="text" placeholder="Укажите адрес доставки">
                 <input type="number" placeholder="Номер телефона для оплаты и связи с курьером">
@@ -40,6 +46,10 @@ const parentSelectedOption = ref(null)
     align-items: center;
     position: relative;    
     width: fit-content;
+}
+
+.order-container.active {
+    margin: 60px 0px;
 }
 
 .order {
@@ -114,6 +124,10 @@ input[type="number"]:focus {
 }
 
 @media (max-width: 550px) {
+    .order-container.active {
+        margin: 0;
+    }
+
     .order {
         position: static;
         margin: 2.5em 1em;

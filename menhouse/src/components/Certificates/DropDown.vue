@@ -29,18 +29,34 @@ const toggleOptionSelect = (option) => {
     isDropDownVisible.value = false
     setTimeout(() => {
         isActive.value = false
+        emit('isActive', isActive.value)
     }, 300);
 }
 
 const closeDropDown = (element) => {
     if(!dropDown.value.contains(element.target)) {
         isDropDownVisible.value = false
+        setTimeout(() => {
+            isActive.value = false
+            emit('isActive', isActive.value)
+        }, 300);
     }
 }
 
 const changeClass = () => {
-    isDropDownVisible.value = true
-    isActive.value = true
+    isDropDownVisible.value = !isDropDownVisible.value
+
+    if (isActive.value) {
+        setTimeout(() => {
+            isActive.value = !isActive.value
+            emit('isActive', isActive.value)
+        }, 300);
+    }
+    else { 
+        isActive.value = !isActive.value
+        emit('isActive', isActive.value)
+    }
+   
 }
 
 onMounted(() => {
