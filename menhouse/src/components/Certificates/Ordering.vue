@@ -46,6 +46,7 @@ const handleDataFromChild = (data) => {
     align-items: center;
     position: relative;    
     width: fit-content;
+    transition: .3s;
 }
 
 .order-container.active {

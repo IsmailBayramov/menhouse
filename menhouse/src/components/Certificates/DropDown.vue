@@ -27,18 +27,18 @@ const toggleOptionSelect = (option) => {
     selectedOption.value = option;
     emit('update:modelValue', option)
     isDropDownVisible.value = false
+    emit('isActive', false)
     setTimeout(() => {
         isActive.value = false
-        emit('isActive', isActive.value)
     }, 300);
 }
 
 const closeDropDown = (element) => {
     if(!dropDown.value.contains(element.target)) {
         isDropDownVisible.value = false
+        emit('isActive', false)
         setTimeout(() => {
             isActive.value = false
-            emit('isActive', isActive.value)
         }, 300);
     }
 }
@@ -47,9 +47,9 @@ const changeClass = () => {
     isDropDownVisible.value = !isDropDownVisible.value
 
     if (isActive.value) {
+        emit('isActive', !isActive.value)
         setTimeout(() => {
             isActive.value = !isActive.value
-            emit('isActive', isActive.value)
         }, 300);
     }
     else { 
