@@ -9,6 +9,7 @@
             ТЕПЕРЬ&nbsp;МЫ ОСУЩЕСТВЛЯЕМ ДОСТАВКУ
             ПОДАРОЧНЫХ СЕРТИФИКАТОВ В&nbsp;ПРЕДЕЛАХ ГОРОДА.
 
+            <br>
             <span class="subtitle">
                 Для&nbsp;вашего удобства каждому сертификату присвоен
                 индивидуальный номер.
@@ -27,7 +28,7 @@
 
 .description p {
     font-size: calc(.7em + .5vw);
-    width: 40%;
+    width: 60%;
 }
 
 .orange {
@@ -38,12 +39,6 @@
 .subtitle {
     color: #7b7b7b;
     font-size: calc(.6em + .5vw);;
-}
-
-@media (max-width: 768px) {
-    .description p {
-        width: 60%;
-    }
 }
 
 @media (max-width: 550px) {

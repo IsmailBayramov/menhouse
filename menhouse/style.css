@@ -1,4 +1,5 @@
 @import url('https://v1.fontapi.ir/css/SFProDisplay');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&display=swap');
 @font-face {
     font-family: 'Sweet Mavka'; /* Укажите имя шрифта */
     src: url('../menhouse/src/assets/fonts/SweetMavkaScript.otf') format('opentype');
