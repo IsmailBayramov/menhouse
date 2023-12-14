@@ -13,7 +13,7 @@ onMounted(() => {
     if (reviewsSlider.value) {
         $(reviewsSlider.value).slick({
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 8000,
             arrows: true,
             slidesToScroll: 1,
         });
@@ -68,6 +68,7 @@ onMounted(() => {
 
 .reviews-slider {
     width: 60%;
+    touch-action: none;
     margin: 20px auto;
 }
 

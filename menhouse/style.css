@@ -13,6 +13,9 @@
     font-style: normal;
 }
 
+html {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;
@@ -23,4 +26,8 @@ body {
 
 img {
     pointer-events: none;
+}
+
+.slider {
+    touch-action: none;
 }

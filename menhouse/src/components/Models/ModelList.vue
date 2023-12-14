@@ -1,16 +1,16 @@
 <script setup>
 import { useSliderLogic } from '../../sliderLogic.js';
-useSliderLogic("suka")
-useSliderLogic("sukaa")
-useSliderLogic("sukaaa")
-useSliderLogic("sukaaaa")
+useSliderLogic("first", 0)
+useSliderLogic("second", 2)
+useSliderLogic("third", 4)
+useSliderLogic("fourth", 6)
 </script>
 
 <template>
 
     <div class="modelList">
         <div class="model-container">
-            <div class="photos-container suka">
+            <div class="photos-container first">
                 <button class="slider-button slider-prev"><div class="arrow left"></div></button>
                 <div class="slider">
                     <div class="slider-line">
@@ -35,7 +35,7 @@ useSliderLogic("sukaaaa")
             </div>
         </div>
         <div class="model-container">
-            <div class="photos-container sukaa">
+            <div class="photos-container second">
                 <button class="slider-button slider-prev"><div class="arrow left"></div></button>
                 <div class="slider">
                     <div class="slider-line">
@@ -60,7 +60,7 @@ useSliderLogic("sukaaaa")
             </div>
         </div>
         <div class="model-container">
-            <div class="photos-container sukaaa">
+            <div class="photos-container third">
                 <button class="slider-button slider-prev"><div class="arrow left"></div></button>
                 <div class="slider">
                     <div class="slider-line">
@@ -85,7 +85,7 @@ useSliderLogic("sukaaaa")
             </div>
         </div>
         <div class="model-container">
-            <div class="photos-container sukaaaa">
+            <div class="photos-container fourth">
                 <button class="slider-button slider-prev"><div class="arrow left"></div></button>
                 <div class="slider">
                     <div class="slider-line">

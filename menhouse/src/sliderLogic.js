@@ -1,7 +1,7 @@
 // sliderLogic.js
 import { onMounted } from 'vue';
 
-export const useSliderLogic = (name) => {
+export const useSliderLogic = (name, timeToStart) => {
   let countSales = 0;
   let widthSales;
   let intervalIdSales;
@@ -15,28 +15,39 @@ export const useSliderLogic = (name) => {
     const nextSlide = () => rollSlider(countVar = (countVar - 1 + images.length) % images.length);
 
     let touchStartX = 0;
-    let touchEndX = 0;
+    let touchMoveX = 0;
 
     const handleTouchStart = (event) => {
       touchStartX = event.touches[0].clientX;
+      stopAutoSlide();
     };
 
     const handleTouchMove = (event) => {
-      touchEndX = event.touches[0].clientX;
+      touchMoveX = event.touches[0].clientX;
+      const deltaX = touchStartX - touchMoveX
+
+      // Обновляем положение слайдов в реальном времени во время drag
+      sliderLine.style.transition = 'none';
+      sliderLine.style.transform = `translate(-${countVar * widthVar + deltaX}px)`;
     };
 
     const handleTouchEnd = () => {
-      const swipeThreshold = 50; // Минимальное расстояние для определения свайпа
+      const swipeThreshold = 50;
 
-      if (touchStartX - touchEndX > swipeThreshold) {
+      if (touchMoveX - touchStartX > swipeThreshold) {
         // свайп влево
-        prevSlide();
-        resetAutoSlide();
-      } else if (touchEndX - touchStartX > swipeThreshold) {
-        // свайп вправо
         nextSlide();
         resetAutoSlide();
+      } else if (touchStartX - touchMoveX > swipeThreshold) {
+        // свайп вправо
+        prevSlide();
+        resetAutoSlide();
       }
+
+      startAutoSlide();
+      // Восстанавливаем transition и реальное положение слайдов после drag
+      sliderLine.style.transition = '';
+      sliderLine.style.transform = `translate(-${countVar * widthVar}px)`;
     };
 
     sliderLine.addEventListener('touchstart', handleTouchStart);
@@ -63,7 +74,7 @@ export const useSliderLogic = (name) => {
     const startAutoSlide = () => {
       intervalIdVar = setInterval(() => {
         prevSlide();
-      }, 4000);
+      }, 8000);
     };
 
     const stopAutoSlide = () => {
@@ -85,7 +96,10 @@ export const useSliderLogic = (name) => {
       resetAutoSlide();
     });
 
-    startAutoSlide();
+    setTimeout(() => {
+      startAutoSlide()
+    }, timeToStart * 1000)
+    
   };
 
   onMounted(() => {

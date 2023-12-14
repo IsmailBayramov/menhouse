@@ -9,9 +9,9 @@ import Programms from '../Home/Programms.vue'
 import BorderButtons from '../General/BorderButtons.vue'
 import { useSliderLogic } from '../../sliderLogic.js'
 
-useSliderLogic("sales");
-useSliderLogic("programms");
-useSliderLogic("apartments");
+useSliderLogic("sales", 0);
+useSliderLogic("programms", 2);
+useSliderLogic("apartments", 4);
 
 </script>
 
