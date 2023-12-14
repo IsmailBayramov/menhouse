@@ -14,6 +14,35 @@ export const useSliderLogic = (name) => {
     const prevSlide = () => rollSlider(countVar = (countVar + 1) % images.length);
     const nextSlide = () => rollSlider(countVar = (countVar - 1 + images.length) % images.length);
 
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleTouchStart = (event) => {
+      touchStartX = event.touches[0].clientX;
+    };
+
+    const handleTouchMove = (event) => {
+      touchEndX = event.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+      const swipeThreshold = 50; // Минимальное расстояние для определения свайпа
+
+      if (touchStartX - touchEndX > swipeThreshold) {
+        // свайп влево
+        prevSlide();
+        resetAutoSlide();
+      } else if (touchEndX - touchStartX > swipeThreshold) {
+        // свайп вправо
+        nextSlide();
+        resetAutoSlide();
+      }
+    };
+
+    sliderLine.addEventListener('touchstart', handleTouchStart);
+    sliderLine.addEventListener('touchmove', handleTouchMove);
+    sliderLine.addEventListener('touchend', handleTouchEnd);
+
     const init = () => {
       widthVar = document.querySelector(`.${sliderClass} .slider`).offsetWidth;
       sliderLine.style.width = `${widthVar * images.length}px`;

@@ -1,4 +1,6 @@
 <script setup>
+import { scrollToTop, toggleMenu } from "../../scrollLogic.js"
+
 const sizeForBurger = 550
 
 // Скрывает Header при скроллинге
@@ -48,36 +50,6 @@ window.addEventListener('resize', () => {
     document.querySelector("nav").classList.remove("hidden");
   }
 });
-
-const scrollToTop = () => {
-  const burgerMenu = document.querySelector('.burger-menu');
-  const menu = document.querySelector('.menu');
-  const screenWidth = window.innerWidth;
-
-  if (screenWidth <= sizeForBurger && getComputedStyle(menu).display === 'flex') {
-    menu.style.display = 'none';
-    burgerMenu.classList.remove('active');
-  }
-  
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth' // Добавляет плавную анимацию прокрутки
-  });
-};
-
-const allButtons = () => {
-  const burgerMenu = document.querySelector('.burger-menu');
-  burgerMenu.classList.remove('active');
-}
-
-const toggleMenu = () => {
-  const burgerMenu = document.querySelector('.burger-menu');
-  const menu = document.querySelector('.menu');
-  const currentDisplay = getComputedStyle(menu).display;
-
-  burgerMenu.classList.toggle('active');
-  menu.style.display = currentDisplay === 'none' ? 'flex' : 'none';
-};
 </script>
 
 <template>

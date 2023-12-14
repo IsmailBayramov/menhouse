@@ -7,7 +7,7 @@ import Apartments from '../Home/Apartments.vue'
 import Review from '../Home/Review.vue'
 import Programms from '../Home/Programms.vue'
 import BorderButtons from '../General/BorderButtons.vue'
-import { useSliderLogic } from '../../sliderLogic.js'; // Укажите правильный путь к файлу
+import { useSliderLogic } from '../../sliderLogic.js'
 
 useSliderLogic("sales");
 useSliderLogic("programms");
