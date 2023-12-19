@@ -1,5 +1,5 @@
 <script setup>
-import { ref, provide } from 'vue';
+import { ref } from 'vue';
 import Modal from "./Modal.vue"
 
 const models = [
@@ -17,7 +17,7 @@ const models = [
         "src/assets/models/1/4.png",
         "src/assets/models/1/5.png",
     ],
-    "status": true
+    "status": false
   },
   {
     "name": "Илона",
@@ -57,10 +57,6 @@ const isModalOpen = ref(false);
 const choosenModel = ref(0);
 const selectedImageSrc = ref(0);
 
-provide('isModalOpen', isModalOpen);
-provide('choosenModel', choosenModel);
-provide('selectedImageSrc', selectedImageSrc);
-
 const showModal = (number) => {
   choosenModel.value = number
   isModalOpen.value = true
@@ -83,7 +79,13 @@ const showModal = (number) => {
         </p>
       </div>
     </div>
-    <Modal></Modal>
+    <Modal
+      :isModalOpen="isModalOpen"
+      :choosenModel="choosenModel"
+      :selectedImageSrc="selectedImageSrc"
+      @closeModal="isModalOpen = false"
+      @updateSelectedImage="selectedImageSrc = $event"
+    />
     <button to="/menhouse-app/models" class="container-background-button">Смотреть больше</button>
 </template>
 
@@ -100,6 +102,7 @@ const showModal = (number) => {
   width: max-content;
   height: auto;
   position: relative;
+  cursor: pointer;
   margin-right: calc(1em + 5vw);
   color: white;
   border-radius: 20px 20px 10px 10px;

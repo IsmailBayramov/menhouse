@@ -1,5 +1,5 @@
 <script setup>
-import { inject } from 'vue';
+import { ref, defineProps, defineEmits } from 'vue';
 
 const models = [
   {
@@ -16,7 +16,7 @@ const models = [
         "src/assets/models/1/4.png",
         "src/assets/models/1/5.png",
     ],
-    "status": true
+    "status": false
   },
   {
     "name": "Илона",
@@ -52,16 +52,15 @@ const models = [
   }
 ];
 
-const isModalOpen = inject('isModalOpen');
-const choosenModel = inject('choosenModel')
-const selectedImageSrc = inject('selectedImageSrc');
+const { isModalOpen, choosenModel, selectedImageSrc } = defineProps(['isModalOpen', 'choosenModel', 'selectedImageSrc']);
+const emit = defineEmits();
 
 const closeModal = () => {
-    isModalOpen.value = false;
-};
+  emit('closeModal');
+}
 
 const changeImage = (newImage) => {
-    selectedImageSrc.value = newImage;
+    emit('updateSelectedImage', newImage);
 };
 </script>
 
@@ -73,34 +72,10 @@ const changeImage = (newImage) => {
             <div class="div1">
                 <img :src="selectedImageSrc"/>
             </div>
-            <div class="div2" @click="changeImage(models[choosenModel].gallery[0])">
-                <img 
-                    :src="models[choosenModel].gallery[0]"
-                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[0] }"
-                />
-            </div>
-            <div class="div3" @click="changeImage(models[choosenModel].gallery[1])">
-                <img 
-                    :src="models[choosenModel].gallery[1]"
-                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[1] }"
-                />
-            </div>
-            <div class="div4" @click="changeImage(models[choosenModel].gallery[2])">
-                <img 
-                    :src="models[choosenModel].gallery[2]"
-                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[2] }"
-                />
-            </div>
-            <div class="div5" @click="changeImage(models[choosenModel].gallery[3])">
-                <img 
-                    :src="models[choosenModel].gallery[3]"
-                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[3] }"
-                />
-            </div>
-            <div class="div6" @click="changeImage(models[choosenModel].gallery[4])">
-                <img 
-                    :src="models[choosenModel].gallery[4]"
-                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[4] }"
+            <div v-for="(image, index) in models[choosenModel].gallery" :key="index" :class="'div' + (index + 2)" @click="changeImage(image)">
+                <img
+                    :src="image"
+                    :class="{ selected: selectedImageSrc === image }"
                 />
             </div>
         </div>
@@ -131,8 +106,6 @@ const changeImage = (newImage) => {
     top: 0;
     width: 100%;
     height: 100%;
-    cursor: pointer;
-    /* указываем z-индекс для корректного наслаивания */
     z-index: 1001;
 }
 
@@ -170,6 +143,10 @@ const changeImage = (newImage) => {
 .div1 img {
     width: 100%;
     border-radius: 15px;
+}
+
+.div2, .div3, .div4, .div5, .div6 {
+    cursor: pointer;
 }
 
 .div2 img, .div3 img, .div4 img, .div5 img, .div6 img {
@@ -225,6 +202,7 @@ const changeImage = (newImage) => {
     border-radius: 15px;
     border-style: solid;
     color: #666666;
+    cursor: pointer;
 }
 
 .sign-up.active {
