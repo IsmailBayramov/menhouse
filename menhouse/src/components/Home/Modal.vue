@@ -15,7 +15,8 @@ const models = [
         "src/assets/models/1/3.png",
         "src/assets/models/1/4.png",
         "src/assets/models/1/5.png",
-    ]
+    ],
+    "status": true
   },
   {
     "name": "Илона",
@@ -30,7 +31,8 @@ const models = [
         "src/assets/models/2/3.png",
         "src/assets/models/2/4.png",
         "src/assets/models/2/5.png",
-    ]
+    ],
+    "status": true
   },
   {
     "name": "Аиша",
@@ -45,7 +47,8 @@ const models = [
         "src/assets/models/3/3.png",
         "src/assets/models/3/4.png",
         "src/assets/models/3/5.png",
-    ]
+    ],
+    "status": true
   }
 ];
 
@@ -71,19 +74,34 @@ const changeImage = (newImage) => {
                 <img :src="selectedImageSrc"/>
             </div>
             <div class="div2" @click="changeImage(models[choosenModel].gallery[0])">
-                <img :src="models[choosenModel].gallery[0]"/>
+                <img 
+                    :src="models[choosenModel].gallery[0]"
+                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[0] }"
+                />
             </div>
             <div class="div3" @click="changeImage(models[choosenModel].gallery[1])">
-                <img :src="models[choosenModel].gallery[1]"/>
+                <img 
+                    :src="models[choosenModel].gallery[1]"
+                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[1] }"
+                />
             </div>
             <div class="div4" @click="changeImage(models[choosenModel].gallery[2])">
-                <img :src="models[choosenModel].gallery[2]"/>
+                <img 
+                    :src="models[choosenModel].gallery[2]"
+                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[2] }"
+                />
             </div>
             <div class="div5" @click="changeImage(models[choosenModel].gallery[3])">
-                <img :src="models[choosenModel].gallery[3]"/>
+                <img 
+                    :src="models[choosenModel].gallery[3]"
+                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[3] }"
+                />
             </div>
             <div class="div6" @click="changeImage(models[choosenModel].gallery[4])">
-                <img :src="models[choosenModel].gallery[4]"/>
+                <img 
+                    :src="models[choosenModel].gallery[4]"
+                    :class="{ selected: selectedImageSrc === models[choosenModel].gallery[4] }"
+                />
             </div>
         </div>
         <div class="description">
@@ -93,9 +111,11 @@ const changeImage = (newImage) => {
                 Возраст: <span>{{ models[choosenModel].age }}</span><br>
                 Рост: <span>{{ models[choosenModel].height }}</span><br>
                 Грудь: <span>{{ models[choosenModel].breast }}</span>
-                <div class="status">Сегодня отсутствует</div>
+                <div class="status" :class="{ active: models[choosenModel].status }">
+                    {{ models[choosenModel].status ? 'Свободна для записи' : 'Сегодня отсутствует' }}
+                </div>
             </p>
-            <button class="sign-up">ЗАПИСАТЬСЯ</button>
+            <button class="sign-up" :class="{ active: models[choosenModel].status }">ЗАПИСАТЬСЯ</button>
         <div @click="closeModal" class="close"></div>
         </div>
     </div>
@@ -149,10 +169,16 @@ const changeImage = (newImage) => {
 
 .div1 img {
     width: 100%;
+    border-radius: 15px;
 }
 
-.div2 img, .div3 img, .div4 img, .div5 img, .div6 img{
+.div2 img, .div3 img, .div4 img, .div5 img, .div6 img {
     width: 90%;
+    border-radius: 5px;
+}
+
+.selected {
+    border: 1px solid white;
 }
 
 .description {

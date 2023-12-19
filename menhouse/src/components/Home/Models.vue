@@ -16,7 +16,8 @@ const models = [
         "src/assets/models/1/3.png",
         "src/assets/models/1/4.png",
         "src/assets/models/1/5.png",
-    ]
+    ],
+    "status": true
   },
   {
     "name": "Илона",
@@ -31,7 +32,8 @@ const models = [
         "src/assets/models/2/3.png",
         "src/assets/models/2/4.png",
         "src/assets/models/2/5.png",
-    ]
+    ],
+    "status": true
   },
   {
     "name": "Аиша",
@@ -46,7 +48,8 @@ const models = [
         "src/assets/models/3/3.png",
         "src/assets/models/3/4.png",
         "src/assets/models/3/5.png",
-    ]
+    ],
+    "status": true
   }
 ];
 
@@ -61,7 +64,7 @@ provide('selectedImageSrc', selectedImageSrc);
 const showModal = (number) => {
   choosenModel.value = number
   isModalOpen.value = true
-  selectedImageSrc.value = models[choosenModel.value].gallery[1]
+  selectedImageSrc.value = models[choosenModel.value].gallery[0]
 }
 
 </script>
