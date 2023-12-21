@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 const models = [
   {
@@ -56,7 +56,7 @@ const { isModalOpen, choosenModel, selectedImageSrc } = defineProps(['isModalOpe
 const emit = defineEmits();
 
 const closeModal = () => {
-  emit('closeModal');
+    emit('closeModal');
 }
 
 const changeImage = (newImage) => {
@@ -91,7 +91,7 @@ const changeImage = (newImage) => {
                 </div>
             </p>
             <button class="sign-up" :class="{ active: models[choosenModel].status }">ЗАПИСАТЬСЯ</button>
-        <div @click="closeModal" class="close"></div>
+            <div @click="closeModal" class="close"></div>
         </div>
     </div>
 </div>
@@ -162,6 +162,7 @@ const changeImage = (newImage) => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .info {

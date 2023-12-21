@@ -1,5 +1,11 @@
 <script setup>
+import { defineEmits } from 'vue';
 
+const emit = defineEmits();
+
+const openModal = () => {
+  emit('openModal');
+};
 </script>
 
 <template>
@@ -35,9 +41,7 @@
         <p class="our-advantages-img-caption">Большой выбор программ</p>
       </div>
     </div>
-    <form action="https://apple.com" target="_blank">
-      <button class="container-background-button advantage">Записаться</button>
-    </form>
+    <button @click="openModal" class="container-background-button advantage">Записаться</button>
 </template>
 
 <style scoped>

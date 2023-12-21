@@ -1,22 +1,100 @@
 <script setup>
 import { useSliderLogic } from '../../sliderLogic.js';
+import { ref } from 'vue';
+import Modal from '../Footer/Modal.vue'
+
 useSliderLogic("first", 0)
 useSliderLogic("second", 2)
 useSliderLogic("third", 4)
 useSliderLogic("fourth", 6)
+
+const models = [
+  {
+    "photosClass": "first",
+    "name": "Вика",
+    "weight": 50,
+    "age": 20,
+    "height": 150,
+    "breast": 4,
+    "image": "src/assets/models/1/1.png",
+    "gallery": [
+        "src/assets/models/1/1.png",
+        "src/assets/models/1/2.png",
+        "src/assets/models/1/3.png",
+        "src/assets/models/1/4.png",
+        "src/assets/models/1/5.png",
+    ],
+    "status": false
+  },
+  {
+    "photosClass": "second",
+    "name": "Илона",
+    "weight": 45,
+    "age": 22,
+    "height": 160,
+    "breast": 1.5,
+    "image": "src/assets/models/2/2.png",
+    "gallery": [
+        "src/assets/models/2/1.png",
+        "src/assets/models/2/2.png",
+        "src/assets/models/2/3.png",
+        "src/assets/models/2/4.png",
+        "src/assets/models/2/5.png",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "third",
+    "name": "Аиша",
+    "weight": 50,
+    "age": 23,
+    "height": 162,
+    "breast": 1.5,
+    "image": "src/assets/models/3/3.png",
+    "gallery": [
+        "src/assets/models/3/1.png",
+        "src/assets/models/3/2.png",
+        "src/assets/models/3/3.png",
+        "src/assets/models/3/4.png",
+        "src/assets/models/3/5.png",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "fourth",
+    "name": "Аиша",
+    "weight": 50,
+    "age": 23,
+    "height": 162,
+    "breast": 1.5,
+    "image": "src/assets/models/3/3.png",
+    "gallery": [
+        "src/assets/models/3/1.png",
+        "src/assets/models/3/2.png",
+        "src/assets/models/3/3.png",
+        "src/assets/models/3/4.png",
+        "src/assets/models/3/5.png",
+    ],
+    "status": true
+  }
+];
+
+const modalWindow = ref()
+
+const openModal = () => {
+  modalWindow.value.openModal()
+}
 </script>
 
 <template>
-
+    <Modal ref="modalWindow"></Modal>
     <div class="modelList">
-        <div class="model-container">
-            <div class="photos-container first">
+        <div class="model-container" v-for="(model, index) in models" :key="index">
+            <div :class="['photos-container', model.photosClass]">
                 <button class="slider-button slider-prev"><div class="arrow left"></div></button>
                 <div class="slider">
                     <div class="slider-line">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
+                        <img class="slide-content" v-for="(photo, photoIndex) in model.gallery" :src="photo" :alt="'Photo ' + photoIndex">
                     </div>
                 </div>
                 <button class="slider-button slider-next"><div class="arrow right"></div></button>
@@ -24,89 +102,14 @@ useSliderLogic("fourth", 6)
             <div class="content-container">
                 <div class="info">
                     <p>
-                        Имя: <span>Илона</span> <br>
-                        Вес: <span>45</span> <br>
-                        Возраст: <span>22</span> <br>
-                        Рост: <span>160</span> <br>
-                        Грудь: <span>1.5</span>
+                    Имя: <span>{{ model.name }}</span> <br>
+                    Вес: <span>{{ model.weight }}</span> <br>
+                    Возраст: <span>{{ model.age }}</span> <br>
+                    Рост: <span>{{ model.height }}</span> <br>
+                    Грудь: <span>{{ model.bust }}</span>
                     </p>
                 </div>
-                <button class="info-button">Записаться</button>
-            </div>
-        </div>
-        <div class="model-container">
-            <div class="photos-container second">
-                <button class="slider-button slider-prev"><div class="arrow left"></div></button>
-                <div class="slider">
-                    <div class="slider-line">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    </div>
-                </div>
-                <button class="slider-button slider-next"><div class="arrow right"></div></button>
-            </div>
-            <div class="content-container">
-                <div class="info">
-                    <p>
-                        Имя: <span>Илона</span> <br>
-                        Вес: <span>45</span> <br>
-                        Возраст: <span>22</span> <br>
-                        Рост: <span>160</span> <br>
-                        Грудь: <span>1.5</span>
-                    </p>
-                </div>
-                <button class="info-button">Записаться</button>
-            </div>
-        </div>
-        <div class="model-container">
-            <div class="photos-container third">
-                <button class="slider-button slider-prev"><div class="arrow left"></div></button>
-                <div class="slider">
-                    <div class="slider-line">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    </div>
-                </div>
-                <button class="slider-button slider-next"><div class="arrow right"></div></button>
-            </div>
-            <div class="content-container">
-                <div class="info">
-                    <p>
-                        Имя: <span>Илона</span> <br>
-                        Вес: <span>45</span> <br>
-                        Возраст: <span>22</span> <br>
-                        Рост: <span>160</span> <br>
-                        Грудь: <span>1.5</span>
-                    </p>
-                </div>
-                <button class="info-button">Записаться</button>
-            </div>
-        </div>
-        <div class="model-container">
-            <div class="photos-container fourth">
-                <button class="slider-button slider-prev"><div class="arrow left"></div></button>
-                <div class="slider">
-                    <div class="slider-line">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    <img class="slide-content" src="../../assets/modelList/1.png" alt="">
-                    </div>
-                </div>
-                <button class="slider-button slider-next"><div class="arrow right"></div></button>
-            </div>
-            <div class="content-container">
-                <div class="info">
-                    <p>
-                        Имя: <span>Илона</span> <br>
-                        Вес: <span>45</span> <br>
-                        Возраст: <span>22</span> <br>
-                        Рост: <span>160</span> <br>
-                        Грудь: <span>1.5</span>
-                    </p>
-                </div>
-                <button class="info-button">Записаться</button>
+                <button @click="openModal" class="info-button">Записаться</button>
             </div>
         </div>
     </div>  

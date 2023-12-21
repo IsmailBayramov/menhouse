@@ -1,3 +1,14 @@
+<script setup> 
+import { defineEmits } from 'vue';
+
+const emit = defineEmits();
+
+const openModal = () => {
+  emit('openModal');
+};
+
+</script>
+
 <template>
     <p class="container-title">Текущие <span class="container-orange-title">Акции</span></p>
     <div class="our sales">
@@ -11,9 +22,7 @@
       </div>
       <button class="slider-button slider-next"><div class="arrow right"></div></button>
     </div>
-    <form action="https://apple.com" target="_blank">
-      <button class="container-background-button">Записаться</button>
-    </form>
+    <button @click="openModal" class="container-background-button">Записаться</button>
 </template>
 
 <style scoped>

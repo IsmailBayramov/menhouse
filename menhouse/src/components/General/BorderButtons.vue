@@ -47,6 +47,7 @@ const toggleContainers = (container) => {
     width: -webkit-fill-available;
     padding: 10px;
     z-index: 2;
+    pointer-events: none;
 }
 
 /* Стили для всех кнопок */
@@ -59,6 +60,7 @@ button {
     width: 50px; /* Set equal width and height */
     height: 50px; /* Set equal width and height */
     cursor: pointer;
+    pointer-events: all;
 }
 
 button:hover {

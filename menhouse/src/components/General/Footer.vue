@@ -1,4 +1,16 @@
+<script setup>
+import { ref } from 'vue';
+import Modal from '../Footer/Modal.vue'
+
+const modalWindow = ref()
+
+const openModal = () => {
+  modalWindow.value.openModal()
+}
+</script>
+
 <template>
+  <Modal ref="modalWindow"></Modal>
   <footer class="footer-container">
     <div class="footer-content">
       <div class="column">
@@ -6,7 +18,7 @@
       </div>
       <div class="column">
         <p>Спа салон для&nbsp;независимых и&nbsp;сильных мужчин</p>
-        <a href="tel:+7 912 512 0016"><button class="column-button">Записаться</button></a>
+        <button @click="openModal" class="column-button">Записаться</button>
       </div>
       <div class="column">
         <p>Правила посещения</p>

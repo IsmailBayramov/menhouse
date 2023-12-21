@@ -86,14 +86,10 @@ const showModal = (number) => {
       @closeModal="isModalOpen = false"
       @updateSelectedImage="selectedImageSrc = $event"
     />
-    <button to="/menhouse-app/models" class="container-background-button">Смотреть больше</button>
+    <button @click="$router.push('/menhouse-app/models')" class="container-background-button">Смотреть больше</button>
 </template>
 
 <style scoped>
-.container-background-button {
-  margin-right: auto;
-  margin-left: auto;
-}
 .our.models {
   flex-direction: row;
 }

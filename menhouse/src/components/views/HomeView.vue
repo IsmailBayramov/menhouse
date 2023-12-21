@@ -8,21 +8,38 @@ import Review from '../Home/Review.vue'
 import Programms from '../Home/Programms.vue'
 import BorderButtons from '../General/BorderButtons.vue'
 import { useSliderLogic } from '../../sliderLogic.js'
+import { ref } from 'vue'
 
 useSliderLogic("sales", 0);
 useSliderLogic("programms", 2);
 useSliderLogic("apartments", 4);
 
+const isModalOpen = ref(false);
+
+const openModal = () => {
+  isModalOpen.value = true;
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+};
 </script>
 
 <template>
   <div class="container">
     <div class="container-background">
       <img src="../../assets/logo.png" alt="body_image" class="container-background-logo">
-      <form action="https://apple.com" target="_blank"><button class="container-background-button">Записаться</button></form>
+      <button @click="openModal" class="container-background-button">Записаться</button>
     </div>
-    <Advantages></Advantages>
-    <Sales></Sales>
+    <div v-if="isModalOpen" class="modalBackground">
+        <div class="modal">
+          <p class="info">+7 912 512 00 16</p>
+          <a href="tel:+7 912 512 0016" class="sign-up">ПОЗВОНИТЬ</a>
+          <div @click="closeModal" class="close"></div>
+        </div>
+    </div>
+    <Advantages @openModal="openModal"></Advantages>
+    <Sales @openModal="openModal"></Sales>
     <Models></Models>
     <Programms></Programms>
     <Apartments></Apartments>
@@ -76,6 +93,8 @@ useSliderLogic("apartments", 4);
   background-color: #ff320d;
   font-size: calc(.5em + 1vw);
   margin-top: calc(2em + 1vw);
+  margin-right: auto;
+  margin-left: auto;
   max-width: fit-content;
   border: none;
   border-radius: 10px;
@@ -160,6 +179,104 @@ useSliderLogic("apartments", 4);
 
 .reviews button {
   visibility: collapse;
+}
+
+/* Модальное окно */
+.close {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  right: 0px; /* Расположение в правом верхнем углу */
+  cursor: pointer;
+}
+
+.close:before {
+  content: '+';
+  color: white;
+  position: absolute;
+  z-index: 2;
+  transform: rotate(45deg);
+  font-size: 25px;
+  line-height: 1;
+  top: -5px;
+  right: 15px;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+
+.close:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: white;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+  transform: scale(0.01);
+}
+
+.close:hover::before {
+  color: rgb(123, 123, 123);
+}
+
+.modalBackground {
+  touch-action: none;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  background-color: #222222;
+  border: 3px solid #3d3d3d;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sign-up {
+  font-size: calc(.5em + .8vw);
+  font-weight: 700;
+  padding: 10px 0;
+  width: 85%;
+  background: none;
+  border-radius: 15px;
+  border-style: solid;
+  text-decoration: none;
+  color: #39c434;
+  cursor: pointer;
+}
+
+.sign-up:hover {
+  color: #1e711b;
+}
+
+.info {
+  text-align: left;
+  padding: 10px;
+  font-weight: 600;
+  font-size: calc(.8em + .8vw);
+  width: max-content;
+}
+
+.info span {
+  font-weight: 100;
 }
 
 @media (max-width: 550px) {
