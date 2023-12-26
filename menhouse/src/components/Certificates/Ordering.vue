@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import DropDown from '../Certificates/DropDown.vue'
+import sendTelegramMessage from '../../telegramMessage';
 
 const options = ref([
     {"name": "2 000 руб", "value": 2000},
@@ -9,10 +10,21 @@ const options = ref([
 ])
 
 const parentSelectedOption = ref(null)
+const address = ref(null)
+const number = ref(null)
 const isActive = ref(false)
 
 const handleDataFromChild = (data) => {
     isActive.value = data
+}
+
+const response = () => {
+    if (parentSelectedOption.value && address.value && number.value)
+    {
+        sendTelegramMessage(number.value, address.value, parentSelectedOption.value.name)
+        address.value = null
+        number.value = null
+    }
 }
 </script>
 
@@ -29,10 +41,10 @@ const handleDataFromChild = (data) => {
                     v-model="parentSelectedOption"
                     @isActive="handleDataFromChild"
                 />
-                <input type="text" placeholder="Укажите адрес доставки">
-                <input type="number" placeholder="Номер телефона для оплаты и связи с курьером">
+                <input v-model="address" type="text" placeholder="Укажите адрес доставки">
+                <input v-model="number" type="tel" placeholder="Номер телефона для оплаты и связи с курьером">
             </div>
-            <button class="order-button">Заказать</button>
+            <button @click="response" class="order-button">Заказать</button>
         </div>
     </div>
 </template>

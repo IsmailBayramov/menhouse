@@ -115,7 +115,7 @@ const changeImage = (newImage) => {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #222222;
+    background-color: #202020;
     border: 3px solid #3d3d3d;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -204,6 +204,7 @@ const changeImage = (newImage) => {
     border-style: solid;
     color: #666666;
     cursor: pointer;
+    font-family: 'SF Pro Display', sans-serif;
 }
 
 .sign-up.active {

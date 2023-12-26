@@ -239,7 +239,7 @@ const closeModal = () => {
   transform: translate(-50%, -50%);
   padding: 20px;
   color: white;
-  background-color: #222222;
+  background-color: #202020;
   border: 3px solid #3d3d3d;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -252,7 +252,7 @@ const closeModal = () => {
 
 .sign-up {
   font-size: calc(.5em + .8vw);
-  font-weight: 700;
+  font-weight: 800;
   padding: 10px 0;
   width: 85%;
   background: none;
@@ -261,6 +261,7 @@ const closeModal = () => {
   text-decoration: none;
   color: #39c434;
   cursor: pointer;
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 .sign-up:hover {

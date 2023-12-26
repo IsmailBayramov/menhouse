@@ -11,6 +11,9 @@ const props = defineProps({
     },
     modelValue: {
         default: null
+    },
+    inscription: {
+        default: "Выберите номинал"
     }
 })
 
@@ -20,7 +23,7 @@ const selectedOption = ref(null)
 const isDropDownVisible = ref(false)
 
 const mappedSelectedOption = computed(() => {
-    return (selectedOption.value?.name || selectedOption.value) || 'Выберите номинал'
+    return (selectedOption.value?.name || selectedOption.value) || props.inscription
 })
 
 const toggleOptionSelect = (option) => {

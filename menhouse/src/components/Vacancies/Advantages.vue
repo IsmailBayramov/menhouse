@@ -1,8 +1,16 @@
 <script setup>
+import Modal from '../Vacancies/Modal.vue'
+import { ref } from 'vue';
 
+const modalWindow = ref()
+
+const openModal = () => {
+  modalWindow.value.openModal()
+}
 </script>
 
 <template>
+    <Modal ref="modalWindow"></Modal>
     <p class="advantages-title">
         <span class="advantages-orange-title">Почему мы</span><br>
         ПРЕИМУЩЕСТВА
@@ -37,9 +45,7 @@
             </div>
         </div>
     </div>
-    <form action="https://apple.com" target="_blank">
-        <button class="container-background-button">Откликнуться</button>
-    </form>
+    <button @click="openModal" class="container-background-button">Откликнуться</button>
 </template>
 
 <style scoped>
