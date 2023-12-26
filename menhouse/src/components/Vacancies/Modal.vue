@@ -65,7 +65,7 @@ const response = () => {
                     <p class="description">Нужен для обртаной связи с кандидатом.</p>
                 </div>
                 <div class="photo-container">
-                    <img src="src/assets/vacancies/modal/woman.png" alt="">
+                    <img src="/src/assets/vacancies/modal/woman.png" alt="">
                 </div>
             </div>
             <button @click="response" class="sign-up">ОТКЛИКНУТЬСЯ</button>

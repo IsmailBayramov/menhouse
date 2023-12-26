@@ -71,7 +71,6 @@ const closeModal = () => {
 .container-background {
   background: url("../../assets/background.png") no-repeat center center;
   background-size: cover; /* или background-size: 100% 100%; */
-  background-repeat: repeat; /* Или background-repeat: no-repeat; если не хотите замощения */
   position: relative;
   height: calc(10em + 25vw); /* Задайте высоту в соответствии с вашими требованиями */
   display: flex;
