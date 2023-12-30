@@ -68,8 +68,6 @@ export const useSliderLogic = (name, timeToStart) => {
 
     init();
     window.addEventListener('resize', init);
-    document.querySelector(`.${sliderClass} .slider-prev`).addEventListener('click', prevSlide);
-    document.querySelector(`.${sliderClass} .slider-next`).addEventListener('click', nextSlide);
 
     const startAutoSlide = () => {
       intervalIdVar = setInterval(() => {
@@ -87,12 +85,12 @@ export const useSliderLogic = (name, timeToStart) => {
     };
 
     document.querySelector(`.${sliderClass} .slider-prev`).addEventListener('click', () => {
-      prevSlide();
+      nextSlide();
       resetAutoSlide();
     });
 
     document.querySelector(`.${sliderClass} .slider-next`).addEventListener('click', () => {
-      nextSlide();
+      prevSlide();
       resetAutoSlide();
     });
 

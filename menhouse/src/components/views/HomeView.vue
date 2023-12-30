@@ -180,6 +180,10 @@ const closeModal = () => {
   visibility: collapse;
 }
 
+img.slide-content {
+  object-fit: cover;
+}
+
 /* Модальное окно */
 .close {
   width: 25px;

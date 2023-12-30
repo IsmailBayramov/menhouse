@@ -3,77 +3,183 @@ import { useSliderLogic } from '../../sliderLogic.js';
 import { ref } from 'vue';
 import Modal from '../Footer/Modal.vue'
 
-useSliderLogic("first", 0)
-useSliderLogic("second", 2)
-useSliderLogic("third", 4)
-useSliderLogic("fourth", 6)
+const applySliderLogicToModels = (models) => {
+  models.forEach((model, index) => {
+    useSliderLogic(`photosClass${index + 1}`, (index % 4) + 1);
+  });
+};
 
 const models = [
   {
-    "photosClass": "first",
-    "name": "Вика",
-    "weight": 50,
-    "age": 20,
-    "height": 150,
-    "breast": 4,
-    "image": "src/assets/models/1/1.png",
+    "photosClass": "photosClass1",
+    "name": "Надя",
+    "weight": 64,
+    "age": 19,
+    "height": 180,
+    "breast": 2,
+    "image": "src/assets/models/nadya/1.webp",
     "gallery": [
-        "src/assets/models/1/1.png",
-        "src/assets/models/1/2.png",
-        "src/assets/models/1/3.png",
-        "src/assets/models/1/4.png",
-        "src/assets/models/1/5.png",
+        "src/assets/models/nadya/1.webp",
+        "src/assets/models/nadya/2.webp",
+        "src/assets/models/nadya/3.webp",
     ],
     "status": false
   },
   {
-    "photosClass": "second",
-    "name": "Илона",
-    "weight": 45,
+    "photosClass": "photosClass2",
+    "name": "Вика",
+    "weight": 50,
+    "age": 23,
+    "height": 150,
+    "breast": 4,
+    "image": "src/assets/models/vika/1.webp",
+    "gallery": [
+        "src/assets/models/vika/1.webp",
+        "src/assets/models/vika/2.webp",
+        "src/assets/models/vika/3.webp",
+        "src/assets/models/vika/4.webp",
+        "src/assets/models/vika/5.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass3",
+    "name": "Василиса",
+    "weight": 53,
+    "age": 21,
+    "height": 162,
+    "breast": 1.5,
+    "image": "src/assets/models/vasilisa/3.webp",
+    "gallery": [
+        "src/assets/models/vasilisa/1.webp",
+        "src/assets/models/vasilisa/2.webp",
+        "src/assets/models/vasilisa/3.webp",
+        "src/assets/models/vasilisa/4.webp",
+        "src/assets/models/vasilisa/5.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass4",
+    "name": "Лиза",
+    "weight": 48,
+    "age": 25,
+    "height": 158,
+    "breast": 3,
+    "image": "src/assets/models/liza/1.webp",
+    "gallery": [
+        "src/assets/models/liza/1.webp",
+        "src/assets/models/liza/2.webp",
+        "src/assets/models/liza/1.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass5",
+    "name": "Дия",
+    "weight": 50,
+    "age": 23,
+    "height": 158,
+    "breast": 2,
+    "image": "src/assets/models/dia/1.webp",
+    "gallery": [
+        "src/assets/models/dia/1.webp",
+        "src/assets/models/dia/2.webp",
+        "src/assets/models/dia/3.webp",
+        "src/assets/models/dia/4.webp",
+        "src/assets/models/dia/5.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass6",
+    "name": "Алина",
+    "weight": 55,
+    "age": 29,
+    "height": 175,
+    "breast": 2.5,
+    "image": "src/assets/models/alina/3.webp",
+    "gallery": [
+        "src/assets/models/alina/1.webp",
+        "src/assets/models/alina/2.webp",
+        "src/assets/models/alina/3.webp",
+        "src/assets/models/alina/4.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass7",
+    "name": "Ясмина",
+    "weight": 57,
+    "age": 20,
+    "height": 156,
+    "breast": 3,
+    "image": "src/assets/models/yasmina/1.webp",
+    "gallery": [
+        "src/assets/models/yasmina/1.webp",
+        "src/assets/models/yasmina/2.webp",
+        "src/assets/models/yasmina/3.webp",
+        "src/assets/models/yasmina/4.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass8",
+    "name": "Настя",
+    "weight": 59,
+    "age": 21,
+    "height": 169,
+    "breast": 2,
+    "image": "src/assets/models/nastya/1.webp",
+    "gallery": [
+        "src/assets/models/nastya/1.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass9",
+    "name": "Ника",
+    "weight": 50,
+    "age": 27,
+    "height": 164,
+    "breast": 2.5,
+    "image": "src/assets/models/nika/1.webp",
+    "gallery": [
+        "src/assets/models/nika/1.webp",
+        "src/assets/models/nika/2.webp",
+        "src/assets/models/nika/1.webp",
+    ],
+    "status": true
+  },
+  {
+    "photosClass": "photosClass10",
+    "name": "Моника",
+    "weight": 57,
     "age": 22,
-    "height": 160,
-    "breast": 1.5,
-    "image": "src/assets/models/2/2.png",
+    "height": 170,
+    "breast": 1,
+    "image": "src/assets/models/monika/1.webp",
     "gallery": [
-        "src/assets/models/2/1.png",
-        "src/assets/models/2/2.png",
-        "src/assets/models/2/3.png",
-        "src/assets/models/2/4.png",
-        "src/assets/models/2/5.png",
+        "src/assets/models/monika/1.webp",
+        "src/assets/models/monika/2.webp",
+        "src/assets/models/monika/3.webp",
+        "src/assets/models/monika/4.webp",
+        "src/assets/models/monika/5.webp",
     ],
     "status": true
   },
   {
-    "photosClass": "third",
-    "name": "Аиша",
-    "weight": 50,
-    "age": 23,
-    "height": 162,
-    "breast": 1.5,
-    "image": "src/assets/models/3/3.png",
+    "photosClass": "photosClass11",
+    "name": "Текила",
+    "weight": 63,
+    "age": 27,
+    "height": 168,
+    "breast": 2.5,
+    "image": "src/assets/models/tekila/1.webp",
     "gallery": [
-        "src/assets/models/3/1.png",
-        "src/assets/models/3/2.png",
-        "src/assets/models/3/3.png",
-        "src/assets/models/3/4.png",
-        "src/assets/models/3/5.png",
-    ],
-    "status": true
-  },
-  {
-    "photosClass": "fourth",
-    "name": "Аиша",
-    "weight": 50,
-    "age": 23,
-    "height": 162,
-    "breast": 1.5,
-    "image": "src/assets/models/3/3.png",
-    "gallery": [
-        "src/assets/models/3/1.png",
-        "src/assets/models/3/2.png",
-        "src/assets/models/3/3.png",
-        "src/assets/models/3/4.png",
-        "src/assets/models/3/5.png",
+        "src/assets/models/tekila/1.webp",
+        "src/assets/models/tekila/2.webp",
+        "src/assets/models/tekila/3.webp",
     ],
     "status": true
   }
@@ -84,6 +190,8 @@ const modalWindow = ref()
 const openModal = () => {
   modalWindow.value.openModal()
 }
+
+applySliderLogicToModels(models);
 </script>
 
 <template>
@@ -206,6 +314,10 @@ const openModal = () => {
 
 .arrow.right {
   transform: rotate(45deg);
+}
+
+img.slide-content {
+  aspect-ratio: 1/1;
 }
 
 
