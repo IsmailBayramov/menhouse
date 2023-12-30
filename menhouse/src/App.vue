@@ -5,6 +5,7 @@ import Footer from './components/General/Footer.vue';
 </script>
 
 <template>
+  <div id="snow" data-count="200"></div>
   <Header></Header>
   <Router-view/>
   <Footer></Footer>

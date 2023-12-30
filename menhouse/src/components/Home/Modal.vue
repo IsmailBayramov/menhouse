@@ -3,53 +3,52 @@ import { defineProps, defineEmits } from 'vue';
 
 const models = [
   {
-    "name": "Вика",
-    "weight": 50,
-    "age": 20,
-    "height": 150,
-    "breast": 4,
-    "image": "src/assets/models/1/1.png",
+    "photosClass": "photosClass1",
+    "name": "Надя",
+    "weight": 64,
+    "age": 19,
+    "height": 180,
+    "breast": 2,
+    "image": "src/assets/models/nadya/2.webp",
     "gallery": [
-        "src/assets/models/1/1.png",
-        "src/assets/models/1/2.png",
-        "src/assets/models/1/3.png",
-        "src/assets/models/1/4.png",
-        "src/assets/models/1/5.png",
+        "src/assets/models/nadya/1.webp",
+        "src/assets/models/nadya/2.webp",
+        "src/assets/models/nadya/3.webp",
     ],
     "status": false
   },
   {
-    "name": "Илона",
-    "weight": 45,
-    "age": 22,
-    "height": 160,
-    "breast": 1.5,
-    "image": "src/assets/models/2/2.png",
+    "photosClass": "photosClass2",
+    "name": "Вика",
+    "weight": 50,
+    "age": 23,
+    "height": 150,
+    "breast": 4,
+    "image": "src/assets/models/vika/2.webp",
     "gallery": [
-        "src/assets/models/2/1.png",
-        "src/assets/models/2/2.png",
-        "src/assets/models/2/3.png",
-        "src/assets/models/2/4.png",
-        "src/assets/models/2/5.png",
+        "src/assets/models/vika/1.webp",
+        "src/assets/models/vika/2.webp",
+        "src/assets/models/vika/3.webp",
+        "src/assets/models/vika/4.webp",
+        "src/assets/models/vika/5.webp",
+    ],
+    "status": true
+  },{
+    "photosClass": "photosClass6",
+    "name": "Алина",
+    "weight": 55,
+    "age": 29,
+    "height": 175,
+    "breast": 2.5,
+    "image": "src/assets/models/alina/1.webp",
+    "gallery": [
+        "src/assets/models/alina/1.webp",
+        "src/assets/models/alina/2.webp",
+        "src/assets/models/alina/3.webp",
+        "src/assets/models/alina/4.webp",
     ],
     "status": true
   },
-  {
-    "name": "Аиша",
-    "weight": 50,
-    "age": 23,
-    "height": 162,
-    "breast": 1.5,
-    "image": "src/assets/models/3/3.png",
-    "gallery": [
-        "src/assets/models/3/1.png",
-        "src/assets/models/3/2.png",
-        "src/assets/models/3/3.png",
-        "src/assets/models/3/4.png",
-        "src/assets/models/3/5.png",
-    ],
-    "status": true
-  }
 ];
 
 const { isModalOpen, choosenModel, selectedImageSrc } = defineProps(['isModalOpen', 'choosenModel', 'selectedImageSrc']);
