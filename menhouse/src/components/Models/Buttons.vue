@@ -18,7 +18,7 @@ const toggleButtonClass = (buttonIndex) => {
         </button>
         
         <button @click="toggleButtonClass(2)" :class="{ clicked: activeButton === 2 }">
-            <p>Сегодня в&nbsp;студии</p>
+            <p >Сегодня в&nbsp;студии</p>
         </button>
         
         <button @click="toggleButtonClass(3)" :class="{ clicked: activeButton === 3 }">
