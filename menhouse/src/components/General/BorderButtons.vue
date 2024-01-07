@@ -18,12 +18,12 @@ const toggleContainers = (container) => {
 <template>
     <div class="button-container">
         <div class="left-buttons">
-            <button @click="toggleContainers('left')">A</button>
-            <button>B</button>
+            <button @click="toggleContainers('left')"><img src="@/assets/icons/border-button_4.png" alt=""></button>
+            <button><img src="@/assets/icons/border-button_1.png" alt=""></button>
         </div>
         <div class="right-buttons">
-            <button @click="toggleContainers('right')">C</button>
-            <button>D</button>
+            <button @click="toggleContainers('right')"><img src="@/assets/icons/border-button_2.png" alt=""></button>
+            <button><img src="@/assets/icons/border-button_3.png" alt=""></button>
         </div>
     </div>
     <div class="link-buttons-container left" :class="{ show: leftContainer }">
@@ -54,17 +54,22 @@ const toggleContainers = (container) => {
 button {
     margin-bottom: 25px;
     background-color: #ff320d;
+    padding: 0;
     color: #fff;
     border: none;
     border-radius: 50%;
-    width: 50px; /* Set equal width and height */
-    height: 50px; /* Set equal width and height */
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     pointer-events: all;
 }
 
 button:hover {
     background-color: rgb(168, 34, 11);
+}
+
+button img {
+    width: 30px;
 }
 
 .left-buttons,
@@ -90,6 +95,10 @@ button:hover {
 
 .left-buttons button:nth-child(2):hover {
     transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.left-buttons button:nth-child(2) img {
+    width: 15px;
 }
 
 .link-buttons-container {
