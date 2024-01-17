@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
+import Modal from '../BorderButtons/Modal.vue'
 
+const isModalOpen = ref(false);
 const leftContainer = ref(false);
 const rightContainer = ref(false);
 
@@ -13,17 +15,29 @@ const toggleContainers = (container) => {
     leftContainer.value = false;
   }
 };
+
+const openModal = () => {
+  isModalOpen.value = true;
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+};
 </script>
 
 <template>
     <div class="button-container">
         <div class="left-buttons">
             <button @click="toggleContainers('left')"><img src="@/assets/icons/border-button_4.png" alt=""></button>
-            <button><img src="@/assets/icons/border-button_1.png" alt=""></button>
+            <button>
+                <RouterLink to="/menhouse-app/questions">
+                    <img src="@/assets/icons/border-button_1.png" alt="">
+                </RouterLink>
+            </button>
         </div>
         <div class="right-buttons">
             <button @click="toggleContainers('right')"><img src="@/assets/icons/border-button_2.png" alt=""></button>
-            <button><img src="@/assets/icons/border-button_3.png" alt=""></button>
+            <button @click="openModal"><img src="@/assets/icons/border-button_3.png" alt=""></button>
         </div>
     </div>
     <div class="link-buttons-container left" :class="{ show: leftContainer }">
@@ -36,6 +50,7 @@ const toggleContainers = (container) => {
         <a href="https://t.me/MENHOUSE0016"><img src="../../assets/footer/icon-telegram.png" alt="Telegram" class="column-link-button"></a>
         <a href="viber://chat?number=+79125120016"><img src="../../assets/footer/icon-vk.png" alt="Viber" class="column-link-button"></a>
     </div>
+    <Modal :isModalOpen="isModalOpen" @close="closeModal"/>
 </template>
 
 <style scoped>
@@ -99,6 +114,19 @@ button img {
 
 .left-buttons button:nth-child(2) img {
     width: 15px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.left-buttons button a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .link-buttons-container {

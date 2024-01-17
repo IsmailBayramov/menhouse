@@ -1,6 +1,8 @@
 <script setup>
 import Description from "../Certificates/Description.vue"
 import Ordering from "../Certificates/Ordering.vue"
+import BorderButtons from '../General/BorderButtons.vue'
+
 </script>
 
 <template>
@@ -9,6 +11,7 @@ import Ordering from "../Certificates/Ordering.vue"
         <Description></Description>
         <Ordering></Ordering>
     </div>    
+    <BorderButtons></BorderButtons>
 </template>
 
 <style scoped>

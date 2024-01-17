@@ -1,4 +1,5 @@
 <script setup>
+import BorderButtons from '../General/BorderButtons.vue'
 import Description from '../Models/Description.vue';
 import Buttons from '../Models/Buttons.vue';
 import ModelList from '../Models/ModelList.vue';
@@ -11,6 +12,7 @@ import ModelList from '../Models/ModelList.vue';
         <Buttons></Buttons>
         <ModelList></ModelList>
     </div>    
+    <BorderButtons></BorderButtons>
 </template>
 
 <style>
