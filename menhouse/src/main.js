@@ -38,5 +38,3 @@ const router = createRouter({
 })
 
 const app = createApp(App).use(router).mount('#app')
-
-export default router;
