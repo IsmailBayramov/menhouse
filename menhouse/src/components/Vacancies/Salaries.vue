@@ -13,35 +13,35 @@
                 <span class="left-caption">7 <span>дней</span></span>
                 <span class="right-caption">ОБНОВЛЕННЫЙ<br>ГАРДЕРОБ</span>
             </div>
-            <img src="../../assets/vacancies/salaries/1.png" alt="Картинка 2">
+            <img src="@/assets/vacancies/salaries/1.png" alt="Картинка 2">
         </div>
         <div class="image-block">
             <div class="caption">
                 <span class="left-caption">30 <span>дней</span></span>
                 <span class="right-caption">НОВЫЙ<br>ТЕЛЕФОН</span>
             </div>
-            <img src="../../assets/vacancies/salaries/2.png" alt="Картинка 2">
+            <img src="@/assets/vacancies/salaries/2.png" alt="Картинка 2">
         </div>
         <div class="image-block">
             <div class="caption">
                 <span class="left-caption">90 <span>дней</span></span>
                 <span class="right-caption">БЕЗЗАБОТНЫЙ<br>ОТДЫХ</span>
             </div>
-            <img src="../../assets/vacancies/salaries/3.png" alt="Картинка 2">
+            <img src="@/assets/vacancies/salaries/3.png" alt="Картинка 2">
         </div>
         <div class="image-block">
             <div class="caption">
                 <span class="left-caption">6 <span>месяцев</span></span>
                 <span class="right-caption">КОМФОРТНАЯ<br>МАШИНА</span>
             </div>
-            <img src="../../assets/vacancies/salaries/4.png" alt="Картинка 2">
+            <img src="@/assets/vacancies/salaries/4.png" alt="Картинка 2">
         </div>
         <div class="image-block">
             <div class="caption">
                 <span class="left-caption">12 <span>месяцев</span></span>
                 <span class="right-caption">СОБСТВЕННАЯ<br>КВАРТИРА</span>
             </div>
-            <img src="../../assets/vacancies/salaries/5.png" alt="Картинка 2">
+            <img src="@/assets/vacancies/salaries/5.png" alt="Картинка 2">
         </div>
     </div>
 </template>

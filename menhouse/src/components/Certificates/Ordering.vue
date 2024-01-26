@@ -31,7 +31,7 @@ const response = () => {
 <template>
     <div class="order-container" :class="{ active: isActive }">
         <div class="certificate-photo">
-            <img src="../../assets/certificates/cards.png" alt="">
+            <img src="@/assets/certificates/cards.png" alt="">
         </div>
         <div class="order">
             <div class="order-form">

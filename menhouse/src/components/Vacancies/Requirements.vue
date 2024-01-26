@@ -16,7 +16,7 @@ const openModal = () => {
         ТРЕБОВАНИЯ
     </p>
     <div class="requirements-container">
-        <img src="../../assets/vacancies/requirements/1.png" alt="">
+        <img src="@/assets/vacancies/requirements/1.png" alt="">
         <div class="description">
             <!-- <p class="title"></p> -->
             <p class="title">Ты нам точно подходишь, если:</p>

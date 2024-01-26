@@ -60,11 +60,11 @@ window.addEventListener('resize', () => {
       </span>
       <nav>
         <div class="menu">
-          <RouterLink to="/menhouse-app/" @click="scrollToTop">Men<span class="header-text-orange">house</span></RouterLink>
-          <RouterLink to="/menhouse-app/models" @click="scrollToTop">Модели</RouterLink>
-          <RouterLink to="/menhouse-app/programms" @click="scrollToTop">Программы</RouterLink>
-          <RouterLink to="/menhouse-app/certificates" @click="scrollToTop">Сертификаты</RouterLink>
-          <RouterLink to="/menhouse-app/vacancies" @click="scrollToTop">Вакансии</RouterLink>
+          <RouterLink to="/" @click="scrollToTop">Men<span class="header-text-orange">house</span></RouterLink>
+          <RouterLink to="/models" @click="scrollToTop">Модели</RouterLink>
+          <RouterLink to="/programms" @click="scrollToTop">Программы</RouterLink>
+          <RouterLink to="/certificates" @click="scrollToTop">Сертификаты</RouterLink>
+          <RouterLink to="/vacancies" @click="scrollToTop">Вакансии</RouterLink>
         </div>
         <div class="burger-menu" @click="toggleMenu">
           <div class="burger-line"></div>

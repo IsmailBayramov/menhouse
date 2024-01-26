@@ -6,117 +6,117 @@ const cards = ref([
   {
     number: 10,
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/1.jpg",
+    photo: "card-photos/1.jpg",
     title: "РАЗ, РАЗ И ГОТОВО",
     body: "• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОМЯЛИ СПИНКУ 🙌<br>• РАЗ, РАЗ И ГОТОВО 😘<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОСИДЕЛИ ПОПИЛИ ЧАЙКУ ИЛИ ЧТО-НИБУДЬ ПОКРЕПЧЕ ☕️",
     price: "60 МИН 4 900 ₽ 🍌<br>90 МИН 6 900 ₽ 🍌🍌"
   },{
     number: "В",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/spades.png",
+    suitImage: "card-suits/spades.png",
     status: "",
-    photo: "src/assets/programms/card-photos/2.png",
+    photo: "card-photos/2.png",
     title: "ТРОГАТЕЛЬНАЯ ИСТОРИЯ",
     body: "• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ТРОГАТЕЛЬНАЯ ИСТОРИЯ 👙<br>• ПОМЯЛИ СПИНКУ 🙌<br>• РАЗ, РАЗ И ГОТОВО 😘<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОСИДЕЛИ ПОПИЛИ ЧАЙКУ ☕️",
     price: "60 МИН 6 900 ₽ 🍌<br>90 МИН 9 900 ₽ 🍌🍌"
   },{
     number: "Д",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/clubs.png",
+    suitImage: "card-suits/clubs.png",
     status: "",
-    photo: "src/assets/programms/card-photos/3.jpg",
+    photo: "card-photos/3.jpg",
     title: "ПОГОНЯТЬ ШАРЫ",
     body: "• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОМЯЛИ СПИНКУ 🙌<br>• ТРОГАТЕЛЬНАЯ ИСТОРИЯ 👙<br>• ПОГОНЯЛИ ШАРЫ 🎱🎱<br>• РАЗ, РАЗ И ГОТОВО 😘<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОСИДЕЛИ ПОПИЛИ ЧАЙКУ ☕️",
     price: "60 МИН 9 900 ₽ 🍌<br>90 МИН 11 900 ₽ 🍌🍌"
   },{
     number: "К",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/diamonds.png",
+    suitImage: "card-suits/diamonds.png",
     status: "",
-    photo: "src/assets/programms/card-photos/4.jpg",
+    photo: "card-photos/4.jpg",
     title: "ПОИГРАТЬ С КИСКОЙ",
     body: "• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОМЯЛИ СПИНКУ 🙌<br>• ТРОГАТЕЛЬНАЯ ИСТОРИЯ 👙<br>• ПОИГРАЛИ С КИСКОЙ 😹<br>• ПОГОНЯЛИ ШАРЫ 🎱🎱<br>• РАЗ, РАЗ И ГОТОВО 😘<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОСИДЕЛИ ПОПИЛИ ЧАЙКУ ☕️",
     price: "60 МИН 9 900 ₽ 🍌<br>90 МИН 11 900 ₽ 🍌🍌"
   },{
     number: "Т",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/5.jpg",
+    photo: "card-photos/5.jpg",
     title: "РАЗВОД ПО ПОЛНОЙ",
     body: "• ИГРА НАЧАЛАСЬ 💃💋<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОМЯЛИ СПИНКУ 🙌<br>• ТРОГАТЕЛЬНАЯ ИСТОРИЯ 👙<br>• ПОИГРАЛИ С КИСКОЙ 😹<br>• ПОГОНЯЛИ ШАРЫ 🎱🎱<br>• СТОЙ, ТОЛЬКО НЕ ТУДА 🎯<br>• РАЗ, РАЗ И ГОТОВО 😘<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁",
     price: "60 МИН 15 900 ₽ 🍌<br>90 МИН 19 900 ₽ 🍌🍌"
   },{
     number: "J",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/nothing.png",
+    suitImage: "card-suits/nothing.png",
     status: "",
-    photo: "src/assets/programms/card-photos/6.jpg",
+    photo: "card-photos/6.jpg",
     title: "СТОП СЛОВО",
     body: "• ИГРА НАЧАЛАСЬ 💃💋<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• УСТРОИЛИ ВАКХАНАЛИЮ<br• ПОМЯЛИ СПИНКУ 🙌<br>• ТРОГАТЕЛЬНАЯ ИСТОРИЯ 👙<br>• ПОИГРАЛИ С КИСКОЙ 😹<br>• ПОГОНЯЛИ ШАРЫ 🎱🎱<br>• СТОЙ, ТОЛЬКО НЕ ТУДА 🎯<br>• РАЗ, РАЗ И ГОТОВО 😘<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОСИДЕЛИ ПОПИЛИ ЧАЙКУ ☕️",
     price: "60 МИН 25 000 ₽ 🍌"
   },{
     number: "J",
     isRed: true,
-    suitImage: "src/assets/programms/card-suits/nothing.png",
+    suitImage: "card-suits/nothing.png",
     status: "",
-    photo: "src/assets/programms/card-photos/7.jpg",
+    photo: "card-photos/7.jpg",
     title: "СТОЙ, ТОЛЬКО НЕ ТУДА!",
     body: "• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОМЯЛИ СПИНКУ 🙌<br>• ТРОГАТЕЛЬНАЯ ИСТОРИЯ 👙<br>• ПОГОНЯЛИ ШАРЫ 🎱🎱<br>• СТОЙ, ТОЛЬКО НЕ ТУДА 🎯<br>• РАЗ, РАЗ И ГОТОВО 😘<br>• ПОМЫЛИСЬ В ДУШИКЕ 🛁<br>• ПОСИДЕЛИ ПОПИЛИ ЧАЙКУ ☕️",
     price: "60 МИН 11 900 ₽ 🍌<br>90 МИН 13 900 ₽ 🍌🍌"
   },{
     number: "М",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/8.jpg",
+    photo: "card-photos/8.jpg",
     title: "МЕДСЕСТРА",
     body: "При загадочных обстоятельствах Вы впали в кому. Но сексуальные медсестричка и врач выяснят причину и очень быстро приведут вас в чувство, ведь перед такой медициной никто не сможет устоять.",
     price: "90 МИН 14 900 ₽ 🍌<br>120 МИН 19 900 ₽ 🍌🍌"
   },{
     number: "С",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/9.jpg",
+    photo: "card-photos/9.jpg",
     title: "СЕКРЕТАРША",
     body: "Офисная тема - богатая почва для сексуальных фантазий, особенно если в твоём офисе ничего подобного не происходит. Подобный сценарий можно считать классикой жанра и мы можем предложить несколько вариантов развития событий.",
     price: "90 МИН 14 900 ₽ 🍌<br>120 МИН 19 900 ₽ 🍌🍌"
   },{
     number: "У",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/10.jpg",
+    photo: "card-photos/10.jpg",
     title: "УЧИТЕЛЬНИЦА",
     body: "Школьные годы чудесные. Наверняка у многих мальчишек была тайная фантазия отдаться в руки своей первой сексуальной учительнице или может быть побыть директором? А может вас вообще вызвали в школу?",
     price: "90 МИН 14 900 ₽ 🍌<br>120 МИН 19 900 ₽ 🍌🍌"
   },{
     number: "Г",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/11.jpg",
+    photo: "card-photos/11.jpg",
     title: "ГОРНИЧНАЯ",
     body: "Представьте, вы хозяин шикарного особняка в котором работает шикарная домработница. Сексуальная и немного рассеянная девушка. Всем своим видом даёт понять насколько эротические фантазии сидят в ее голове....",
     price: "90 МИН 14 900 ₽ 🍌<br>120 МИН 19 900 ₽ 🍌🍌"
   },{
     number: "Б",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/12.jpg",
+    photo: "card-photos/12.jpg",
     title: "БИБЛИОТЕКАРША",
     body: "Блуждая среди пыльных книг, одинокая библиотекарша мечтает, чтобы приятный в общении читатель также взял ее и вернул полностью потрепанной...",
     price: "90 МИН 14 900 ₽ 🍌<br>120 МИН 19 900 ₽ 🍌🍌"
   },{
     number: "Ш",
     isRed: false,
-    suitImage: "src/assets/programms/card-suits/heart.png",
+    suitImage: "card-suits/heart.png",
     status: "",
-    photo: "src/assets/programms/card-photos/13.jpg",
+    photo: "card-photos/13.jpg",
     title: "ШКОЛЬНИЦА",
     body: "Во время контрольной ты решил списать у своей одноклассницы, однако шпаргалка оказалась спрятана у неё под юбкой.",
     price: "90 МИН 14 900 ₽ 🍌<br>120 МИН 19 900 ₽ 🍌🍌"
@@ -132,18 +132,18 @@ const cards = ref([
         <div class="card-info">
           <p class="number" :class="{ red: card.isRed }">{{ card.number }}</p>
           <div class="card-suit">
-            <img :src="card.suitImage" alt="">
+            <img :src="`assets/programms/${card.suitImage}`" alt="">
           </div>
         </div>
         <div class="status" v-if="card.status">{{ card.status }}</div>
         <div class="card-photo">
-          <img :src="card.photo" alt="">
+          <img :src="`assets/programms/${card.photo}`" alt="">
           <p>НАЖМИ</p>
         </div>
         <div class="card-info">
           <p class="number" :class="{ red: card.isRed }">{{ card.number }}</p>
           <div class="card-suit last">
-            <img :src="card.suitImage" alt="">
+            <img :src="`assets/programms/${card.suitImage}`" alt="">
           </div>
         </div>
       </template>

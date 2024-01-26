@@ -10,11 +10,11 @@ const models = [
     "age": 19,
     "height": 180,
     "breast": 2,
-    "image": "src/assets/models/nadya/2.webp",
+    "image": "nadya/2.webp",
     "gallery": [
-        "src/assets/models/nadya/1.webp",
-        "src/assets/models/nadya/2.webp",
-        "src/assets/models/nadya/3.webp",
+        "nadya/1.webp",
+        "nadya/2.webp",
+        "nadya/3.webp",
     ],
     "status": false
   },
@@ -25,13 +25,13 @@ const models = [
     "age": 23,
     "height": 150,
     "breast": 4,
-    "image": "src/assets/models/vika/2.webp",
+    "image": "vika/2.webp",
     "gallery": [
-        "src/assets/models/vika/1.webp",
-        "src/assets/models/vika/2.webp",
-        "src/assets/models/vika/3.webp",
-        "src/assets/models/vika/4.webp",
-        "src/assets/models/vika/5.webp",
+        "vika/1.webp",
+        "vika/2.webp",
+        "vika/3.webp",
+        "vika/4.webp",
+        "vika/5.webp",
     ],
     "status": true
   },{
@@ -41,12 +41,12 @@ const models = [
     "age": 29,
     "height": 175,
     "breast": 2.5,
-    "image": "src/assets/models/alina/1.webp",
+    "image": "alina/1.webp",
     "gallery": [
-        "src/assets/models/alina/1.webp",
-        "src/assets/models/alina/2.webp",
-        "src/assets/models/alina/3.webp",
-        "src/assets/models/alina/4.webp",
+        "alina/1.webp",
+        "alina/2.webp",
+        "alina/3.webp",
+        "alina/4.webp",
     ],
     "status": true
   },
@@ -68,7 +68,7 @@ const showModal = (number) => {
     <p class="container-title">Модели <span class="container-orange-title">Студии</span></p>
     <div class="our models">
       <div v-for="(model, index) in models" :key="index" class="model-card" @click="showModal(index)">
-        <img :src="model.image" alt="model"/>
+        <img :src="`assets/models/${model.image}`" alt="model"/>
         <p>
           Имя: <span>{{ model.name }}</span><br>
           Вес: <span>{{ model.weight }}</span><br>
@@ -85,7 +85,7 @@ const showModal = (number) => {
       @closeModal="isModalOpen = false"
       @updateSelectedImage="selectedImageSrc = $event"
     />
-    <button @click="$router.push('/menhouse-app/models')" class="container-background-button">Смотреть больше</button>
+    <button @click="$router.push('/models')" class="container-background-button">Смотреть больше</button>
 </template>
 
 <style scoped>

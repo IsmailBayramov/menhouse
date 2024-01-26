@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { createApp } from 'vue'
 import App from './App.vue'
 import HomeView from './components/views/HomeView.vue'
@@ -9,30 +9,30 @@ import CertificatesView from './components/views/CertificatesView.vue'
 import QuestionsView from './components/views/QuestionsView.vue'
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [{
         name: 'Home',
-        path: '/menhouse-app/',
+        path: '/',
         component: HomeView
     }, {
         name: 'Vacancies',
-        path: '/menhouse-app/vacancies',
+        path: '/vacancies',
         component: VacanciesView
     }, {
         name: 'Programms',
-        path: '/menhouse-app/programms',
+        path: '/programms',
         component: ProgrammsView
     }, {
         name: 'Models',
-        path: '/menhouse-app/models',
+        path: '/models',
         component: ModelsView
     }, {
         name: 'Certificates',
-        path: '/menhouse-app/certificates',
+        path: '/certificates',
         component: CertificatesView 
     }, {
         name: 'Questions',
-        path: '/menhouse-app/questions',
+        path: '/questions',
         component: QuestionsView 
     }]
 })

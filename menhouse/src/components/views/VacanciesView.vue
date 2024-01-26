@@ -34,19 +34,6 @@ import BorderButtons from '../General/BorderButtons.vue'
   font-size: calc(.5em + 2vw);
 }
 
-.container-background {
-  background: url("../../assets/body-background.png") no-repeat center center;
-  background-size: cover; /* или background-size: 100% 100%; */
-  background-repeat: repeat; /* Или background-repeat: no-repeat; если не хотите замощения */
-  position: relative;
-  height: calc(10em + 25vw); /* Задайте высоту в соответствии с вашими требованиями */
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .container-background-logo {
   max-width: calc(5em + 22vw); /* Адаптивная ширина */
   object-fit: contain;

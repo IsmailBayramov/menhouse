@@ -30,7 +30,7 @@ const closeModal = () => {
         <div class="left-buttons">
             <button @click="toggleContainers('left')"><img src="@/assets/icons/border-button_4.png" alt=""></button>
             <button>
-                <RouterLink to="/menhouse-app/questions">
+                <RouterLink to="/questions">
                     <img src="@/assets/icons/border-button_1.png" alt="">
                 </RouterLink>
             </button>
@@ -41,14 +41,14 @@ const closeModal = () => {
         </div>
     </div>
     <div class="link-buttons-container left" :class="{ show: leftContainer }">
-        <a href="https://t.me/MHouse_club_bot"><img src="../../assets/footer/icon-telegram.png" alt="Telegram" class="column-link-button"></a>
-        <a href="https://vk.com/menhouse_club"><img src="../../assets/footer/icon-vk.png" alt="Vkontakte" class="column-link-button"></a>
+        <a href="https://t.me/MHouse_club_bot"><img src="@/assets/footer/icon-telegram.png" alt="Telegram" class="column-link-button"></a>
+        <a href="https://vk.com/menhouse_club"><img src="@/assets/footer/icon-vk.png" alt="Vkontakte" class="column-link-button"></a>
     </div>
     <div class="link-buttons-container right" :class="{ show: rightContainer }">
-        <a href="tel:+7 912 512 0016"><img src="../../assets/footer/icon-vk.png" alt="Phone number" class="column-link-button"></a>
-        <a href="whatsapp://send?phone=+79125120016"><img src="../../assets/footer/icon-whatsapp.png" alt="Whatsapp" class="column-link-button"></a>
-        <a href="https://t.me/MENHOUSE0016"><img src="../../assets/footer/icon-telegram.png" alt="Telegram" class="column-link-button"></a>
-        <a href="viber://chat?number=+79125120016"><img src="../../assets/footer/icon-vk.png" alt="Viber" class="column-link-button"></a>
+        <a href="tel:+7 912 512 0016"><img src="@/assets/footer/icon-vk.png" alt="Phone number" class="column-link-button"></a>
+        <a href="whatsapp://send?phone=+79125120016"><img src="@/assets/footer/icon-whatsapp.png" alt="Whatsapp" class="column-link-button"></a>
+        <a href="https://t.me/MENHOUSE0016"><img src="@/assets/footer/icon-telegram.png" alt="Telegram" class="column-link-button"></a>
+        <a href="viber://chat?number=+79125120016"><img src="@/assets/footer/icon-vk.png" alt="Viber" class="column-link-button"></a>
     </div>
     <Modal :isModalOpen="isModalOpen" @close="closeModal"/>
 </template>

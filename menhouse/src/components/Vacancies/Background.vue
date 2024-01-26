@@ -1,13 +1,13 @@
 <template>    
     <div class="background">
-      <img src="../../assets/logo.png" alt="body_image" class="container-background-logo">
+      <img src="@/assets/logo.png" alt="body_image" class="container-background-logo">
       <p class="background-title">С НАМИ <span>Приятно</span> РАБОТАТЬ</p>
     </div>
 </template>
 
 <style scoped>
 .background {
-  background: url("../../assets/vacancies/background.png") no-repeat center center;
+  background: url("@/assets/vacancies/background.png") no-repeat center center;
   background-size: cover; /* или background-size: 100% 100%; */
   position: relative;
   height: 20em;

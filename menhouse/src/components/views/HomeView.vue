@@ -28,7 +28,7 @@ const closeModal = () => {
 <template>
   <div class="container">
     <div class="container-background">
-      <img src="../../assets/logo.png" alt="body_image" class="container-background-logo">
+      <img src="@/assets/logo.png" alt="body_image" class="container-background-logo">
       <button @click="openModal" class="container-background-button">Записаться</button>
     </div>
     <div v-if="isModalOpen" class="modalBackground">
@@ -69,7 +69,7 @@ const closeModal = () => {
 }
 
 .container-background {
-  background: url("../../assets/background.png") no-repeat center center;
+  background: url("@/assets/background.png") no-repeat center center;
   background-size: cover; /* или background-size: 100% 100%; */
   position: relative;
   height: calc(10em + 25vw); /* Задайте высоту в соответствии с вашими требованиями */

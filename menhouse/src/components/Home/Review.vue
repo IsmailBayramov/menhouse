@@ -29,7 +29,7 @@ onMounted(() => {
                 <div class="slide">
                     <div class="review">
                         <div class="review-content">
-                            <img src="../../assets/reviews/review_icon.png" alt="">
+                            <img src="@/assets/reviews/review_icon.png" alt="">
                             <p class="review-text">„Огромная благодарность мастер Алине за&nbsp;релакс.“</p>
                         </div>
                         <div class="review-author">
@@ -40,7 +40,7 @@ onMounted(() => {
                 <div class="slide">
                     <div class="review">
                         <div class="review-content">
-                            <img src="../../assets/reviews/review_icon.png" alt="">
+                            <img src="@/assets/reviews/review_icon.png" alt="">
                             <p class="review-text">„Огромная благодарность мастер Алине за&nbsp;релакс.“</p>
                         </div>
                         <div class="review-author">
@@ -51,7 +51,7 @@ onMounted(() => {
             </div>
         </div>
     </section>
-    <form action="https://apple.com" target="_blank">
+    <form action="" target="_blank">
         <button class="container-background-button">Оставить отзыв</button>
     </form>
 </template>

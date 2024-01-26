@@ -14,7 +14,7 @@ const openModal = () => {
   <footer class="footer-container">
     <div class="footer-content">
       <div class="column">
-        <img src="../../assets/logo.png" alt="" class="footer-logo">
+        <img src="@/assets/logo.png" alt="" class="footer-logo">
       </div>
       <div class="column">
         <p>Спа салон для&nbsp;независимых и&nbsp;сильных мужчин</p>
@@ -22,15 +22,15 @@ const openModal = () => {
       </div>
       <div class="column">
         <p>Правила посещения</p>
-        <a href="https://apple.com" target="_blank"><button class="column-button">Ознакомиться</button></a>
+        <a href="" target="_blank"><button class="column-button">Ознакомиться</button></a>
       </div>
       <div class="column">
         <p>Мы в&nbsp;социальных сетях</p>
         <div class="column-buttons">
-          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-whatsapp.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-instagram.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-vk.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="../../assets/footer/icon-telegram.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-whatsapp.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-instagram.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-vk.png" alt="" class="column-link-button"></a>
+          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-telegram.png" alt="" class="column-link-button"></a>
         </div>
       </div>
     </div>

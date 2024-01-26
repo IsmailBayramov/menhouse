@@ -17,7 +17,7 @@ const sales = ["1.webp", "2.webp", "3.webp", "4.webp",]
       <button class="slider-button slider-prev"><div class="arrow left"></div></button>
       <div class="slider">
         <div class="slider-line">
-          <img class="slide-content" v-for="(image, index) in sales" :key="index" :src="`src/assets/sales/${image}`" alt="">
+          <img class="slide-content" v-for="(image, index) in sales" :key="index" :src="`assets/sales/${image}`" alt="">
         </div>
       </div>
       <button class="slider-button slider-next"><div class="arrow right"></div></button>

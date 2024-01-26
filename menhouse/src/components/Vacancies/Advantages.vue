@@ -16,7 +16,7 @@ const openModal = () => {
         ПРЕИМУЩЕСТВА
     </p>
     <div class="advantages-container">
-        <img src="../../assets/vacancies/advantages/1.png" alt="">
+        <img src="@/assets/vacancies/advantages/1.png" alt="">
         <div class="description">
             <!-- <p class="title"></p> -->
             <p class="title">Строго без&nbsp;интима</p>

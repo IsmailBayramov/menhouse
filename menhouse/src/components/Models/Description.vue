@@ -7,7 +7,7 @@
             моделей в&nbsp;текущий момент времени
         </p>
         <div class="logo">
-            <img src="../../assets/logo.png" alt="">
+            <img src="@/assets/logo.png" alt="">
         </div>
     </div>
 </template>

@@ -17,11 +17,11 @@ const models = [
     "age": 19,
     "height": 180,
     "breast": 2,
-    "image": "src/assets/models/nadya/1.webp",
+    "image": "nadya/1.webp",
     "gallery": [
-        "src/assets/models/nadya/1.webp",
-        "src/assets/models/nadya/2.webp",
-        "src/assets/models/nadya/3.webp",
+        "nadya/1.webp",
+        "nadya/2.webp",
+        "nadya/3.webp",
     ],
     "status": false
   },
@@ -32,13 +32,13 @@ const models = [
     "age": 23,
     "height": 150,
     "breast": 4,
-    "image": "src/assets/models/vika/1.webp",
+    "image": "vika/1.webp",
     "gallery": [
-        "src/assets/models/vika/1.webp",
-        "src/assets/models/vika/2.webp",
-        "src/assets/models/vika/3.webp",
-        "src/assets/models/vika/4.webp",
-        "src/assets/models/vika/5.webp",
+        "vika/1.webp",
+        "vika/2.webp",
+        "vika/3.webp",
+        "vika/4.webp",
+        "vika/5.webp",
     ],
     "status": true
   },
@@ -49,13 +49,13 @@ const models = [
     "age": 21,
     "height": 162,
     "breast": 1.5,
-    "image": "src/assets/models/vasilisa/3.webp",
+    "image": "vasilisa/3.webp",
     "gallery": [
-        "src/assets/models/vasilisa/1.webp",
-        "src/assets/models/vasilisa/2.webp",
-        "src/assets/models/vasilisa/3.webp",
-        "src/assets/models/vasilisa/4.webp",
-        "src/assets/models/vasilisa/5.webp",
+        "vasilisa/1.webp",
+        "vasilisa/2.webp",
+        "vasilisa/3.webp",
+        "vasilisa/4.webp",
+        "vasilisa/5.webp",
     ],
     "status": true
   },
@@ -66,11 +66,11 @@ const models = [
     "age": 25,
     "height": 158,
     "breast": 3,
-    "image": "src/assets/models/liza/1.webp",
+    "image": "liza/1.webp",
     "gallery": [
-        "src/assets/models/liza/1.webp",
-        "src/assets/models/liza/2.webp",
-        "src/assets/models/liza/1.webp",
+        "liza/1.webp",
+        "liza/2.webp",
+        "liza/1.webp",
     ],
     "status": true
   },
@@ -81,13 +81,13 @@ const models = [
     "age": 23,
     "height": 158,
     "breast": 2,
-    "image": "src/assets/models/dia/1.webp",
+    "image": "dia/1.webp",
     "gallery": [
-        "src/assets/models/dia/1.webp",
-        "src/assets/models/dia/2.webp",
-        "src/assets/models/dia/3.webp",
-        "src/assets/models/dia/4.webp",
-        "src/assets/models/dia/5.webp",
+        "dia/1.webp",
+        "dia/2.webp",
+        "dia/3.webp",
+        "dia/4.webp",
+        "dia/5.webp",
     ],
     "status": true
   },
@@ -98,12 +98,12 @@ const models = [
     "age": 29,
     "height": 175,
     "breast": 2.5,
-    "image": "src/assets/models/alina/3.webp",
+    "image": "alina/3.webp",
     "gallery": [
-        "src/assets/models/alina/1.webp",
-        "src/assets/models/alina/2.webp",
-        "src/assets/models/alina/3.webp",
-        "src/assets/models/alina/4.webp",
+        "alina/1.webp",
+        "alina/2.webp",
+        "alina/3.webp",
+        "alina/4.webp",
     ],
     "status": true
   },
@@ -114,12 +114,12 @@ const models = [
     "age": 20,
     "height": 156,
     "breast": 3,
-    "image": "src/assets/models/yasmina/1.webp",
+    "image": "yasmina/1.webp",
     "gallery": [
-        "src/assets/models/yasmina/1.webp",
-        "src/assets/models/yasmina/2.webp",
-        "src/assets/models/yasmina/3.webp",
-        "src/assets/models/yasmina/4.webp",
+        "yasmina/1.webp",
+        "yasmina/2.webp",
+        "yasmina/3.webp",
+        "yasmina/4.webp",
     ],
     "status": true
   },
@@ -130,9 +130,9 @@ const models = [
     "age": 21,
     "height": 169,
     "breast": 2,
-    "image": "src/assets/models/nastya/1.webp",
+    "image": "nastya/1.webp",
     "gallery": [
-        "src/assets/models/nastya/1.webp",
+        "nastya/1.webp",
     ],
     "status": true
   },
@@ -143,11 +143,11 @@ const models = [
     "age": 27,
     "height": 164,
     "breast": 2.5,
-    "image": "src/assets/models/nika/1.webp",
+    "image": "nika/1.webp",
     "gallery": [
-        "src/assets/models/nika/1.webp",
-        "src/assets/models/nika/2.webp",
-        "src/assets/models/nika/1.webp",
+        "nika/1.webp",
+        "nika/2.webp",
+        "nika/1.webp",
     ],
     "status": true
   },
@@ -158,13 +158,13 @@ const models = [
     "age": 22,
     "height": 170,
     "breast": 1,
-    "image": "src/assets/models/monika/1.webp",
+    "image": "monika/1.webp",
     "gallery": [
-        "src/assets/models/monika/1.webp",
-        "src/assets/models/monika/2.webp",
-        "src/assets/models/monika/3.webp",
-        "src/assets/models/monika/4.webp",
-        "src/assets/models/monika/5.webp",
+        "monika/1.webp",
+        "monika/2.webp",
+        "monika/3.webp",
+        "monika/4.webp",
+        "monika/5.webp",
     ],
     "status": true
   },
@@ -175,11 +175,11 @@ const models = [
     "age": 27,
     "height": 168,
     "breast": 2.5,
-    "image": "src/assets/models/tekila/1.webp",
+    "image": "tekila/1.webp",
     "gallery": [
-        "src/assets/models/tekila/1.webp",
-        "src/assets/models/tekila/2.webp",
-        "src/assets/models/tekila/3.webp",
+        "tekila/1.webp",
+        "tekila/2.webp",
+        "tekila/3.webp",
     ],
     "status": true
   }
@@ -202,7 +202,7 @@ applySliderLogicToModels(models);
                 <button class="slider-button slider-prev"><div class="arrow left"></div></button>
                 <div class="slider">
                     <div class="slider-line">
-                        <img class="slide-content" v-for="(photo, photoIndex) in model.gallery" :src="photo" :alt="'Photo ' + photoIndex">
+                        <img class="slide-content" v-for="(photo, photoIndex) in model.gallery" :src="`assets/models/${photo}`" :alt="'Photo ' + photoIndex">
                     </div>
                 </div>
                 <button class="slider-button slider-next"><div class="arrow right"></div></button>

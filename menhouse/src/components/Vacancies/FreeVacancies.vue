@@ -24,7 +24,7 @@ const openModal = () => {
     <div class="vacancies">
         <div class="card-container">
             <div class="card-image">
-                <img src="../../assets/vacancies/vacancies/1.png" alt="Vacancy Image">
+                <img src="@/assets/vacancies/vacancies/1.png" alt="Vacancy Image">
             </div>
             <p class="card-title">Администратор</p>
             <div class="line">
@@ -39,7 +39,7 @@ const openModal = () => {
         </div>
         <div class="card-container">
             <div class="card-image">
-                <img src="../../assets/vacancies/vacancies/2.png" alt="Vacancy Image">
+                <img src="@/assets/vacancies/vacancies/2.png" alt="Vacancy Image">
             </div>
             <p class="card-title">SPA-Модель</p>
             <div class="line">
@@ -54,7 +54,7 @@ const openModal = () => {
         </div>
         <div class="card-container">
             <div class="card-image">
-                <img src="../../assets/vacancies/vacancies/3.png" alt="Vacancy Image">
+                <img src="@/assets/vacancies/vacancies/3.png" alt="Vacancy Image">
             </div>
             <p class="card-title">HR-Менеджер</p>
             <div class="line">
@@ -69,7 +69,7 @@ const openModal = () => {
         </div>
         <div class="card-container">
             <div class="card-image">
-                <img src="../../assets/vacancies/vacancies/4.png" alt="Vacancy Image">
+                <img src="@/assets/vacancies/vacancies/4.png" alt="Vacancy Image">
             </div>
             <p class="card-title">Оператор Call-Центра</p>
             <div class="line">
@@ -84,7 +84,7 @@ const openModal = () => {
         </div>
         <div class="card-container">
             <div class="card-image">
-                <img src="../../assets/vacancies/vacancies/5.png" alt="Vacancy Image">
+                <img src="@/assets/vacancies/vacancies/5.png" alt="Vacancy Image">
             </div>
             <p class="card-title">SMM-Менеджер</p>
             <div class="line">
