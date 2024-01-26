@@ -5,13 +5,15 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/menhouse-app/",
+  server: {
+    origin: 'http://127.0.0.1:5500',
+  },
   plugins: [
     vue(),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./public', import.meta.url))
     }
   }
 })
