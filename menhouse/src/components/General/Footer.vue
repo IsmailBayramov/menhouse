@@ -27,10 +27,10 @@ const openModal = () => {
       <div class="column">
         <p>Мы в&nbsp;социальных сетях</p>
         <div class="column-buttons">
-          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-whatsapp.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-instagram.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-vk.png" alt="" class="column-link-button"></a>
-          <a href="https://apple.com" target="_blank"><img src="@/assets/footer/icon-telegram.png" alt="" class="column-link-button"></a>
+          <a href="https://api.whatsapp.com/send/?phone=89125120016&text&type=phone_number&app_absent=0" target="_blank"><img src="@/assets/footer/icon-whatsapp.png" alt="" class="column-link-button"></a>
+          <a href="https://instagram.com/name" target="_blank"><img src="@/assets/footer/icon-instagram.png" alt="" class="column-link-button"></a>
+          <a href="https://vk.com/menhouse_club" target="_blank"><img src="@/assets/footer/icon-vk.png" alt="" class="column-link-button"></a>
+          <a href="https://t.me/MENHOUSE0016" target="_blank"><img src="@/assets/footer/icon-telegram.png" alt="" class="column-link-button"></a>
         </div>
       </div>
     </div>
