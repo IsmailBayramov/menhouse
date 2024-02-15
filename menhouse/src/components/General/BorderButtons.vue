@@ -41,7 +41,7 @@ const closeModal = () => {
         </div>
     </div>
     <div class="link-buttons-container left" :class="{ show: leftContainer }">
-        <a href="https://t.me/MHouse_club_bot"><img src="@/assets/footer/icon-telegram.png" alt="Telegram" class="column-link-button"></a>
+        <a href="https://t.me/Menhouse14"><img src="@/assets/footer/icon-telegram.png" alt="Telegram" class="column-link-button"></a>
         <a href="https://vk.com/menhouse_club"><img src="@/assets/footer/icon-vk.png" alt="Vkontakte" class="column-link-button"></a>
     </div>
     <div class="link-buttons-container right" :class="{ show: rightContainer }">

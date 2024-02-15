@@ -126,6 +126,7 @@ const changeImage = (newImage) => {
 
 .parent {
     display: grid;
+    grid-template-rows: auto 1fr; /* Указываем явно размеры строк */
     margin-right: 1em;
     height: 100%;
     min-width: 200px;
@@ -278,10 +279,6 @@ const changeImage = (newImage) => {
     .div2 img, .div3 img, .div4 img, 
     .div5 img, .div6 img {
         width: 85%;
-    }
-
-    .description {
-        height: none;
     }
 
     .close {

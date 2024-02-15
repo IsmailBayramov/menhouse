@@ -17,13 +17,13 @@ const toggleButtonClass = (buttonIndex) => {
             <p>10 Моделей</p>
         </button>
         
-        <button @click="toggleButtonClass(2)" :class="{ clicked: activeButton === 2 }">
+        <!-- <button @click="toggleButtonClass(2)" :class="{ clicked: activeButton === 2 }">
             <p >Сегодня в&nbsp;студии</p>
         </button>
         
         <button @click="toggleButtonClass(3)" :class="{ clicked: activeButton === 3 }">
             <p>ТОП Недели</p>
-        </button>
+        </button> -->
     </div>
 </template>
 

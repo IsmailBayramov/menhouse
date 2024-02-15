@@ -7,7 +7,7 @@ const openModal = () => {
   emit('openModal');
 };
 
-const sales = ["1.webp", "2.webp", "3.webp", "4.webp",]
+const sales = ["1.webp", "2.jpg", "3.jpg", "4.jpg",]
 
 </script>
 
@@ -26,5 +26,7 @@ const sales = ["1.webp", "2.webp", "3.webp", "4.webp",]
 </template>
 
 <style scoped>
-
+img.slide-content {
+  object-fit: contain; 
+}
 </style>
