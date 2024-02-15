@@ -214,7 +214,7 @@ applySliderLogicToModels(models);
                     Вес: <span>{{ model.weight }}</span> <br>
                     Возраст: <span>{{ model.age }}</span> <br>
                     Рост: <span>{{ model.height }}</span> <br>
-                    Грудь: <span>{{ model.bust }}</span>
+                    Грудь: <span>{{ model.breast }}</span>
                     </p>
                 </div>
                 <button @click="openModal" class="info-button">Записаться</button>
