@@ -1,4 +1,5 @@
-<script setup> 
+<script setup>
+import {openFullscreen} from '../../plugins/fullScreen.vue';
 
 const apartments = [
   "1.webp", "2.webp", "3.webp", "4.webp",
@@ -10,14 +11,22 @@ const apartments = [
 </script>
 
 <template>
-    <p class="container-title">Обзор <span class="container-orange-title">Апартаментов</span></p>
-    <div class="our apartments">
-      <button class="slider-button slider-prev"><div class="arrow left"></div></button>
-      <div class="slider">
-        <div class="slider-line">
-          <img class="slide-content" v-for="(image, index) in apartments" :key="index" :src="`assets/apartments/${image}`" alt="">
-        </div>
+  <p class="container-title">Обзор <span class="container-orange-title">Апартаментов</span></p>
+  <div class="our apartments">
+    <button class="slider-button slider-prev">
+      <div class="arrow left"></div>
+    </button>
+    <div class="slider">
+      <div class="slider-line">
+        <img 
+          class="slide-content fullscreenable" 
+          @click="openFullscreen(`assets/apartments/${image}`)"
+          v-for="(image, index) in apartments" 
+          :key="index"
+          :src="`assets/apartments/${image}`" alt="">
       </div>
-      <button class="slider-button slider-next"><div class="arrow right"></div></button>
     </div>
-</template>
+    <button class="slider-button slider-next">
+    <div class="arrow right"></div>
+  </button>
+</div></template>

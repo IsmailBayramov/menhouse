@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue';
+import {openFullscreen} from '../../plugins/fullScreen.vue';
 
 const models = [
   {
@@ -69,7 +70,11 @@ const changeImage = (newImage) => {
     <div class="modal">
         <div class="parent">
             <div class="div1">
-                <img :src="`assets/models/${selectedImageSrc}`" />
+                <img 
+                    class="fullscreenable" 
+                    @click="openFullscreen(`assets/models/${selectedImageSrc}`)"
+                    :src="`assets/models/${selectedImageSrc}`" 
+                />
             </div>
             <div v-for="(image, index) in models[choosenModel].gallery" :key="index" :class="'div' + (index + 2)" @click="changeImage(image)">
                 <img

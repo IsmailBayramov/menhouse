@@ -40,7 +40,7 @@ const openModal = () => {
 
 <style scoped>
 a {
-  width: fit-content;
+  display: inline-block;
 }
 
 .footer-container {

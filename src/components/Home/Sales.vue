@@ -1,5 +1,6 @@
-<script setup> 
+<script setup>
 import { defineEmits } from 'vue';
+import {openFullscreen} from '../../plugins/fullScreen.vue';
 
 const emit = defineEmits();
 
@@ -12,21 +13,28 @@ const sales = ["1.webp", "2.jpg", "3.jpg", "4.jpg",]
 </script>
 
 <template>
-    <p class="container-title">Текущие <span class="container-orange-title">Акции</span></p>
-    <div class="our sales">
-      <button class="slider-button slider-prev"><div class="arrow left"></div></button>
-      <div class="slider">
-        <div class="slider-line">
-          <img class="slide-content" v-for="(image, index) in sales" :key="index" :src="`assets/sales/${image}`" alt="">
-        </div>
+  <p class="container-title">Текущие <span class="container-orange-title">Акции</span></p>
+  <div class="our sales">
+    <button class="slider-button slider-prev">
+      <div class="arrow left"></div>
+    </button>
+    <div class="slider">
+      <div class="slider-line">
+        <img
+              @click="openFullscreen(`assets/sales/${image}`)" 
+              class="slide-content fullscreenable" 
+              v-for="(image, index) in sales" 
+              :key="index"
+              :src="`assets/sales/${image}`">
       </div>
-      <button class="slider-button slider-next"><div class="arrow right"></div></button>
     </div>
-    <button @click="openModal" class="container-background-button">Записаться</button>
+    <button class="slider-button slider-next">
+      <div class="arrow right"></div>
+    </button>
+  </div>
+  <button @click="openModal" class="container-background-button">Записаться</button>
 </template>
 
-<style scoped>
-img.slide-content {
-  object-fit: contain; 
-}
-</style>
+<style scoped>img.slide-content {
+  object-fit: contain;
+}</style>

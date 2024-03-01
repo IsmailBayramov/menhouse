@@ -32,11 +32,11 @@ const closeModal = () => {
       <button @click="openModal" class="container-background-button">Записаться</button>
     </div>
     <div v-if="isModalOpen" class="modalBackground">
-        <div class="modal">
-          <p class="info">+7 912 512 00 16</p>
-          <a href="tel:+7 912 512 0016" class="sign-up">ПОЗВОНИТЬ</a>
-          <div @click="closeModal" class="close"></div>
-        </div>
+      <div class="modal">
+        <p class="info">+7 912 512 00 16</p>
+        <a href="tel:+7 912 512 0016" class="sign-up">ПОЗВОНИТЬ</a>
+        <div @click="closeModal" class="close"></div>
+      </div>
     </div>
     <Advantages @openModal="openModal"></Advantages>
     <Sales @openModal="openModal"></Sales>
@@ -70,9 +70,11 @@ const closeModal = () => {
 
 .container-background {
   background: url("@/assets/background.png") no-repeat center center;
-  background-size: cover; /* или background-size: 100% 100%; */
+  background-size: cover;
+  /* или background-size: 100% 100%; */
   position: relative;
-  height: calc(10em + 25vw); /* Задайте высоту в соответствии с вашими требованиями */
+  height: calc(10em + 25vw);
+  /* Задайте высоту в соответствии с вашими требованиями */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,9 +82,11 @@ const closeModal = () => {
 }
 
 .container-background-logo {
-  max-width: calc(5em + 22vw); /* Адаптивная ширина */
+  max-width: calc(5em + 22vw);
+  /* Адаптивная ширина */
   object-fit: contain;
-  height: auto; /* Сохранение пропорций */
+  height: auto;
+  /* Сохранение пропорций */
 }
 
 .container-background-button {
@@ -124,7 +128,10 @@ const closeModal = () => {
   background-color: rgb(202, 202, 202);
 }
 
-.our.sales, .our.apartments, .our.models, .our.review {
+.our.sales,
+.our.apartments,
+.our.models,
+.our.review {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,7 +197,8 @@ img.slide-content {
   height: 25px;
   position: absolute;
   top: 10px;
-  right: 0px; /* Расположение в правом верхнем углу */
+  right: 0px;
+  /* Расположение в правом верхнем углу */
   cursor: pointer;
 }
 

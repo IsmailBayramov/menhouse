@@ -2,6 +2,7 @@
 import { useSliderLogic } from '../../sliderLogic.js';
 import { ref } from 'vue';
 import Modal from '../Footer/Modal.vue'
+import {openFullscreen} from '../../plugins/fullScreen.vue';
 
 const applySliderLogicToModels = (models) => {
   models.forEach((model, index) => {
@@ -202,7 +203,13 @@ applySliderLogicToModels(models);
                 <button class="slider-button slider-prev"><div class="arrow left"></div></button>
                 <div class="slider">
                     <div class="slider-line">
-                        <img class="slide-content" v-for="(photo, photoIndex) in model.gallery" :src="`assets/models/${photo}`" :alt="'Photo ' + photoIndex">
+                        <img 
+                            class="slide-content fullscreenable" 
+                            @click="openFullscreen(`assets/models/${photo}`)" 
+                            v-for="(photo, photoIndex) in model.gallery" 
+                            :src="`assets/models/${photo}`" 
+                            :alt="'Photo ' + photoIndex"
+                        >
                     </div>
                 </div>
                 <button class="slider-button slider-next"><div class="arrow right"></div></button>

@@ -25,14 +25,14 @@ body {
 }
 
 img {
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .slider {
     touch-action: none;
 }
 
-
+/* Стили для снега */
 .snowflake {
     position: absolute;
     z-index: 3;
@@ -42,3 +42,4 @@ img {
     border-radius: 50%;
     filter: drop-shadow(0 0 10px white);
 }
+  
